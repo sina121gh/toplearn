@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopLearn.Core.Convertors;
 using TopLearn.Core.DTOs;
+using TopLearn.Core.Generator;
 using TopLearn.Core.Security;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
@@ -52,6 +53,20 @@ namespace TopLearn.Core.Services
                     return user;
 
             return null;
+        }
+
+        public bool ActiveAccount(string activeCode)
+        {
+            var user = _context.Users.SingleOrDefault(u => u.ActiveCode == activeCode);
+
+            if (user == null || user.IsActive)
+                return false;
+
+            user.IsActive = true;
+            user.ActiveCode = MyGenerator.GenerateCode();
+            _context.SaveChanges();
+
+            return true;
         }
     }
 }

@@ -83,11 +83,23 @@ namespace TopLearn.Web.Controllers
                 }
                     
                 else
-                    ModelState.AddModelError("Email", "حساب کاربری شما تایید نشده است");
+                    ModelState.AddModelError("Email", "حساب کاربری شما فعال نمی باشد");
             }
             ModelState.AddModelError("Email", "کاربری با مشخصات وارد شده یافت نشد");
             return View();
         }
+        #endregion
+
+        #region Active Account
+
+        [Route("ActiveAccount/{activeCode}")]
+        public IActionResult ActiveAccount(string activeCode)
+        {
+            ViewBag.IsActive = _userService.ActiveAccount(activeCode);
+
+            return View();
+        }
+
         #endregion
     }
 }
