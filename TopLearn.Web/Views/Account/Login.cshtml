@@ -13,7 +13,7 @@
 
 <main class="client-page">
     <div class="container-content">
-        @if (ViewBag.IsSuccess != null)
+        @if (ViewBag.IsSuccess == true)
         {
             <div class="alert alert-success">
                 <p class="help-block">ورود با موفقیت انجام شد</p>
@@ -21,8 +21,8 @@
 
             <script>
                 // Your delay in milliseconds
-                var delay = 3000;
-                setTimeout(function () { window.location = "https://localhost:44349/"; }, delay);
+                var delay = 1000;
+                setTimeout(function () { window.location = "/"; }, delay);
             </script>
         }
         <header><h2> ورود به سایت </h2></header>

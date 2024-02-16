@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopLearn.Core.DTOs;
 using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.Core.Services.Interfaces
@@ -12,5 +13,7 @@ namespace TopLearn.Core.Services.Interfaces
         bool IsExistUserName(string userName);
         bool IsExistEmail(string email);
         int AddUser(User user);
+        User? GetUserByEmail(string email);
+        User? LoginUser(LoginViewModel login);
     }
 }

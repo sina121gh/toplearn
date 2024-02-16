@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopLearn.Core.Convertors;
+using TopLearn.Core.DTOs;
+using TopLearn.Core.Security;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.User;
@@ -33,6 +36,22 @@ namespace TopLearn.Core.Services
         public bool IsExistUserName(string userName)
         {
             return _context.Users.Any(u => u.UserName == userName);
+        }
+
+        public User? GetUserByEmail(string email)
+        {
+            return _context.Users.SingleOrDefault(u => u.Email == email);
+        }
+
+        public User? LoginUser(LoginViewModel login)
+        {
+            User user = GetUserByEmail(FixedText.FixEmail(login.Email));
+
+            if (user != null)
+                if (PasswordHelper.VerifyPassword(login.Password, user.Password))
+                    return user;
+
+            return null;
         }
     }
 }

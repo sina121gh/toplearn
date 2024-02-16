@@ -65,12 +65,29 @@ namespace TopLearn.Web.Controllers
         [Route("Login")]
         public IActionResult Login() => View();
 
-        //[HttpPost]
-        //[Route("Login")]
-        //public IActionResult Login()
-        //{
+        [HttpPost]
+        [Route("Login")]
+        public IActionResult Login(LoginViewModel login)
+        {
+            if (!ModelState.IsValid)
+                return View(login);
 
-        //}
+            var user = _userService.LoginUser(login);
+
+            if (user!= null)
+            {
+                if (user.IsActive)
+                {
+                    ViewBag.IsSuccess = true;
+                    return View();
+                }
+                    
+                else
+                    ModelState.AddModelError("Email", "حساب کاربری شما تایید نشده است");
+            }
+            ModelState.AddModelError("Email", "کاربری با مشخصات وارد شده یافت نشد");
+            return View();
+        }
         #endregion
     }
 }
