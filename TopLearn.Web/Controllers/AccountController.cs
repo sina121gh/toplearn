@@ -17,6 +17,7 @@ namespace TopLearn.Web.Controllers
             _userService = userService;
         }
 
+        #region Register
         [Route("Register")]
         public IActionResult Register() => View();
 
@@ -53,7 +54,23 @@ namespace TopLearn.Web.Controllers
             };
 
             _userService.AddUser(user);
+
+            //TODO: Send Email Activation
+
             return View("SuccessRegister", user);
         }
+        #endregion
+
+        #region Login
+        [Route("Login")]
+        public IActionResult Login() => View();
+
+        //[HttpPost]
+        //[Route("Login")]
+        //public IActionResult Login()
+        //{
+
+        //}
+        #endregion
     }
 }
