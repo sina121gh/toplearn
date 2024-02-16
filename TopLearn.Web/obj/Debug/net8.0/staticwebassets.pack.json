@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
+      "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap-rtl.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-rtl.min.css"
     },

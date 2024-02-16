@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
+using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.Core.Services
 {
@@ -15,6 +16,13 @@ namespace TopLearn.Core.Services
         public UserService(TopLearnContext context)
         {
             _context = context;
+        }
+
+        public int AddUser(User user)
+        {
+            _context.Users.Add(user);
+            _context.SaveChanges();
+            return user.Id;
         }
 
         public bool IsExistEmail(string email)

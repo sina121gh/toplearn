@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XBOQsFCZI1NLBlzIyEd2vfp7hkpGivqiMrlDT23i9zLgl8GnItR1Trq568tqqAw+v/OxtoxDLk2oAt68aU5RXQ==",
+  "dgSpecHash": "K5+/7nx704dFRgNJcQb2hXdx2MIw8h1CO/1v5pLJQS2EkHvQ0/qoMDwmYJlyCsObIN7ru99DM83WBwAjqH/W/g==",
   "success": true,
   "projectFilePath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sina1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\sina1\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

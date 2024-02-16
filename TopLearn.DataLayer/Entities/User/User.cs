@@ -48,6 +48,9 @@ namespace TopLearn.DataLayer.Entities.User
         [Display(Name = "تاریخ ثبت نام")]
         public DateTime RegisterDate { get; set; }
 
+        [MaxLength(29)]
+        public string? Salt { get; set; }
+
         #region Relations
 
         public virtual IEnumerable<UserRole>? UserRoles { get; set; }

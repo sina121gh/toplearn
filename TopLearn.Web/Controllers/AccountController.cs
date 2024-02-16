@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TopLearn.Core.Convertors;
 using TopLearn.Core.DTOs;
+using TopLearn.Core.Generator;
+using TopLearn.Core.Security;
 using TopLearn.Core.Services.Interfaces;
+using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.Web.Controllers
 {
@@ -18,6 +21,7 @@ namespace TopLearn.Web.Controllers
         public IActionResult Register() => View();
 
         [HttpPost]
+        [Route("Register")]
         public IActionResult Register(RegisterViewModel register)
         {
             if (!ModelState.IsValid)
@@ -25,19 +29,31 @@ namespace TopLearn.Web.Controllers
 
             if (_userService.IsExistUserName(register.UserName))
             {
-                ModelState.AddModelError("UserName", "این ایمیل قبلا ثبت شده است.");
+                ModelState.AddModelError("UserName", "این نام کاربری قبلا ثبت شده است.");
                 return View(register);
             }
 
-            if (_userService.IsExistEmail(FixedText.FixedEmail(register.Email)))
+            if (_userService.IsExistEmail(FixedText.FixEmail(register.Email)))
             {
                 ModelState.AddModelError("Email", "این ایمیل قبلا ثبت شده است.");
                 return View(register);
             }
 
-            //TODO: Register User
+            string salt = PasswordHelper.GenerateSalt();
+            var user = new User()
+            {
+                UserName = register.UserName,
+                Email = FixedText.FixEmail(register.Email),
+                Salt = salt,
+                Password = PasswordHelper.HashPassword(register.Password, salt),
+                RegisterDate = DateTime.Now,
+                ActiveCode = MyGenerator.GenerateCode(),
+                IsActive = false,
+                Avatar = "DefaultAvatar.png",
+            };
 
-            return View();
+            _userService.AddUser(user);
+            return View("SuccessRegister", user);
         }
     }
 }

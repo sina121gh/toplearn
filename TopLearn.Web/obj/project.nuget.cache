@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "s90ITFP+QNTrE/1GwI6sdnnt4ZrXFR//0JvNgXEZLcgJd0UUKeC01WYcjESMXV6jXSX9D+eSeIuj36re/v+EUA==",
+  "dgSpecHash": "taI6YHHAVGQa01UEYkuMqRi4Gsosj8xLZQr7SUhmw2Zk9CxH8yHURRv5yVT7bj27g8bOeHaW7Xk3MuuFwJ9JJg==",
   "success": true,
   "projectFilePath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sina1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\sina1\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\dotnetenv\\3.0.0\\dotnetenv.3.0.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

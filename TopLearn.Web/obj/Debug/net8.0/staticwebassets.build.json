@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7Pq6z8Wi6eMN2R/n0ak8n8v+YEwDOILJ8dSz2sGQpbY=",
+  "Hash": "KZ10IffpLaJ7H50ubTPXorJ5Trn91wq4fJ9/Gj4eo4c=",
   "Source": "TopLearn.Web",
   "BasePath": "_content/TopLearn.Web",
   "Mode": "Default",
@@ -756,6 +756,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\script.js"
+    },
+    {
+      "Identity": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
+      "SourceId": "TopLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\",
+      "BasePath": "_content/TopLearn.Web",
+      "RelativePath": "UsersAvatars/DefaultAvatar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UsersAvatars\\DefaultAvatar.png"
     }
   ]
 }

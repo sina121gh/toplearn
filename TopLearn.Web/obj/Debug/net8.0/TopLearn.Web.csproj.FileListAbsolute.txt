@@ -403,3 +403,4 @@ E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\run
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\BCrypt.Net-Next.dll
