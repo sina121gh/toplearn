@@ -17,12 +17,12 @@ namespace TopLearn.Core.Services
             _context = context;
         }
 
-        public bool IsExistsEmail(string email)
+        public bool IsExistEmail(string email)
         {
             return _context.Users.Any(u => u.Email == email);
         }
 
-        public bool IsExistsUserName(string userName)
+        public bool IsExistUserName(string userName)
         {
             return _context.Users.Any(u => u.UserName == userName);
         }

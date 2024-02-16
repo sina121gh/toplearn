@@ -8,7 +8,7 @@ namespace TopLearn.Core.Services.Interfaces
 {
     public interface IUserService
     {
-        bool IsExistsUserName(string userName);
-        bool IsExistsEmail(string email);
+        bool IsExistUserName(string userName);
+        bool IsExistEmail(string email);
     }
 }
