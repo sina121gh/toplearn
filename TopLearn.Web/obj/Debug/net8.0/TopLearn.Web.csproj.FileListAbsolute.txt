@@ -135,3 +135,6 @@ E:\Documents\VS\TopLearn\TopLearn.Web\bin\Debug\net8.0\TopLearn.Core.pdb
 E:\Documents\VS\TopLearn\TopLearn.Web\bin\Debug\net8.0\TopLearn.DataLayer.pdb
 E:\Documents\VS\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.csproj.AssemblyReference.cache
 E:\Documents\VS\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.csproj.CopyComplete
+E:\Documents\VS\TopLearn\TopLearn.Web\bin\Debug\net8.0\TopLearn.Web.staticwebassets.runtime.json
+E:\Documents\VS\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.RazorAssemblyInfo.cache
+E:\Documents\VS\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.RazorAssemblyInfo.cs

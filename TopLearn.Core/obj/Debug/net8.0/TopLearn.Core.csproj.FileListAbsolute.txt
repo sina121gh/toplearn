@@ -9,3 +9,9 @@ E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.dll
 E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\refint\TopLearn.Core.dll
 E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.pdb
 E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\ref\TopLearn.Core.dll
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.Core.runtimeconfig.json
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.DataLayer.dll
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.DataLayer.pdb
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.csproj.AssemblyReference.cache
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.csproj.CopyComplete
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.genruntimeconfig.cache
