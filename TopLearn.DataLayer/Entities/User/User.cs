@@ -35,12 +35,14 @@ namespace TopLearn.DataLayer.Entities.User
         public string? Password { get; set; }
 
         [Display(Name = "کد فعال سازی")]
+        [MaxLength(50, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
         public string? ActiveCode { get; set; }
 
         [Display(Name = "وضعیت")]
         public bool IsActive { get; set; }
 
         [Display(Name = "آواتار")]
+        [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
         public string? Avatar { get; set; }
         
         [Display(Name = "تاریخ ثبت نام")]
