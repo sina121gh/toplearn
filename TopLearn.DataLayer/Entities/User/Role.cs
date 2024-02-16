@@ -9,6 +9,11 @@ namespace TopLearn.DataLayer.Entities.User
 {
     public class Role
     {
+        public Role()
+        {
+            
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -16,5 +21,11 @@ namespace TopLearn.DataLayer.Entities.User
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(50, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
         public string? Title { get; set; }
+
+        #region Relations
+
+        public virtual IEnumerable<UserRole>? UserRoles { get; set; }
+
+        #endregion
     }
 }

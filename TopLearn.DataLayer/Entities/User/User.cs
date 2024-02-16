@@ -9,6 +9,12 @@ namespace TopLearn.DataLayer.Entities.User
 {
     public class User
     {
+
+        public User()
+        {
+            
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -39,5 +45,11 @@ namespace TopLearn.DataLayer.Entities.User
         
         [Display(Name = "تاریخ ثبت نام")]
         public DateTime RegisterDate { get; set; }
+
+        #region Relations
+
+        public virtual IEnumerable<UserRole>? UserRoles { get; set; }
+
+        #endregion
     }
 }
