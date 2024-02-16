@@ -1,0 +1,11 @@
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.Core.deps.json
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.Core.dll
+E:\Documents\VS\TopLearn\TopLearn.Core\bin\Debug\net8.0\TopLearn.Core.pdb
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.AssemblyInfoInputs.cache
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.AssemblyInfo.cs
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.csproj.CoreCompileInputs.cache
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.dll
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\refint\TopLearn.Core.dll
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.pdb
+E:\Documents\VS\TopLearn\TopLearn.Core\obj\Debug\net8.0\ref\TopLearn.Core.dll
