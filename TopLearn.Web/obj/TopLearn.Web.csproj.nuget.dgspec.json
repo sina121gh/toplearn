@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documents\\VS\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj": {}
+    "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj": {}
   },
   "projects": {
-    "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj": {
+    "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
+        "projectUniqueName": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
         "projectName": "TopLearn.Core",
-        "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
+        "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
         "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\obj\\",
+        "outputPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
-                "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
+              "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
+                "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
+    "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
+        "projectUniqueName": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
         "projectName": "TopLearn.DataLayer",
-        "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
+        "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
         "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\obj\\",
+        "outputPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,14 +160,14 @@
         }
       }
     },
-    "E:\\Documents\\VS\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj": {
+    "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\VS\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
+        "projectUniqueName": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
         "projectName": "TopLearn.Web",
-        "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
+        "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
         "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.Web\\obj\\",
+        "outputPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -189,11 +189,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj": {
-                "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj"
+              "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj": {
+                "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj"
               },
-              "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
-                "projectPath": "E:\\Documents\\VS\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
+              "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
+                "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
               }
             }
           }
@@ -212,6 +212,10 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -225,6 +229,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
