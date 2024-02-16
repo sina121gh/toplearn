@@ -10,3 +10,5 @@ E:\Documents\VS\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.
 E:\Documents\VS\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\refint\TopLearn.DataLayer.dll
 E:\Documents\VS\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.pdb
 E:\Documents\VS\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\ref\TopLearn.DataLayer.dll
+E:\Documents\VS\TopLearn\TopLearn.DataLayer\bin\Debug\net8.0\TopLearn.DataLayer.runtimeconfig.json
+E:\Documents\VS\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.genruntimeconfig.cache

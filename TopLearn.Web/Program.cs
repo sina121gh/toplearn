@@ -8,7 +8,7 @@ DotNetEnv.Env.Load();
 #region Database Context
 builder.Services.AddDbContext<TopLearnContext>(options =>
 {
-    options.UseSqlServer();
+    options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION_STRING"));
 });
 #endregion
 
