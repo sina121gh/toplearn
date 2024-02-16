@@ -10,11 +10,11 @@ namespace TopLearn.DataLayer.Entities.User
     public class Role
     {
         [Key]
-        public int RoleId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(50, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
-        public string? RoleTitle { get; set; }
+        public string? Title { get; set; }
     }
 }
