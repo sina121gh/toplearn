@@ -28,7 +28,8 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <div class="loggein">
-                                    <i class="zmdi zmdi-account"></i><a href="">@User.Identity.Name ، خوش آمدی</a>
+                                    <i class="zmdi zmdi-account"></i><a href=""> @User.Identity.Name ، خوش آمدی </a> /
+                                    <a href="/Logout"> خروج </a>
                                 </div>
                             }
                             else

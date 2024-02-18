@@ -41,3 +41,4 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.DataLay
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.pdb
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.genruntimeconfig.cache
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.DataLayer\obj\Debug\net8.0\ref\TopLearn.DataLayer.dll
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.DataLayer\obj\Debug\net8.0\TopLearn.DataLayer.sourcelink.json

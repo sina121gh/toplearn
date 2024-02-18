@@ -35,14 +35,14 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-app.UseAuthentication();
-app.UseAuthorization();
-
 app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{Controller=Home}/{Action=Index}/{id?}"
     );
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();

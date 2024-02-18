@@ -50,3 +50,4 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.Core\ob
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.pdb
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.genruntimeconfig.cache
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\toplearn\TopLearn.Core\obj\Debug\net8.0\ref\TopLearn.Core.dll
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Core\obj\Debug\net8.0\TopLearn.Core.sourcelink.json

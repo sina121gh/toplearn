@@ -110,6 +110,16 @@ namespace TopLearn.Web.Controllers
         }
         #endregion
 
+        #region Logout
+        [Route("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return Redirect("/");
+        }
+        #endregion
+
         #region Active Account
 
         [Route("ActiveAccount/{activeCode}")]
