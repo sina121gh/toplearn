@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TopLearn.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+068843f3857e96748c911053bed004603b1829b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b697b50cb8bcba9725bc480ac92d4e630deda978")]
 [assembly: System.Reflection.AssemblyProductAttribute("TopLearn.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TopLearn.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

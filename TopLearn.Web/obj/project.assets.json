@@ -12536,19 +12536,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sina1\\.nuget\\packages\\": {}
+    "C:\\Users\\sina1\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.Web\\TopLearn.Web.csproj",
+      "projectUniqueName": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
       "projectName": "TopLearn.Web",
-      "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.Web\\TopLearn.Web.csproj",
+      "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
       "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.Web\\obj\\",
+      "outputPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\sina1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12556,17 +12561,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.Core\\TopLearn.Core.csproj": {
-              "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.Core\\TopLearn.Core.csproj"
+            "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj": {
+              "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj"
             },
-            "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
-              "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\toplearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
+            "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
+              "projectPath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
             }
           }
         }
@@ -12627,7 +12633,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
