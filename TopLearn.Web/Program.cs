@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using TopLearn.Core.Services;
 using TopLearn.Core.Services.Interfaces;
@@ -16,12 +17,28 @@ builder.Services.AddDbContext<TopLearnContext>(options =>
 #region IoC
 builder.Services.AddTransient<IUserService, UserService>();
 #endregion
+#region Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+}).AddCookie(options =>
+{
+    options.LoginPath = "/Login";
+    options.LogoutPath = "/Logout";
+    options.ExpireTimeSpan = TimeSpan.FromDays(30);
+});
+#endregion
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseRouting();
-app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "default",

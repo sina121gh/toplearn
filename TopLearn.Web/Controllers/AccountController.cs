@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TopLearn.Core.Convertors;
 using TopLearn.Core.DTOs;
 using TopLearn.Core.Generator;
@@ -78,6 +81,23 @@ namespace TopLearn.Web.Controllers
             {
                 if (user.IsActive)
                 {
+                    var claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                        new Claim(ClaimTypes.Name, user.UserName),
+                    };
+
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    var principal = new ClaimsPrincipal(identity);
+
+                    var properties = new AuthenticationProperties()
+                    {
+                        IsPersistent = login.RememberMe,
+                    };
+
+                    HttpContext.SignInAsync(principal, properties);
+
                     ViewBag.IsSuccess = true;
                     return View();
                 }
