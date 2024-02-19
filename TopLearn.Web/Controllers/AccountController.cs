@@ -9,6 +9,7 @@ using TopLearn.Core.Generator;
 using TopLearn.Core.Security;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Entities.User;
+using TopLearn.Senders;
 
 namespace TopLearn.Web.Controllers
 {
@@ -61,7 +62,12 @@ namespace TopLearn.Web.Controllers
 
             _userService.AddUser(user);
 
-            //TODO: Send Email Activation
+            #region Send Activation Email
+
+            string body = _viewRender.RenderToStringAsync("_ActiveEmail", user);
+            SendEmail.Send(user.Email, "فعال سازی حساب", body);
+
+            #endregion
 
             return View("SuccessRegister", user);
         }
