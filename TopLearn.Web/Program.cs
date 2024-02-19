@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using TopLearn.Convertors;
 using TopLearn.Core.Services;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<TopLearnContext>(options =>
 #endregion
 #region IoC
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
 #endregion
 #region Authentication
 builder.Services.AddAuthentication(options =>
