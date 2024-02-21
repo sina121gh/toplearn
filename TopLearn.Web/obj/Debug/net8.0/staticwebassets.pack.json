@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png",
+      "PackagePath": "staticwebassets\\images\\EmailActivation.png"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
