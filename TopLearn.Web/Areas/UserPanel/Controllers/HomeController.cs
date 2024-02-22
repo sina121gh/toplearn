@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Areas.UserPanel.Controllers
 {
@@ -7,9 +8,13 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IUserService _userService;
+
+        public HomeController(IUserService userService)
         {
-            return View();
+            _userService = userService;
         }
+
+        public IActionResult Index() => View(_userService.GetUserInformation(User.Identity.Name));
     }
 }
