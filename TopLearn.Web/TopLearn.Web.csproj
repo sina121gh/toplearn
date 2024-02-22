@@ -18,6 +18,7 @@
     <None Include="wwwroot\js\jquery.validate.unobtrusive.min.js" />
     <None Include="wwwroot\js\modernizr-custom.js" />
     <None Include="wwwroot\js\script.js" />
+    <None Include="wwwroot\noUiSlider\nouislider.min.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,14 +36,6 @@
   <ItemGroup>
     <ProjectReference Include="..\TopLearn.Core\TopLearn.Core.csproj" />
     <ProjectReference Include="..\TopLearn.DataLayer\TopLearn.DataLayer.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Areas\UserPanel\Controllers\" />
-    <Folder Include="Areas\UserPanel\Data\" />
-    <Folder Include="Areas\UserPanel\Models\" />
-    <Folder Include="Areas\UserPanel\Views\" />
   </ItemGroup>
 
 </Project>
