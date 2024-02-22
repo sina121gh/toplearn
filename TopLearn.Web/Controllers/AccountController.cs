@@ -64,8 +64,8 @@ namespace TopLearn.Web.Controllers
 
             #region Send Activation Email
 
-            string body = _viewRender.RenderToStringAsync("_ActiveEmail", user);
-            SendEmail.Send(user.Email, "فعال سازی حساب", body);
+            string emailBody = _viewRender.RenderToStringAsync("_ActiveEmail", user);
+            SendEmail.Send(user.Email, "فعال سازی حساب", emailBody);
 
             #endregion
 
@@ -135,6 +135,69 @@ namespace TopLearn.Web.Controllers
         public IActionResult ActiveAccount(string activeCode)
         {
             ViewBag.IsActive = _userService.ActiveAccount(activeCode);
+
+            return View();
+        }
+
+        #endregion
+
+        #region Forgot Password
+        [Route("ForgotPassword")]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("ForgotPassword")]
+        public IActionResult ForgotPassword(ForgotPasswordViewModel forgot)
+        {
+            if (!ModelState.IsValid)
+                return View(forgot);
+
+            User user = _userService.GetUserByEmail(FixedText.FixEmail(forgot.Email));
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "کاربری یافت نشد");
+                return View(forgot);
+            }
+
+            string emailBody = _viewRender.RenderToStringAsync("_ForgotPasswordEmail", user);
+
+            SendEmail.Send(forgot.Email, "بازیابی کلمه عبور", emailBody);
+            ViewBag.IsSuccess = true;
+
+            return View();
+        }
+        #endregion
+
+        #region Reset Password
+        [Route("/ResetPassword/{activeCode}")]
+        public IActionResult ResetPassword(string activeCode)
+        {
+            return View(new ResetPasswordViewModel()
+            {
+                ActiveCode = activeCode
+            });
+        }
+
+        [HttpPost]
+        [Route("/ResetPassword/{activeCode}")]
+        public IActionResult ResetPassword(ResetPasswordViewModel reset)
+        {
+            if (!ModelState.IsValid)
+                return View(reset);
+
+            User user = _userService.GetUserByActiveCode(reset.ActiveCode);
+            if (user == null)
+                NotFound();
+
+            user.Salt = PasswordHelper.GenerateSalt();
+            user.Password = PasswordHelper.HashPassword(reset.Password, user.Salt);
+            user.ActiveCode = MyGenerator.GenerateCode();
+            _userService.UpdateUser(user);
+
+            ViewBag.IsSuccess = true;
 
             return View();
         }

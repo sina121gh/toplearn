@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
+using TopLearn.Convertors;
 
 namespace TopLearn.Senders
 {
@@ -17,6 +18,14 @@ namespace TopLearn.Senders
             mail.Subject = subject;
             mail.Body = body;
             mail.IsBodyHtml = true;
+            //LinkedResource logo = new LinkedResource("E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png");
+            //LinkedResource emailActivation = new LinkedResource("E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png");
+            //logo.ContentId = "Logo";
+            //emailActivation.ContentId = "EmailActivation";
+            //AlternateView htmlView = AlternateView.CreateAlternateViewFromString("", null, "text/html");
+            //htmlView.LinkedResources.Add(logo);
+            //htmlView.LinkedResources.Add(emailActivation);
+            //mail.AlternateViews.Add(htmlView);
 
             //System.Net.Mail.Attachment attachment;
             // attachment = new System.Net.Mail.Attachment("c:/textfile.txt");
