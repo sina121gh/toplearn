@@ -107,5 +107,16 @@ namespace TopLearn.Core.Services
         {
             return _context.Users.SingleOrDefault(u => u.UserName == userName);
         }
+
+        public UserPanelSideBarViewModel GetUserPanelSideBar(string userName)
+        {
+            return _context.Users.Where(u => u.UserName == userName)
+                .Select(u => new UserPanelSideBarViewModel()
+            {
+                UserName = u.UserName,
+                RegisterDate = u.RegisterDate,
+                PitcureName = u.Avatar
+            }).Single();
+        }
     }
 }
