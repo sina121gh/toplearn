@@ -25,6 +25,14 @@
                 setTimeout(function () { window.location = "/UserPanel"; }, delay);
             </script>
         }
+        @if (ViewBag.EditProfile == true)
+        {
+            <div class="alert alert-warning">
+                <p>
+                    بدلیل ویرایش پروفایل و بارگزاری مجدد اطلاعات لطفا مجددا لاگین کنید
+                </p>
+            </div>
+        }
         <header><h2> ورود به سایت </h2></header>
 
         <div class="form-layer">
@@ -51,7 +59,7 @@
                     <a href="/ForgotPassword"> <i class="zmdi zmdi-lock"></i> رمز عبور خود را فراموش کرده ام !</a>
                     <a href="/Register"> <i class="zmdi zmdi-account"></i> عضویت در سایت </a>
                 </div>
-                
+
                 @* <div asp-validation-summary="All" class="text-danger">
                 </div> *@
 

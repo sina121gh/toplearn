@@ -112,11 +112,68 @@ namespace TopLearn.Core.Services
         {
             return _context.Users.Where(u => u.UserName == userName)
                 .Select(u => new UserPanelSideBarViewModel()
+                {
+                    UserName = u.UserName,
+                    RegisterDate = u.RegisterDate,
+                    PitcureName = u.Avatar
+                }).Single();
+        }
+
+        public EditProfileViewModel GetUserForEdit(string userName)
+        {
+            return _context.Users.Where(u => u.UserName == userName)
+                .Select(u => new EditProfileViewModel()
+                {
+                    UserName = u.UserName,
+                    Email = u.Email,
+                }).Single();
+        }
+
+        public bool EditProfile(string userName, EditProfileViewModel profile)
+        {
+            User user = GetUserByUserName(userName);
+
+            if (user == null) return false;
+
+            if(profile.UserAvatar ? .Length > 0)
             {
-                UserName = u.UserName,
-                RegisterDate = u.RegisterDate,
-                PitcureName = u.Avatar
-            }).Single();
+                string imagePath = "";
+                string currentAvatar = user.Avatar;
+                if (currentAvatar != "DefaultAvatar.png")
+                {
+                    imagePath = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot",
+                        "UsersAvatars",
+                        currentAvatar);
+                    if (File.Exists(imagePath))
+                        File.Delete(imagePath);
+                }
+
+                string newAvatar = MyGenerator.GenerateCode() + Path.GetExtension(profile.UserAvatar.FileName);
+                imagePath = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot",
+                        "UsersAvatars",
+                        newAvatar);
+                using (FileStream stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    profile.UserAvatar.CopyTo(stream);
+                }
+
+                user.Avatar = newAvatar;
+            }
+
+            user.UserName = profile.UserName;
+            user.Email = profile.Email;
+
+            try
+            {
+                UpdateUser(user);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }            
         }
     }
 }

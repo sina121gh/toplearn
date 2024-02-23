@@ -24,6 +24,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         UserInformationViewModel GetUserInformation(string userName);
         UserPanelSideBarViewModel GetUserPanelSideBar(string userName);
+        EditProfileViewModel GetUserForEdit(string userName);
+        bool EditProfile(string userName, EditProfileViewModel profile);
 
         #endregion
     }
