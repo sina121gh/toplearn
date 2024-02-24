@@ -8,13 +8,25 @@ using System.Threading.Tasks;
 
 namespace TopLearn.DataLayer.Entities.Wallet
 {
-    public class WalletType
+    public class TransactionType
     {
+
+        public TransactionType()
+        {
+            
+        }
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]
         [MaxLength(50)]
         public string? Title { get; set; }
+
+        #region Relations
+
+        public virtual IEnumerable<Transaction> Transactions { get; set; }
+
+        #endregion
     }
 }
