@@ -44,7 +44,7 @@ namespace TopLearn.Core.Services
             return _context.Users.SingleOrDefault(u => u.Email == email);
         }
 
-        public User? LoginUser(LoginViewModel login)
+        public User? GetUserForLogin(LoginViewModel login)
         {
             User user = GetUserByEmail(FixedText.FixEmail(login.Email));
 
@@ -174,6 +174,41 @@ namespace TopLearn.Core.Services
             {
                 return false;
             }            
+        }
+
+        public bool ChangeUserSalt(string userName)
+        {
+            try
+            {
+                User user = GetUserByUserName(userName);
+                user.Salt = PasswordHelper.GenerateSalt();
+                UpdateUser(user);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool ChangeUserPassword(string userName, string newPassword)
+        {
+            try
+            {
+                User user = GetUserByUserName(userName);
+                user.Password = PasswordHelper.HashPassword(newPassword, user.Salt);
+                UpdateUser(user);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public string? GetUserPassword(string userName)
+        {
+            return _context.Users.Single(u => u.UserName == userName).Password;
         }
     }
 }

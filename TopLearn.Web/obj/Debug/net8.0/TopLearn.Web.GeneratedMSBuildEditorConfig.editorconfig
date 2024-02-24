@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Areas/UserPanel/Views/Home/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Areas/UserPanel/Views/Home/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcRWRpdFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

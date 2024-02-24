@@ -16,7 +16,7 @@ namespace TopLearn.Core.Services.Interfaces
         bool UpdateUser(User user);
         int AddUser(User user);
         User? GetUserByEmail(string email);
-        User? LoginUser(LoginViewModel login);
+        User? GetUserForLogin(LoginViewModel login);
         User? GetUserByActiveCode(string activeCode);
         User? GetUserByUserName(string userName);
 
@@ -26,6 +26,9 @@ namespace TopLearn.Core.Services.Interfaces
         UserPanelSideBarViewModel GetUserPanelSideBar(string userName);
         EditProfileViewModel GetUserForEdit(string userName);
         bool EditProfile(string userName, EditProfileViewModel profile);
+        bool ChangeUserSalt(string userName);
+        bool ChangeUserPassword(string userName, string newPassword);
+        string? GetUserPassword(string userName);
 
         #endregion
     }

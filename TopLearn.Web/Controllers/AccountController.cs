@@ -88,7 +88,7 @@ namespace TopLearn.Web.Controllers
             if (!ModelState.IsValid)
                 return View(login);
 
-            var user = _userService.LoginUser(login);
+            User user = _userService.GetUserForLogin(login);
 
             if (user!= null)
             {
@@ -118,7 +118,7 @@ namespace TopLearn.Web.Controllers
                 else
                     ModelState.AddModelError("Email", "حساب کاربری شما فعال نمی باشد");
             }
-            ModelState.AddModelError("Email", "کاربری با مشخصات وارد شده یافت نشد");
+            ModelState.AddModelError("Email", "اطلاعات وارد شده صحیح نمیباشد");
             return View();
         }
         #endregion
