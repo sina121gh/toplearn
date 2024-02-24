@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,16 @@ namespace TopLearn.DataLayer.Entities.Wallet
             
         }
 
+        [Key]
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "کاربر")]
         public int UserId { get; set; }
+
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "موجودی")]
+        public uint Balance { get; set; }
 
 
         #region Relations
