@@ -31,5 +31,29 @@ namespace TopLearn.DataLayer.Context
         public DbSet<Wallet> Wallets { get; set; }
 
         #endregion
+
+
+        #region Seed Date
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TransactionType>().HasData(
+                new TransactionType()
+                {
+                    Id = 1,
+                    Title = "واریز"
+                },
+
+                new TransactionType()
+                {
+                    Id = 2,
+                    Title = "برداشت"
+                }
+                );
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+        #endregion
     }
 }

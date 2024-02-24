@@ -158,6 +158,18 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TransactionsTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Title = "واریز"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Title = "برداشت"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.Wallet", b =>
