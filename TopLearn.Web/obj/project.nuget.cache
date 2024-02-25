@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L/F0JJxES2eeG7mN5Ugd0sNfe1+3hSs+fBswzxLXDHHrpi8H4jlr4tKm1wbJQgwp9V+j3D77lk4kpw/Vh5/+3g==",
+  "dgSpecHash": "NWuvaeqW7Chb9oTD8sjS5YToC7dl+yDy3vS8nhPBtvyh3QoLdhL3SCm+dHOPTaL76VOUNf/EC67Fc7sTL+x+sw==",
   "success": true,
   "projectFilePath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
   "expectedPackageFiles": [
@@ -283,7 +283,8 @@
     "C:\\Users\\sina1\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\sina1\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\sina1\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\sina1\\.nuget\\packages\\zarinpal\\3.0.1\\zarinpal.3.0.1.nupkg.sha512"
   ],
   "logs": []
 }
