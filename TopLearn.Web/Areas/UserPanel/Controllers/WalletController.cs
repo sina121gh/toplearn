@@ -12,6 +12,8 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
     [Authorize]
     public class WalletController : Controller
     {
+        #region Dependency Injection
+
         private readonly TopLearnContext _context;
         private readonly IUserService _userService;
         private readonly IPaymentService _paymentService;
@@ -23,12 +25,12 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             _paymentService = paymentService;
         }
 
+        #endregion
 
         [Route("UserPanel/Transactions")]
-        public IActionResult Transactions()
-        {
-            return View(_userService.GetTransactions(User.Identity.Name));
-        }
+        public IActionResult Transactions() => View(_userService.GetTransactions(User.Identity.Name));
+
+        #region Charge Wallet
 
         [Route("UserPanel/ChargeWallet")]
         public IActionResult ChargeWallet() => View();
@@ -40,7 +42,6 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             if (!ModelState.IsValid)
                 return View(charge);
 
-            //ToDo : Online Payment
             int walletId = _userService.ChargeWallet(User.Identity.Name, charge.Amount, "شارژ حساب");
 
             #region Online Payment
@@ -54,6 +55,10 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             #endregion
         }
 
+        #endregion
+
+        #region Validate Payment
+
         [Route("ValidatePayment/{transactionId}")]
         public async Task<IActionResult> ValidatePayment(int transactionId)
         {
@@ -63,17 +68,21 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             {
                 string authority = HttpContext.Request.Query["Authority"].ToString();
                 Transaction? transaction = _userService.GetTransactionById(transactionId);
-                int status = await _paymentService.ValidatePayment(transaction.Amount, authority);
+                var verification = await _paymentService.ValidatePayment(transaction.Amount, authority);
 
-                if (status == 100)
+                // 100 = Ok Payment
+                if (verification.Status == 100)
                 {
-                    transaction.IsPaid = true;
+                    transaction.IsSuccess = true;
                     _userService.UpdateTransaction(transaction);
-                    return Redirect("/UserPanel");
+                    ViewBag.IsSuccess = true;
+                    ViewBag.Code = verification.RefId;
                 }
             }
 
-            return BadRequest();
+            return View();
         }
+
+        #endregion
     }
 }

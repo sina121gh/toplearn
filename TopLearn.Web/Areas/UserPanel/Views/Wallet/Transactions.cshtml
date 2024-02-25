@@ -26,31 +26,40 @@
                         <div class="inner">
                             <div class="account-information">
                                 <h3> لیست تراکنش ها </h3>
-                                <table class="table table-bordered table-hover table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th>نوع تراکنش</th>
-                                            <th>مبلغ</th>
-                                            <th>شرح</th>
-                                            <th>تاریخ</th>
-                                            <th>وضعیت</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        @foreach (TransactionsListViewModel transaction in Model)
-                                        {
-                                            <tr class="@(!transaction.Status ? "bg-warning" : transaction.Type ? "bg-success" : "bg-danger")">
-                                                <td>@(transaction.Type ? "واریز" : "برداشت")</td>
-                                                <td>@transaction.Amout.ToString("#,0")‌ تومان</td>
-                                                <td>@transaction.Description</td>
-                                                <td>@transaction.Date.ToShamsi()</td>
-                                                <td>@(transaction.Status ? "موفق" : "ناموفق")</td>
+                                @if (Model.Count() > 0)
+                                {
+                                    <table class="table table-bordered table-hover table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>نوع تراکنش</th>
+                                                <th>مبلغ</th>
+                                                <th>شرح</th>
+                                                <th>تاریخ</th>
+                                                <th>وضعیت</th>
                                             </tr>
-                                        }
-                                    </tbody>
+                                        </thead>
 
-                                </table>
+                                        <tbody>
+                                            @foreach (TransactionsListViewModel transaction in Model)
+                                            {
+                                                <tr class="@(!transaction.Status ? "bg-warning" : transaction.Type ? "bg-success" : "bg-danger")">
+                                                    <td>@(transaction.Type ? "واریز" : "برداشت")</td>
+                                                    <td>@transaction.Amout.ToString("#,0")‌ تومان</td>
+                                                    <td>@transaction.Description</td>
+                                                    <td>@transaction.Date.ToShamsi()</td>
+                                                    <td>@(transaction.Status ? "موفق" : "ناموفق")</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+
+                                    </table>
+                                }
+                                else
+                                {
+                                    <div class="alert alert-info">
+                                        تراکنشی یافت نشد
+                                    </div>
+                                }
                             </div>
                         </div>
                     </section>

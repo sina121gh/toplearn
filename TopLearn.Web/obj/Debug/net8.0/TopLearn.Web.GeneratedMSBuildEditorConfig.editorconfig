@@ -50,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFdhbGxldFxUcmFuc2FjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Areas/UserPanel/Views/Wallet/ValidatePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFdhbGxldFxWYWxpZGF0ZVBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Areas/UserPanel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

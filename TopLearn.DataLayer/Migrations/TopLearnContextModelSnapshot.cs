@@ -127,7 +127,7 @@ namespace TopLearn.DataLayer.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<bool>("IsPaid")
+                    b.Property<bool>("IsSuccess")
                         .HasColumnType("bit");
 
                     b.Property<int>("TypeId")

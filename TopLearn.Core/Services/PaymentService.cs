@@ -1,4 +1,5 @@
 ﻿using Dto.Payment;
+using Dto.Response.Payment;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -32,18 +33,16 @@ namespace TopLearn.Core.Services
             return "";
         }
 
-        public async Task<int> ValidatePayment(int amount, string authority)
+        public async Task<Verification> ValidatePayment(int amount, string authority)
         {
             
             Payment payment = new Payment();
-            var verifiaction = await payment.Verification(new DtoVerification()
+            return await payment.Verification(new DtoVerification()
             {
                 MerchantId = Environment.GetEnvironmentVariable("ZARINPAL_MERCHANT"),
                 Authority = authority,
                 Amount = amount
             }, Payment.Mode.sandbox);
-
-            return verifiaction.Status;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dto.Response.Payment;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace TopLearn.Core.Services.Interfaces
     public interface IPaymentService
     {
         Task<string> PaymentRequest(int amount, int transactionId, string description, string email = "", string mobile = "");
-        Task<int> ValidatePayment(int amount, string authority);
+        Task<Verification> ValidatePayment(int amount, string authority);
     }
 }

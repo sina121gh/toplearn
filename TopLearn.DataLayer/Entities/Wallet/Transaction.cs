@@ -37,7 +37,7 @@ namespace TopLearn.DataLayer.Entities.Wallet
         public string? Description { get; set; }
 
         [Display(Name = "وضعیت پرداخت")]
-        public bool IsPaid { get; set; }
+        public bool IsSuccess { get; set; }
 
         [Display(Name = "تاریخ و ساعت")]
         public DateTime CreateDate { get; set; }

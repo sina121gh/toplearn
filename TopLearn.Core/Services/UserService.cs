@@ -219,12 +219,12 @@ namespace TopLearn.Core.Services
             int userId = GetUserIdByUserName(userName);
 
             var incomes = _context.Transactions
-                .Where(t => t.UserId == userId && t.TypeId == 1 && t.IsPaid)
+                .Where(t => t.UserId == userId && t.TypeId == 1 && t.IsSuccess)
                 .Select(t => t.Amount)
                 .ToList();
 
             var outcomes = _context.Transactions
-                .Where(t => t.UserId == userId && t.TypeId == 2 && t.IsPaid)
+                .Where(t => t.UserId == userId && t.TypeId == 2 && t.IsSuccess)
                 .Select(t => t.Amount)
                 .ToList();
 
@@ -251,7 +251,7 @@ namespace TopLearn.Core.Services
                 Amout = t.Amount,
                 Description = t.Description,
                 Date = t.CreateDate,
-                Status = t.IsPaid,
+                Status = t.IsSuccess,
             }).ToList();
         }
 
@@ -263,7 +263,7 @@ namespace TopLearn.Core.Services
                 Amount = amount,
                 CreateDate = DateTime.Now,
                 Description = description,
-                IsPaid = isSuccess,
+                IsSuccess = isSuccess,
                 TypeId = 1,
             };
 
