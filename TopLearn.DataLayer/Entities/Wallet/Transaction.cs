@@ -25,8 +25,8 @@ namespace TopLearn.DataLayer.Entities.Wallet
         public int TypeId { get; set; }
 
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [Display(Name = "کیف پول")]
-        public int WalletId { get; set; }
+        [Display(Name = "کاربر")]
+        public int UserId { get; set; }
 
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [Display(Name = "مبلغ")]
@@ -48,8 +48,8 @@ namespace TopLearn.DataLayer.Entities.Wallet
         [ForeignKey("TypeId")]
         public virtual TransactionType TransactionType { get; set; }
 
-        [ForeignKey("WalletId")]
-        public virtual Wallet Wallet { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User.User User { get; set; }
 
         #endregion
 

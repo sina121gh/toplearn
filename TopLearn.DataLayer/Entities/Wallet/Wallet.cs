@@ -32,7 +32,6 @@ namespace TopLearn.DataLayer.Entities.Wallet
 
         [ForeignKey("UserId")]
         public virtual User.User User { get; set; }
-        public virtual IEnumerable<Transaction> Transactions { get; set; }
 
         #endregion
     }

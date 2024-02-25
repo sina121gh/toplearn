@@ -56,6 +56,7 @@ namespace TopLearn.DataLayer.Entities.User
 
         public virtual IEnumerable<UserRole>? UserRoles { get; set; }
         public virtual Wallet.Wallet Wallet { get; set; }
+        public virtual IEnumerable<Transaction> Transactions { get; set; }
 
         #endregion
     }
