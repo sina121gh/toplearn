@@ -40,6 +40,7 @@ namespace TopLearn.Core.Services.Interfaces
         #region Wallet
 
         int GetWalletBalance(string userName);
+        IEnumerable<TransactionsListViewModel> GetTransactions(string userName);
 
         #endregion
     }

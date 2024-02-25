@@ -235,5 +235,18 @@ namespace TopLearn.Core.Services
             return _context.Users.Single(u => u.UserName == userName).Id;
         }
 
+        public IEnumerable<TransactionsListViewModel> GetTransactions(string userName)
+        {
+            int userId = GetUserIdByUserName(userName);
+            var transactions = _context.Transactions.Where(t => t.UserId == userId).ToList();
+            return transactions
+                .Select(t => new TransactionsListViewModel()
+                {
+                    Type = t.TypeId == 1 ? true : false,
+                    Amout = t.Amount,
+                    Date = t.CreateDate,
+                    Status = t.IsPaid
+                }).ToList();
+        }
     }
 }
