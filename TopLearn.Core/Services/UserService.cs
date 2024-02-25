@@ -242,7 +242,7 @@ namespace TopLearn.Core.Services
             var transactions = _context.Transactions
                 .OrderByDescending(t => t.CreateDate)
                 .Where(t => t.UserId == userId)
-                .ToList();            
+                .ToList();
 
             return transactions.Select(t =>
             new TransactionsListViewModel()
@@ -255,7 +255,7 @@ namespace TopLearn.Core.Services
             }).ToList();
         }
 
-        public bool ChargeWallet(string userName, int amount, string description, bool isSuccess = false)
+        public int ChargeWallet(string userName, int amount, string description, bool isSuccess = false)
         {
             Transaction transaction = new Transaction()
             {
@@ -269,20 +269,38 @@ namespace TopLearn.Core.Services
 
             try
             {
-                AddTransaction(transaction);
-                return true;
+                return AddTransaction(transaction);
             }
             catch (Exception)
             {
-                return false;
+                return 0;
             }
         }
 
-        public bool AddTransaction(Transaction transaction)
+        public int AddTransaction(Transaction transaction)
         {
             try
             {
                 _context.Transactions.Add(transaction);
+                _context.SaveChanges();
+                return transaction.Id;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public Transaction? GetTransactionById(int transactionId)
+        {
+            return _context.Transactions.Find(transactionId);
+        }
+
+        public bool UpdateTransaction(Transaction transaction)
+        {
+            try
+            {
+                _context.Transactions.Update(transaction);
                 _context.SaveChanges();
                 return true;
             }

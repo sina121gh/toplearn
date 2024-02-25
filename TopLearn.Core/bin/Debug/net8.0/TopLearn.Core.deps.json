@@ -14,7 +14,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.2",
-          "TopLearn.DataLayer": "1.0.0"
+          "TopLearn.DataLayer": "1.0.0",
+          "ZarinPal": "3.0.1"
         },
         "runtime": {
           "TopLearn.Core.dll": {}
@@ -2102,6 +2103,22 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "ZarinPal/3.0.1": {
+        "runtime": {
+          "lib/netcoreapp2.2/Dto.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netcoreapp2.2/Service.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netcoreapp2.2/ZarinPal.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "TopLearn.DataLayer/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.2",
@@ -3441,6 +3458,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ZarinPal/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1XPTvVdTa+ywa61JOK7TXVNqzHfwg/8bnMqKh9ISvHWk8HEhhrFXhuC/F5c/xDz9smay7254gD6T4WicgS+FeQ==",
+      "path": "zarinpal/3.0.1",
+      "hashPath": "zarinpal.3.0.1.nupkg.sha512"
     },
     "TopLearn.DataLayer/1.0.0": {
       "type": "project",

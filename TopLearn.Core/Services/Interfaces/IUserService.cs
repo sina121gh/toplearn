@@ -40,9 +40,11 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Wallet
 
-        bool ChargeWallet(string userName, int amount, string description, bool isSuccess = false);
-        bool AddTransaction(Transaction transaction);
+        int ChargeWallet(string userName, int amount, string description, bool isSuccess = false);
+        int AddTransaction(Transaction transaction);
         int GetWalletBalance(string userName);
+        Transaction? GetTransactionById(int transactionId);
+        bool UpdateTransaction(Transaction transaction);
         IEnumerable<TransactionsListViewModel> GetTransactions(string userName);
 
         #endregion

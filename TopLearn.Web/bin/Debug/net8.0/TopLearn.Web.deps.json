@@ -2935,7 +2935,8 @@
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
-          "TopLearn.DataLayer": "1.0.0"
+          "TopLearn.DataLayer": "1.0.0",
+          "ZarinPal": "3.0.1"
         },
         "runtime": {
           "TopLearn.Core.dll": {}

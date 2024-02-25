@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Sprache;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
+using TopLearn.DataLayer.Entities.Wallet;
+using Transaction = TopLearn.DataLayer.Entities.Wallet.Transaction;
 
 namespace TopLearn.Web.Areas.UserPanel.Controllers
 {
@@ -11,11 +14,13 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
     {
         private readonly TopLearnContext _context;
         private readonly IUserService _userService;
+        private readonly IPaymentService _paymentService;
 
-        public WalletController(TopLearnContext context, IUserService userService)
+        public WalletController(TopLearnContext context, IUserService userService, IPaymentService paymentService)
         {
             _context = context;
             _userService = userService;
+            _paymentService = paymentService;
         }
 
 
@@ -30,15 +35,45 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
 
         [HttpPost]
         [Route("UserPanel/ChargeWallet")]
-        public IActionResult ChargeWallet(ChargeWalletViewModel charge)
+        public async Task<IActionResult> ChargeWallet(ChargeWalletViewModel charge)
         {
             if (!ModelState.IsValid)
                 return View(charge);
 
             //ToDo : Online Payment
-            _userService.ChargeWallet(User.Identity.Name, charge.Amount, "شارژ حساب");
+            int walletId = _userService.ChargeWallet(User.Identity.Name, charge.Amount, "شارژ حساب");
 
-            return RedirectToAction("Transactions");
+            #region Online Payment
+
+            string authority = await _paymentService.PaymentRequest(charge.Amount, walletId, "شارژ حساب");
+
+            if (authority == "")
+                return NotFound();
+
+            return Redirect($"https://sandbox.zarinpal.com/pg/StartPay/{authority}");
+            #endregion
+        }
+
+        [Route("ValidatePayment/{transactionId}")]
+        public async Task<IActionResult> ValidatePayment(int transactionId)
+        {
+            if (HttpContext.Request.Query["Status"] != "" &&
+                HttpContext.Request.Query["Status"].ToString().ToLower() == "ok" &&
+                HttpContext.Request.Query["Authority"] != "")
+            {
+                string authority = HttpContext.Request.Query["Authority"].ToString();
+                Transaction? transaction = _userService.GetTransactionById(transactionId);
+                int status = await _paymentService.ValidatePayment(transaction.Amount, authority);
+
+                if (status == 100)
+                {
+                    transaction.IsPaid = true;
+                    _userService.UpdateTransaction(transaction);
+                    return Redirect("/UserPanel");
+                }
+            }
+
+            return BadRequest();
         }
     }
 }

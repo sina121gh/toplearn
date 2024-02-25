@@ -18,6 +18,7 @@ builder.Services.AddDbContext<TopLearnContext>(options =>
 #region IoC
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
+builder.Services.AddTransient<IPaymentService, PaymentService>();
 #endregion
 #region Authentication
 builder.Services.AddAuthentication(options =>
