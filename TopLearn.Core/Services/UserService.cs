@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using TopLearn.Core.Convertors;
 using TopLearn.Core.DTOs;
 using TopLearn.Core.Generator;
@@ -10,6 +11,7 @@ using TopLearn.Core.Security;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.User;
+using TopLearn.DataLayer.Entities.Wallet;
 
 namespace TopLearn.Core.Services
 {
@@ -97,7 +99,7 @@ namespace TopLearn.Core.Services
                 UserName = userName,
                 Email = user.Email,
                 RegisterDate = user.RegisterDate,
-                Wallet = 0,
+                Wallet = GetWalletBalance(userName),
             };
 
             return userInfo;
@@ -210,5 +212,28 @@ namespace TopLearn.Core.Services
         {
             return _context.Users.Single(u => u.UserName == userName).Password;
         }
+
+        public int GetWalletBalance(string userName)
+        {
+            int userId = GetUserIdByUserName(userName);
+
+            var incomes = _context.Transactions
+                .Where(t => t.UserId == userId && t.TypeId == 1)
+                .Select(t => t.Amount)
+                .ToList();
+
+            var outcomes = _context.Transactions
+                .Where(t => t.UserId == userId && t.TypeId == 2)
+                .Select(t => t.Amount)
+                .ToList();
+
+            return incomes.Sum() - outcomes.Sum();
+        }
+
+        public int GetUserIdByUserName(string userName)
+        {
+            return _context.Users.Single(u => u.UserName == userName).Id;
+        }
+
     }
 }

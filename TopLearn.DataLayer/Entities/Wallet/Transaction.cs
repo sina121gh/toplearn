@@ -30,7 +30,7 @@ namespace TopLearn.DataLayer.Entities.Wallet
 
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [Display(Name = "مبلغ")]
-        public uint Amount { get; set; }
+        public int Amount { get; set; }
 
         [Display(Name = "شرح")]
         [MaxLength(500, ErrorMessage = "فیلد {0} نمیتواند بیشتر از {1} کاراکتر باشد")]

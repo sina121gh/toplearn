@@ -25,7 +25,7 @@ namespace TopLearn.DataLayer.Entities.Wallet
 
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [Display(Name = "موجودی")]
-        public uint Balance { get; set; }
+        public int Balance { get; set; }
 
 
         #region Relations
