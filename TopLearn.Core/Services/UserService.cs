@@ -12,6 +12,7 @@ using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.User;
 using TopLearn.DataLayer.Entities.Wallet;
+using Transaction = TopLearn.DataLayer.Entities.Wallet.Transaction;
 
 namespace TopLearn.Core.Services
 {
@@ -137,7 +138,7 @@ namespace TopLearn.Core.Services
 
             if (user == null) return false;
 
-            if(profile.UserAvatar ? .Length > 0)
+            if (profile.UserAvatar?.Length > 0)
             {
                 string imagePath = "";
                 string currentAvatar = user.Avatar;
@@ -175,7 +176,7 @@ namespace TopLearn.Core.Services
             catch (Exception)
             {
                 return false;
-            }            
+            }
         }
 
         public bool ChangeUserSalt(string userName)
@@ -218,12 +219,12 @@ namespace TopLearn.Core.Services
             int userId = GetUserIdByUserName(userName);
 
             var incomes = _context.Transactions
-                .Where(t => t.UserId == userId && t.TypeId == 1)
+                .Where(t => t.UserId == userId && t.TypeId == 1 && t.IsPaid)
                 .Select(t => t.Amount)
                 .ToList();
 
             var outcomes = _context.Transactions
-                .Where(t => t.UserId == userId && t.TypeId == 2)
+                .Where(t => t.UserId == userId && t.TypeId == 2 && t.IsPaid)
                 .Select(t => t.Amount)
                 .ToList();
 
@@ -238,15 +239,57 @@ namespace TopLearn.Core.Services
         public IEnumerable<TransactionsListViewModel> GetTransactions(string userName)
         {
             int userId = GetUserIdByUserName(userName);
-            var transactions = _context.Transactions.Where(t => t.UserId == userId).ToList();
-            return transactions
-                .Select(t => new TransactionsListViewModel()
-                {
-                    Type = t.TypeId == 1 ? true : false,
-                    Amout = t.Amount,
-                    Date = t.CreateDate,
-                    Status = t.IsPaid
-                }).ToList();
+            var transactions = _context.Transactions
+                .OrderByDescending(t => t.CreateDate)
+                .Where(t => t.UserId == userId)
+                .ToList();            
+
+            return transactions.Select(t =>
+            new TransactionsListViewModel()
+            {
+                Type = t.TypeId == 1 ? true : false,
+                Amout = t.Amount,
+                Description = t.Description,
+                Date = t.CreateDate,
+                Status = t.IsPaid,
+            }).ToList();
+        }
+
+        public bool ChargeWallet(string userName, int amount, string description, bool isSuccess = false)
+        {
+            Transaction transaction = new Transaction()
+            {
+                UserId = GetUserIdByUserName(userName),
+                Amount = amount,
+                CreateDate = DateTime.Now,
+                Description = description,
+                IsPaid = isSuccess,
+                TypeId = 1,
+            };
+
+            try
+            {
+                AddTransaction(transaction);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool AddTransaction(Transaction transaction)
+        {
+            try
+            {
+                _context.Transactions.Add(transaction);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

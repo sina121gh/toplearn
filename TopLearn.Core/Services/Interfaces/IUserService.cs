@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopLearn.Core.DTOs;
 using TopLearn.DataLayer.Entities.User;
+using TopLearn.DataLayer.Entities.Wallet;
 
 namespace TopLearn.Core.Services.Interfaces
 {
@@ -39,6 +40,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Wallet
 
+        bool ChargeWallet(string userName, int amount, string description, bool isSuccess = false);
+        bool AddTransaction(Transaction transaction);
         int GetWalletBalance(string userName);
         IEnumerable<TransactionsListViewModel> GetTransactions(string userName);
 

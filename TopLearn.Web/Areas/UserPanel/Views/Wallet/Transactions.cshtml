@@ -1,0 +1,61 @@
+﻿@using TopLearn.Core.DTOs
+@using TopLearn.Core.Convertors
+@model IEnumerable<TransactionsListViewModel>
+@{
+    ViewData["Title"] = "کیف پول";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> کیف پول </li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+
+                <partial name="_SideBar"></partial>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <section class="user-account-content">
+                        <header><h1> کیف پول </h1></header>
+                        <div class="inner">
+                            <div class="account-information">
+                                <h3> لیست تراکنش ها </h3>
+                                <table class="table table-bordered table-hover table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>نوع تراکنش</th>
+                                            <th>مبلغ</th>
+                                            <th>شرح</th>
+                                            <th>تاریخ</th>
+                                            <th>وضعیت</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (TransactionsListViewModel transaction in Model)
+                                        {
+                                            <tr class="@(!transaction.Status ? "bg-warning" : transaction.Type ? "bg-success" : "bg-danger")">
+                                                <td>@(transaction.Type ? "واریز" : "برداشت")</td>
+                                                <td>@transaction.Amout.ToString("#,0")‌ تومان</td>
+                                                <td>@transaction.Description</td>
+                                                <td>@transaction.Date.ToShamsi()</td>
+                                                <td>@(transaction.Status ? "موفق" : "ناموفق")</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
