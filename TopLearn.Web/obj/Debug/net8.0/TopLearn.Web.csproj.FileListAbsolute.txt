@@ -950,3 +950,6 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\ne
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll

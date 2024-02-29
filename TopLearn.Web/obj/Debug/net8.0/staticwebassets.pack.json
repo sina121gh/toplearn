@@ -1,415 +1,415 @@
 {
   "Files": [
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap-rtl.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap-rtl.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap-rtl.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\dataTables\\dataTables.bootstrap.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\dataTables\\dataTables.bootstrap.css",
       "PackagePath": "staticwebassets\\Admin\\css\\plugins\\dataTables\\dataTables.bootstrap.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\morris\\morris-0.4.3.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\morris\\morris-0.4.3.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\plugins\\morris\\morris-0.4.3.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\social-buttons\\social-buttons.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\social-buttons\\social-buttons.css",
       "PackagePath": "staticwebassets\\Admin\\css\\plugins\\social-buttons\\social-buttons.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\timeline\\timeline.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\plugins\\timeline\\timeline.css",
       "PackagePath": "staticwebassets\\Admin\\css\\plugins\\timeline\\timeline.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\sb-admin.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\sb-admin.css",
       "PackagePath": "staticwebassets\\Admin\\css\\sb-admin.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\css\\font-awesome.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\css\\font-awesome.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\css\\font-awesome.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\css\\font-awesome.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\FontAwesome.otf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\bordered-pulled.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\bordered-pulled.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\bordered-pulled.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\core.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\core.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\core.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\fixed-width.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\fixed-width.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\fixed-width.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\font-awesome.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\font-awesome.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\font-awesome.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\icons.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\icons.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\icons.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\larger.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\larger.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\larger.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\list.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\list.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\list.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\mixins.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\mixins.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\mixins.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\path.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\path.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\path.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\rotated-flipped.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\rotated-flipped.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\rotated-flipped.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\spinning.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\spinning.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\spinning.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\stacked.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\stacked.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\stacked.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\variables.less",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\less\\variables.less",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\less\\variables.less"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_bordered-pulled.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_bordered-pulled.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_bordered-pulled.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_core.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_core.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_core.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_fixed-width.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_fixed-width.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_fixed-width.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_icons.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_icons.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_icons.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_larger.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_larger.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_larger.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_list.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_list.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_list.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_mixins.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_mixins.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_path.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_path.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_path.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_rotated-flipped.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_rotated-flipped.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_rotated-flipped.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_spinning.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_spinning.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_spinning.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_stacked.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_stacked.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_stacked.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_variables.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\_variables.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\font-awesome.scss",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\font-awesome\\scss\\font-awesome.scss",
       "PackagePath": "staticwebassets\\Admin\\font-awesome\\scss\\font-awesome.scss"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.svg",
       "PackagePath": "staticwebassets\\Admin\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\glyphicons-halflings-regular.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\bootstrap.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\Admin\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\bootstrap.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\dashboard-demo.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\dashboard-demo.js",
       "PackagePath": "staticwebassets\\Admin\\js\\demo\\dashboard-demo.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\flot-demo.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\flot-demo.js",
       "PackagePath": "staticwebassets\\Admin\\js\\demo\\flot-demo.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\morris-demo.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo\\morris-demo.js",
       "PackagePath": "staticwebassets\\Admin\\js\\demo\\morris-demo.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\jquery-1.10.2.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\jquery-1.10.2.js",
       "PackagePath": "staticwebassets\\Admin\\js\\jquery-1.10.2.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\dataTables\\dataTables.bootstrap.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\dataTables\\dataTables.bootstrap.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\dataTables\\dataTables.bootstrap.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\dataTables\\jquery.dataTables.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\dataTables\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\dataTables\\jquery.dataTables.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\excanvas.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\excanvas.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\flot\\excanvas.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\flot\\jquery.flot.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.pie.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.pie.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\flot\\jquery.flot.pie.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.resize.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.resize.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\flot\\jquery.flot.resize.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.tooltip.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\flot\\jquery.flot.tooltip.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\flot\\jquery.flot.tooltip.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\metisMenu\\jquery.metisMenu.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\metisMenu\\jquery.metisMenu.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\metisMenu\\jquery.metisMenu.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\morris\\morris.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\morris\\morris.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\morris\\morris.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\morris\\raphael-2.1.0.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\morris\\raphael-2.1.0.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\morris\\raphael-2.1.0.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\sb-admin.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\sb-admin.js",
       "PackagePath": "staticwebassets\\Admin\\js\\sb-admin.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
       "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap-rtl.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap-rtl.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-rtl.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.eot",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.woff",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.eot",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.svg",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff2",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
       "PackagePath": "staticwebassets\\css\\material-design-iconic-font.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png",
       "PackagePath": "staticwebassets\\images\\EmailActivation.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\captcha.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\captcha.jpg",
       "PackagePath": "staticwebassets\\images\\captcha.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pattern.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pattern.png",
       "PackagePath": "staticwebassets\\images\\pattern.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\1.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\1.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\1.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\2.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\2.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\2.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\3.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\3.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\3.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\4.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\4.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\4.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\5.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\5.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\5.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\6.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\6.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\6.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\7.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\7.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\7.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\8.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\8.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\8.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\avatar.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\avatar.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\avatar.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\big-thumb.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\big-thumb.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\big-thumb.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad-1.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad-1.png",
       "PackagePath": "staticwebassets\\images\\pic\\namad-1.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad.png",
       "PackagePath": "staticwebassets\\images\\pic\\namad.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\slide.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\slide.jpg",
       "PackagePath": "staticwebassets\\images\\slide.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\modernizr-custom.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\modernizr-custom.js",
       "PackagePath": "staticwebassets\\js\\modernizr-custom.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.css",
       "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
       "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.js"
     },
     {

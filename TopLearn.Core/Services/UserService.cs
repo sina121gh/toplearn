@@ -309,5 +309,29 @@ namespace TopLearn.Core.Services
                 return false;
             }
         }
+
+        public UsersForAdminViewModel GetUsers(int pageId = 1, string filterEmail = "", string filterUserName = "")
+        {
+            IQueryable<User> result = _context.Users;
+
+            if (!string.IsNullOrEmpty(filterEmail))
+                result.Where(u => u.Email.Contains(filterEmail));
+
+            if (!string.IsNullOrEmpty(filterUserName))
+                result.Where(u => u.UserName.Contains(filterUserName));
+
+            // Show Item In Page
+            int take = 20;
+            int skip = (pageId - 1) * take;
+
+            UsersForAdminViewModel viewModel = new UsersForAdminViewModel()
+            {
+                CurrentPage = pageId,
+                PageCount = result.Count() / take,
+                Users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList(),
+            };
+
+            return viewModel;
+        }
     }
 }

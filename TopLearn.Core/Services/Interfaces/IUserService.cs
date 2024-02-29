@@ -48,5 +48,11 @@ namespace TopLearn.Core.Services.Interfaces
         IEnumerable<TransactionsListViewModel> GetTransactions(string userName);
 
         #endregion
+
+        #region Admin Panel
+
+        UsersForAdminViewModel GetUsers(int pageId = 1, string filterEmail = "", string filterUserName = "");
+
+        #endregion
     }
 }
