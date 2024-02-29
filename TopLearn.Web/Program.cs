@@ -46,6 +46,7 @@ app.MapControllerRoute(
     );
 
 app.MapDefaultControllerRoute();
+app.MapRazorPages();
 #endregion
 
 app.UseAuthentication();
