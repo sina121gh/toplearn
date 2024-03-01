@@ -17,12 +17,29 @@ namespace TopLearn.Web.Pages.Admin.Users
 
         #endregion
 
-
+        [BindProperty]
         public UsersForAdminViewModel UsersViewModel { get; set; }
 
-        public void OnGet()
+        //[BindProperty]
+        //public string FilterByUserName { get; set; }
+
+        //[BindProperty]
+        //public string FilterByEmail { get; set; }
+
+        //[BindProperty]
+        //public int Take { get; set; }
+
+        public void OnGet(int take = 10, int pageId = 1, string userName = "", string email = "")
         {
-            UsersViewModel = _userService.GetUsers();
+            //if (string.IsNullOrEmpty(userName))
+            //    FilterByUserName = userName;
+
+            //if (string.IsNullOrEmpty(email))
+            //    FilterByEmail = email;
+
+            //Take = take;
+
+            UsersViewModel = _userService.GetUsers(take ,pageId,email, userName);
         }
     }
 }

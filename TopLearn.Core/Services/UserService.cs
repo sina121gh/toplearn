@@ -310,26 +310,27 @@ namespace TopLearn.Core.Services
             }
         }
 
-        public UsersForAdminViewModel GetUsers(int pageId = 1, string filterEmail = "", string filterUserName = "")
+        public UsersForAdminViewModel GetUsers(int take = 10, int pageId = 1, string filterEmail = "", string filterUserName = "")
         {
             IQueryable<User> result = _context.Users;
 
             if (!string.IsNullOrEmpty(filterEmail))
-                result.Where(u => u.Email.Contains(filterEmail));
+                result = result.Where(u => u.Email.Contains(filterEmail));
 
             if (!string.IsNullOrEmpty(filterUserName))
-                result.Where(u => u.UserName.Contains(filterUserName));
+                result = result.Where(u => u.UserName.Contains(filterUserName));
 
             // Show Item In Page
-            int take = 20;
             int skip = (pageId - 1) * take;
 
             UsersForAdminViewModel viewModel = new UsersForAdminViewModel()
             {
                 CurrentPage = pageId,
-                PageCount = result.Count() / take,
+                PageCount = (int)Math.Ceiling(result.Count() / (double) take),
                 Users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList(),
             };
+            viewModel.HasNextPage = viewModel.CurrentPage < viewModel.PageCount;
+            viewModel.HasPreviousPage = viewModel.CurrentPage > 1;
 
             return viewModel;
         }

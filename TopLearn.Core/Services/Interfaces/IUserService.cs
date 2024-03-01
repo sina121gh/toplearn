@@ -51,7 +51,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Admin Panel
 
-        UsersForAdminViewModel GetUsers(int pageId = 1, string filterEmail = "", string filterUserName = "");
+        UsersForAdminViewModel GetUsers(int take = 10, int pageId = 1, string filterEmail = "", string filterUserName = "");
 
         #endregion
     }
