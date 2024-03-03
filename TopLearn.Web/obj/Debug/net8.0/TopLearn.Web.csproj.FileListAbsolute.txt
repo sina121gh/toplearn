@@ -676,6 +676,9 @@ E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Mic
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.MvcApplicationPartsAssemblyInfo.cs
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
+E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\appsettings.Development.json
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\appsettings.json
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\TopLearn.Web.staticwebassets.runtime.json
@@ -769,6 +772,9 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\ne
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\System.Security.Permissions.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -947,9 +953,3 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\ne
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.pdb
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.genruntimeconfig.cache
 E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\obj\Debug\net8.0\ref\TopLearn.Web.dll
-E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
-E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
-E:\Documents\VS\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll
-E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Dto.dll
-E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\Service.dll
-E:\Documents\VS\Toplean\Asp.Net Core\Advanced\TopLearn\TopLearn.Web\bin\Debug\net8.0\ZarinPal.dll

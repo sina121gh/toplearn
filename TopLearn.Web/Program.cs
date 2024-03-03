@@ -10,17 +10,25 @@ builder.Services.AddMvc();
 DotNetEnv.Env.Load();
 
 #region Database Context
+
 builder.Services.AddDbContext<TopLearnContext>(options =>
 {
     options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION_STRING"));
 });
+
 #endregion
+
 #region IoC
+
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
 builder.Services.AddTransient<IPaymentService, PaymentService>();
+builder.Services.AddTransient<IPermisionService, PermisionService>();
+
 #endregion
+
 #region Authentication
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -32,6 +40,7 @@ builder.Services.AddAuthentication(options =>
     options.LogoutPath = "/Logout";
     options.ExpireTimeSpan = TimeSpan.FromDays(30);
 });
+
 #endregion
 
 var app = builder.Build();

@@ -1,0 +1,118 @@
+﻿@page "/admin/create-user/"
+@model TopLearn.Web.Pages.Admin.Users.CreateUserModel
+@{
+    ViewData["Title"] = "افزودن کاربر";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">افزودن کاربر</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات کاربر</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label>نام کاربری</label>
+                                <input type="text" asp-for="CreateUserViewModel.UserName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>آدرس ایمیل</label>
+                                <input type="email" asp-for="CreateUserViewModel.Email" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>کلمه عبور</label>
+                                <input type="text" asp-for="CreateUserViewModel.Password" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>نقش کاربر</label>
+                                @foreach (Role role in Model.Roles)
+                                {
+                                    <div class="form-check">
+
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input"
+                                                   value="@role.Id" name="SelectedRolesIds">
+                                            @role.Title
+                                        </label>
+
+                                    </div>
+                                }
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-success">افزودن</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">تصویر پروفایل</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <img id="userAvatar" class="img-fluid img-thumbnail" src="/UsersAvatars/DefaultAvatar.png"/>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input asp-for="CreateUserViewModel.UserAvater" type="file" class="custom-file-input" id="avatarInput">
+                                        <label class="custom-file-label">انتخاب تصویر</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>                    
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+
+    @* preview uploaded image *@
+    <script>
+
+        avatarInput.onchange = evt => {
+            const [file] = avatarInput.files
+            if (file) {
+                userAvatar.src = URL.createObjectURL(file)
+            }
+        }
+
+    </script>
+
+}
