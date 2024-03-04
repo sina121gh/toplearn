@@ -12,6 +12,7 @@ using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.User;
 using TopLearn.DataLayer.Entities.Wallet;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using Transaction = TopLearn.DataLayer.Entities.Wallet.Transaction;
 
 namespace TopLearn.Core.Services
@@ -326,13 +327,55 @@ namespace TopLearn.Core.Services
             UsersForAdminViewModel viewModel = new UsersForAdminViewModel()
             {
                 CurrentPage = pageId,
-                PageCount = (int)Math.Ceiling(result.Count() / (double) take),
+                PageCount = (int)Math.Ceiling(result.Count() / (double)take),
                 Users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList(),
             };
             viewModel.HasNextPage = viewModel.CurrentPage < viewModel.PageCount;
             viewModel.HasPreviousPage = viewModel.CurrentPage > 1;
 
             return viewModel;
+        }
+
+        public int AddUserFromAdmin(CreateUserViewModel user)
+        {
+            User newUser = new User()
+            {
+                Email = user.Email,
+                UserName = user.UserName,
+                Salt = PasswordHelper.GenerateSalt(),
+                IsActive = user.IsActive,
+                RegisterDate = DateTime.Now,
+                ActiveCode = MyGenerator.GenerateCode(),
+            };
+
+            newUser.Password = PasswordHelper.HashPassword(user.Password, newUser.Salt);
+
+            #region Save User Avatar
+
+            if (user.UserAvater != null)
+            {
+                string avatar = MyGenerator.GenerateCode() + Path.GetExtension(user.UserAvater.FileName);
+                string imagePath = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot",
+                        "UsersAvatars",
+                        avatar);
+                using (FileStream stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    user.UserAvater.CopyTo(stream);
+                }
+
+                newUser.Avatar = avatar;
+            }
+            else
+            {
+                newUser.Avatar = "DefaultAvatar.png";
+            }
+
+            #endregion
+
+            return AddUser(newUser);
+
+            
         }
     }
 }

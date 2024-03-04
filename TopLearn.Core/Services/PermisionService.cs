@@ -23,6 +23,31 @@ namespace TopLearn.Core.Services
 
         #endregion
 
+        public bool AddRolesToUser(IEnumerable<int> rolesIds, int userId)
+        {
+            foreach (int roleId in rolesIds)
+            {
+                _context.UserRoles.Add(new UserRole()
+                {
+                    RoleId = roleId,
+                    UserId = userId,
+                });
+            }
+
+            try
+            {
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+        
+
         public IEnumerable<Role> GetRoles()
         {
             return _context.Roles.ToList();

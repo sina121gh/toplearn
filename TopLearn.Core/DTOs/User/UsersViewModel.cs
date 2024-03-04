@@ -39,6 +39,10 @@ namespace TopLearn.Core.DTOs
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
         public string? Password { get; set; }
 
+
+        [Display(Name = "فعال بودن حساب کاربری")]
+        public bool IsActive { get; set; }
+
         public IFormFile? UserAvater { get; set; }
 
         // public IEnumerable<int>? SelectedRolesIds { get; set; }

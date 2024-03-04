@@ -12,6 +12,7 @@ namespace TopLearn.Core.Services.Interfaces
         #region Roles
 
         IEnumerable<Role> GetRoles();
+        bool AddRolesToUser(IEnumerable<int> rolesIds, int userId);
 
         #endregion
     }

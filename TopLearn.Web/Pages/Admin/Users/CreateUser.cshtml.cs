@@ -31,7 +31,22 @@ namespace TopLearn.Web.Pages.Admin.Users
 
         public IActionResult OnPost(IEnumerable<int> SelectedRolesIds)
         {
-            return Page();
+            if (!ModelState.IsValid)
+                return Page();
+
+            #region Add Roles
+
+            int userId = _userService.AddUserFromAdmin(CreateUserViewModel);
+
+            #endregion
+
+            #region Add Roles
+
+            _permisionService.AddRolesToUser(SelectedRolesIds, userId);
+
+            #endregion
+
+            return Redirect("/admin/users-list/");
         }
     }
 }
