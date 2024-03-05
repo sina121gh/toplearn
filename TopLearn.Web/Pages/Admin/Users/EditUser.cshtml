@@ -1,0 +1,139 @@
+﻿@page "/admin/edit-user/{userId}/"
+@inject IPermisionService _permisionService;
+@model TopLearn.Web.Pages.Admin.Users.EditUserModel
+@{
+    IEnumerable<Role> roles = _permisionService.GetRoles();
+    ViewData["Title"] = "افزودن کاربر";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">ویرایش کاربر</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات کاربر</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <input asp-for="EditUserViewModel.UserId" class="hide" />
+                            <input asp-for="EditUserViewModel.CurrentAvatar" class="hide" />
+
+                            <div class="form-group">
+                                <label>نام کاربری</label>
+                                <input type="text" asp-for="EditUserViewModel.UserName" class="form-control">
+                                <span class="text-danger" asp-validation-for="EditUserViewModel.UserName"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>آدرس ایمیل</label>
+                                <input type="email" asp-for="EditUserViewModel.Email" class="form-control">
+                                <span class="text-danger" asp-validation-for="EditUserViewModel.Email"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>کلمه عبور</label>
+                                <input type="text" asp-for="EditUserViewModel.Password" class="form-control">
+                                <span class="text-danger" asp-validation-for="EditUserViewModel.Password"></span>
+                                <p class="help-block text-info">
+                                    درصورت وارد کردن کلمه عبور ، کلمه عبور کاربر تغییر خواهد کرد
+                                </p>
+                            </div>
+
+                            <div class="form-check mb-3">
+
+                                <label class="form-check-label">
+                                    <input asp-for="EditUserViewModel.IsActive" type="checkbox" class="form-check-input">
+                                    @Html.DisplayNameFor(Model => Model.EditUserViewModel.IsActive)
+                                </label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>نقش کاربر</label>
+                                @foreach (Role role in roles)
+                                {
+                                    <div class="form-check">
+
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input"
+                                                   value="@role.Id" name="SelectedRolesIds"
+                                            @(_permisionService.HasUserThisRole(Model.EditUserViewModel.UserId, role.Id) ? "checked" : "")>
+                                            @role.Title
+                                        </label>
+
+                                    </div>
+                                }
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">ویرایش</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">تصویر پروفایل</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <img id="userAvatar" class="img-fluid img-thumbnail" src="/UsersAvatars/@Model.EditUserViewModel.CurrentAvatar" />
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input asp-for="EditUserViewModel.UserAvater" type="file" class="custom-file-input" id="avatarInput">
+                                        <label class="custom-file-label">انتخاب تصویر</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+
+    @* preview uploaded image *@
+    <script>
+
+        avatarInput.onchange = evt => {
+            const [file] = avatarInput.files
+            if (file) {
+                userAvatar.src = URL.createObjectURL(file)
+            }
+        }
+
+    </script>
+
+}

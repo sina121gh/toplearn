@@ -1,6 +1,8 @@
 ﻿@page "/admin/create-user/"
 @model TopLearn.Web.Pages.Admin.Users.CreateUserModel
+@inject IPermisionService _permisionService
 @{
+    IEnumerable<Role> roles = _permisionService.GetRoles();
     ViewData["Title"] = "افزودن کاربر";
 }
 
@@ -31,16 +33,19 @@
                             <div class="form-group">
                                 <label>نام کاربری</label>
                                 <input type="text" asp-for="CreateUserViewModel.UserName" class="form-control">
+                                <span class="text-danger" asp-validation-for="CreateUserViewModel.UserName"></span>
                             </div>
 
                             <div class="form-group">
                                 <label>آدرس ایمیل</label>
                                 <input type="email" asp-for="CreateUserViewModel.Email" class="form-control">
+                                <span class="text-danger" asp-validation-for="CreateUserViewModel.Email"></span>
                             </div>
 
                             <div class="form-group">
                                 <label>کلمه عبور</label>
                                 <input type="text" asp-for="CreateUserViewModel.Password" class="form-control">
+                                <span class="text-danger" asp-validation-for="CreateUserViewModel.Password"></span>
                             </div>
 
                             <div class="form-check mb-3">
@@ -54,7 +59,7 @@
 
                             <div class="form-group">
                                 <label>نقش کاربر</label>
-                                @foreach (Role role in Model.Roles)
+                                @foreach (Role role in roles)
                                 {
                                     <div class="form-check">
 

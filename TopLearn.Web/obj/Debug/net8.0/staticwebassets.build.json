@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BGbvjiHuwvbGOa6zdck9eecuO1qzjFczk7LA3iqirV8=",
+  "Hash": "rCjVqJKp1wf9KjDAw7c4kYeLvtKUiZw/C54WmBbnCCE=",
   "Source": "TopLearn.Web",
   "BasePath": "_content/TopLearn.Web",
   "Mode": "Default",
@@ -5639,6 +5639,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\noUiSlider\\nouislider.min.js"
+    },
+    {
+      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg",
+      "SourceId": "TopLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\",
+      "BasePath": "_content/TopLearn.Web",
+      "RelativePath": "UsersAvatars/28c511bc1f4a41e786da591f12a6329f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg"
     },
     {
       "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",

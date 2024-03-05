@@ -1013,6 +1013,10 @@
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg",
+      "PackagePath": "staticwebassets\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
       "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
     },

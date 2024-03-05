@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,18 @@ namespace TopLearn.Core.Services
 {
     public class UserService : IUserService
     {
-        private readonly TopLearnContext _context;
+        #region Dependency Injection
 
-        public UserService(TopLearnContext context)
+        private readonly TopLearnContext _context;
+        private readonly IFileService _fileService;
+
+        public UserService(TopLearnContext context, IFileService fileService)
         {
             _context = context;
+            _fileService = fileService;
         }
+
+        #endregion
 
         public int AddUser(User user)
         {
@@ -141,29 +148,8 @@ namespace TopLearn.Core.Services
 
             if (profile.UserAvatar?.Length > 0)
             {
-                string imagePath = "";
-                string currentAvatar = user.Avatar;
-                if (currentAvatar != "DefaultAvatar.png")
-                {
-                    imagePath = Path.Combine(Directory.GetCurrentDirectory(),
-                        "wwwroot",
-                        "UsersAvatars",
-                        currentAvatar);
-                    if (File.Exists(imagePath))
-                        File.Delete(imagePath);
-                }
-
-                string newAvatar = MyGenerator.GenerateCode() + Path.GetExtension(profile.UserAvatar.FileName);
-                imagePath = Path.Combine(Directory.GetCurrentDirectory(),
-                        "wwwroot",
-                        "UsersAvatars",
-                        newAvatar);
-                using (FileStream stream = new FileStream(imagePath, FileMode.Create))
-                {
-                    profile.UserAvatar.CopyTo(stream);
-                }
-
-                user.Avatar = newAvatar;
+                _fileService.DeleteAvatar(user.Avatar);
+                user.Avatar = _fileService.SaveAvatar(profile.UserAvatar);
             }
 
             user.UserName = profile.UserName;
@@ -354,17 +340,7 @@ namespace TopLearn.Core.Services
 
             if (user.UserAvater != null)
             {
-                string avatar = MyGenerator.GenerateCode() + Path.GetExtension(user.UserAvater.FileName);
-                string imagePath = Path.Combine(Directory.GetCurrentDirectory(),
-                        "wwwroot",
-                        "UsersAvatars",
-                        avatar);
-                using (FileStream stream = new FileStream(imagePath, FileMode.Create))
-                {
-                    user.UserAvater.CopyTo(stream);
-                }
-
-                newUser.Avatar = avatar;
+                newUser.Avatar = _fileService.SaveAvatar(user.UserAvater);
             }
             else
             {
@@ -376,6 +352,52 @@ namespace TopLearn.Core.Services
             return AddUser(newUser);
 
             
+        }
+
+        public EditUserViewModel GetUserForEdit(int userId)
+        {
+            return _context.Users.Where(u => u.Id == userId)
+                .Select(u => new EditUserViewModel()
+                {
+                    UserId = u.Id,
+                    Email = u.Email,
+                    UserName = u.UserName,
+                    CurrentAvatar = u.Avatar,
+                    IsActive = u.IsActive,
+                    UserRolesIds = u.UserRoles.Select(r => r.RoleId).ToList(),
+                }).Single();
+        }
+
+        public User? GetUserById(int userId)
+        {
+            return _context.Users.Find(userId);
+        }
+
+        public bool EditUserFromAdmin(EditUserViewModel editUser)
+        {
+            User user = GetUserById(editUser.UserId);
+            user.UserName = editUser.UserName;
+            user.Email = editUser.Email;
+            user.IsActive = editUser.IsActive;
+
+            if (!string.IsNullOrEmpty(editUser.Password))
+                user.Password = PasswordHelper.HashPassword(editUser.Password, user.Salt);
+
+            if (editUser.UserAvater ? .Length > 0)
+            {
+                _fileService.DeleteAvatar(user.Avatar);
+                user.Avatar = _fileService.SaveAvatar(editUser.UserAvater);
+            }
+
+            try
+            {
+                UpdateUser(user);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

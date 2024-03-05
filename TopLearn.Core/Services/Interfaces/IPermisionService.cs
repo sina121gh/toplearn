@@ -12,7 +12,11 @@ namespace TopLearn.Core.Services.Interfaces
         #region Roles
 
         IEnumerable<Role> GetRoles();
+        IEnumerable<Role> GetUserRoles(int userId);
         bool AddRolesToUser(IEnumerable<int> rolesIds, int userId);
+        bool HasUserThisRole(int userId, int roleId);
+        bool EditUserRoles(int userId, IEnumerable<int> rolesIds);
+        bool DeleteUserRoles(int userId);
 
         #endregion
     }

@@ -76,10 +76,10 @@
                                         <td>@(user.IsActive ? "فعال" : "غیر فعال")</td>
                                         <td>@user.RegisterDate.ToShamsi()</td>
                                         <td>
-                                            <a href="#" class="btn btn-primary btn-sm">
+                                            <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
-                                            <a href="#" class="btn btn-danger btn-sm">
+                                            <a href="/admin/delete-user/@user.Id/" class="btn btn-danger btn-sm">
                                                 حذف
                                             </a>
                                         </td>

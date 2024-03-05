@@ -22,11 +22,8 @@ namespace TopLearn.Web.Pages.Admin.Users
         [BindProperty]
         public CreateUserViewModel? CreateUserViewModel { get; set; }
 
-        public IEnumerable<Role> Roles { get; set; }
-
         public void OnGet()
         {
-            Roles = _permisionService.GetRoles();
         }
 
         public IActionResult OnPost(IEnumerable<int> SelectedRolesIds)
