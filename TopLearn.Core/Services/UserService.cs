@@ -399,5 +399,45 @@ namespace TopLearn.Core.Services
                 return false;
             }
         }
+
+        public UsersForAdminViewModel GetDeletedUsers(int take = 10, int pageId = 1, string filterEmail = "", string filterUserName = "")
+        {
+            IQueryable<User> result = _context.Users.IgnoreQueryFilters().Where(u => u.IsDeleted);
+
+            if (!string.IsNullOrEmpty(filterEmail))
+                result = result.Where(u => u.Email.Contains(filterEmail));
+
+            if (!string.IsNullOrEmpty(filterUserName))
+                result = result.Where(u => u.UserName.Contains(filterUserName));
+
+            // Show Item In Page
+            int skip = (pageId - 1) * take;
+
+            UsersForAdminViewModel viewModel = new UsersForAdminViewModel()
+            {
+                CurrentPage = pageId,
+                PageCount = (int)Math.Ceiling(result.Count() / (double)take),
+                Users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList(),
+            };
+            viewModel.HasNextPage = viewModel.CurrentPage < viewModel.PageCount;
+            viewModel.HasPreviousPage = viewModel.CurrentPage > 1;
+
+            return viewModel;
+        }
+
+        public bool DeleteUser(int userId)
+        {
+            User user = GetUserById(userId);
+            user.IsDeleted = true;
+            try
+            {
+                UpdateUser(user);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

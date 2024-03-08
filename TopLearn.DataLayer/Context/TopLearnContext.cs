@@ -33,10 +33,19 @@ namespace TopLearn.DataLayer.Context
         #endregion
 
 
-        #region Seed Date
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region Query Filter
+
+            modelBuilder.Entity<User>()
+                .HasQueryFilter(u => !u.IsDeleted);
+
+            #endregion
+
+            #region Seed Data
+
             modelBuilder.Entity<TransactionType>().HasData(
                 new TransactionType()
                 {
@@ -51,9 +60,10 @@ namespace TopLearn.DataLayer.Context
                 }
                 );
 
+            #endregion
+
             base.OnModelCreating(modelBuilder);
         }
 
-        #endregion
     }
 }

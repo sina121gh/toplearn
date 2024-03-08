@@ -1,5 +1,6 @@
-﻿@page "/admin/users-list/"
-@model TopLearn.Web.Pages.Admin.Users.IndexModel
+﻿@page "/admin/users/"
+@model TopLearn.Web.Pages.Admin.Users.UsersListModel
+@inject IUserService _userService
 @{
     ViewData["Title"] = "لیست کاربران";
 }
@@ -73,13 +74,13 @@
                                     <tr>
                                         <td>@user.UserName</td>
                                         <td>@user.Email</td>
-                                        <td>@(user.IsActive ? "فعال" : "غیر فعال")</td>
+                                        <td><span class="btn-sm @(user.IsActive ? "btn-success" : "btn-warning")">@(user.IsActive ? "فعال" : "غیر فعال")</span></td>
                                         <td>@user.RegisterDate.ToShamsi()</td>
                                         <td>
                                             <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
-                                            <a href="/admin/delete-user/@user.Id/" class="btn btn-danger btn-sm">
+                                            <a onclick="showSwal(@user.Id)" class="btn btn-danger btn-sm">
                                                 حذف
                                             </a>
                                         </td>
@@ -122,3 +123,35 @@
         <!-- /.card-body -->
     </div>
 </section>
+
+@section Scripts{
+
+    <script>
+
+        const deleteBtn = document.getElementById("deleteButton");
+
+        const showSwal = (id) => {
+            Swal.fire({
+                title: `آیا از حذف ${id} مطمئن هستید؟`,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'لغو',
+                confirmButtonColor: '#dc3545',
+                cancelButtonColor: '#e0a800',
+                focusConfirm: false,
+                // customClass: {
+                //     confirmButton: 'btn btn-danger',
+                //     cancelButton: 'btn btn-warning mx-2',
+                // },
+                // buttonsStyling: false,
+            }).then(result => {
+                if (result.isConfirmed) {
+                    
+                }
+            });
+        }
+
+    </script>
+
+}

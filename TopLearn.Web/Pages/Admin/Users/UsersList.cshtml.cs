@@ -4,13 +4,13 @@ using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
-    public class IndexModel : PageModel
+    public class UsersListModel : PageModel
     {
         #region Dependency Injection
 
         private readonly IUserService _userService;
 
-        public IndexModel(IUserService userService)
+        public UsersListModel(IUserService userService)
         {
             _userService = userService;
         }

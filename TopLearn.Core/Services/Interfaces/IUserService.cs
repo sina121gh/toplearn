@@ -17,6 +17,7 @@ namespace TopLearn.Core.Services.Interfaces
         bool IsExistEmail(string email);
         bool ActiveAccount(string activeCode);
         bool UpdateUser(User user);
+        bool DeleteUser(int userId);
         int AddUser(User user);
         int GetUserIdByUserName(string userName);
         User? GetUserByEmail(string email);
@@ -53,6 +54,7 @@ namespace TopLearn.Core.Services.Interfaces
         #region Admin Panel
 
         UsersForAdminViewModel GetUsers(int take = 10, int pageId = 1, string filterEmail = "", string filterUserName = "");
+        UsersForAdminViewModel GetDeletedUsers(int take = 10, int pageId = 1, string filterEmail = "", string filterUserName = "");
         EditUserViewModel GetUserForEdit(int userId);
         int AddUserFromAdmin(CreateUserViewModel user);
         bool EditUserFromAdmin(EditUserViewModel editUser);
