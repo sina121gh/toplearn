@@ -201,7 +201,7 @@ namespace TopLearn.Core.Services
             return _context.Users.Single(u => u.UserName == userName).Password;
         }
 
-        public int GetWalletBalance(string userName)
+        public int CalculateWalletBalance(string userName)
         {
             int userId = GetUserIdByUserName(userName);
 
@@ -351,7 +351,7 @@ namespace TopLearn.Core.Services
 
             return AddUser(newUser);
 
-            
+
         }
 
         public EditUserViewModel GetUserForEdit(int userId)
@@ -383,7 +383,7 @@ namespace TopLearn.Core.Services
             if (!string.IsNullOrEmpty(editUser.Password))
                 user.Password = PasswordHelper.HashPassword(editUser.Password, user.Salt);
 
-            if (editUser.UserAvater ? .Length > 0)
+            if (editUser.UserAvater?.Length > 0)
             {
                 _fileService.DeleteAvatar(user.Avatar);
                 user.Avatar = _fileService.SaveAvatar(editUser.UserAvater);
@@ -438,6 +438,72 @@ namespace TopLearn.Core.Services
             {
                 return false;
             }
+        }
+
+        public bool UpdateWalletBalance(Transaction transaction)
+        {
+            Wallet wallet = GetWalletByUserId(transaction.UserId);
+
+            if (transaction.TypeId == 1)
+            {
+                wallet.Balance += transaction.Amount;
+                wallet.UpdateDate = DateTime.Now;
+            }
+                
+
+            else if (transaction.TypeId == 2)
+                if (wallet.Balance >= transaction.Amount)
+                {
+                    wallet.Balance -= transaction.Amount;
+                    wallet.UpdateDate = DateTime.Now;
+                }
+                    
+
+            return UpdateWallet(wallet);
+        }
+
+        public Wallet GetWalletByUserId(int userId)
+        {
+            return _context.Wallets.SingleOrDefault(w => w.UserId == userId);
+        }
+
+        public bool UpdateWallet(Wallet wallet)
+        {
+            try
+            {
+                _context.Wallets.Update(wallet);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public int GetWalletBalance(string userName)
+        {
+            int userId = GetUserIdByUserName(userName);
+
+            return _context.Wallets.SingleOrDefault(w => w.UserId == userId).Balance;
+        }
+
+        public bool CreateWallet(int userId)
+        {
+            Wallet wallet = new Wallet()
+            {
+                UserId = userId,
+                Balance = 0,
+                UpdateDate = DateTime.Now,
+            };
+
+            return AddWallet(wallet);
+        }
+
+        public bool AddWallet(Wallet wallet)
+        {
+            _context.Add(wallet);
+            return _context.SaveChanges() > 0 ? true : false;
         }
     }
 }

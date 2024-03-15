@@ -35,10 +35,13 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
                 return View(profile);
 
             User user = _userService.GetUserByUserName(User.Identity.Name);
+
+            #region Data Duplication Check
+
             string currentUserName = user.UserName;
             string currentEmail = user.Email;
 
-            #region Data Duplication Check
+            
             if (profile.UserName != currentUserName)
                 if (_userService.IsExistUserName(profile.UserName))
                 {

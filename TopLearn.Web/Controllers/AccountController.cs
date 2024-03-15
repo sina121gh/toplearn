@@ -59,7 +59,10 @@ namespace TopLearn.Web.Controllers
                 Avatar = "DefaultAvatar.png",
             };
 
-            _userService.AddUser(user);
+            int userId = _userService.AddUser(user);
+
+            if (!_userService.CreateWallet(userId))
+                return BadRequest();
 
             #region Send Activation Email
 
@@ -70,6 +73,7 @@ namespace TopLearn.Web.Controllers
 
             return View("SuccessRegister", user);
         }
+
         #endregion
 
         #region Login

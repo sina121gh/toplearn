@@ -37,7 +37,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.User", b =>
@@ -86,7 +86,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserRole", b =>
@@ -109,7 +109,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRoles");
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.Transaction", b =>
@@ -145,7 +145,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transactions", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.TransactionType", b =>
@@ -160,7 +160,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransactionsTypes");
+                    b.ToTable("TransactionsTypes", (string)null);
 
                     b.HasData(
                         new
@@ -186,6 +186,9 @@ namespace TopLearn.DataLayer.Migrations
                     b.Property<int>("Balance")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
@@ -194,7 +197,7 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Wallets");
+                    b.ToTable("Wallets", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserRole", b =>

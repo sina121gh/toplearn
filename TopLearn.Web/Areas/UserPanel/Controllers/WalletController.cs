@@ -75,6 +75,7 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
                 {
                     transaction.IsSuccess = true;
                     _userService.UpdateTransaction(transaction);
+                    _userService.UpdateWalletBalance(transaction);
                     ViewBag.IsSuccess = true;
                     ViewBag.Code = verification.RefId;
                 }

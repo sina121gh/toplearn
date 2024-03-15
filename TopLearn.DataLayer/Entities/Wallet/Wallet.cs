@@ -27,6 +27,10 @@ namespace TopLearn.DataLayer.Entities.Wallet
         [Display(Name = "موجودی")]
         public int Balance { get; set; }
 
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "تاریخ به روز رسانی")]
+        public DateTime UpdateDate { get; set; }
+
 
         #region Relations
 
