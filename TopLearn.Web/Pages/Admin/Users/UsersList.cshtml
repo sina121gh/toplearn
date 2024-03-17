@@ -128,7 +128,6 @@
 
     <script>
 
-        const deleteBtn = document.getElementById("deleteButton");
 
         const showSwal = (id) => {
             Swal.fire({
@@ -147,10 +146,22 @@
                 // buttonsStyling: false,
             }).then(result => {
                 if (result.isConfirmed) {
-                    
+                    $.ajax({
+                        type: 'GET',
+                        url: `/admin/delete-user/${id}`,
+                        success: function (response) {
+                            console.log(response);
+                        }
+                    })
                 }
             });
         }
+
+        $(document).ready(function (){
+
+            const deleteBtn = document.getElementById("deleteButton");
+
+        })
 
     </script>
 
