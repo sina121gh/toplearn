@@ -17,7 +17,7 @@ namespace TopLearn.DataLayer.Entities.User
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "عنوان نقش")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(50, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
         public string? Title { get; set; }

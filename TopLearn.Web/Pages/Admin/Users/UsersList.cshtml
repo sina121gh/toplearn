@@ -34,7 +34,7 @@
                             <div class="row mb-3">
 
                                 <div class="col-2">
-                                    <input name="take" type="number" class="form-control form-control-sm" placeholder="تعداد نمایش"/>
+                                    <input name="take" type="number" class="form-control form-control-sm" placeholder="تعداد نمایش" />
                                 </div>
 
                                 <div class="col-4">
@@ -80,7 +80,7 @@
                                             <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
-                                            <a onclick="showSwal(@user.Id)" class="btn btn-danger btn-sm">
+                                            <a onclick="showSwal(@user.Id)" class="btn btn-danger btn-sm text-white">
                                                 حذف
                                             </a>
                                         </td>
@@ -94,7 +94,7 @@
                     <div class="col-sm-12 col-md-5">
                     </div>
                     <div class="col-sm-12 col-md-7">
-                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                        <div class="dataTables_paginate paging_simple_numbers">
                             <ul class="pagination">
                                 <li class="paginate_button page-item previous @(!Model.UsersViewModel.HasPreviousPage ? "disabled" : "")" id="example1_previous">
                                     <a href="/admin/users?pageId=@(Model.UsersViewModel.CurrentPage - 1)" class="page-link">
@@ -124,14 +124,14 @@
     </div>
 </section>
 
-@section Scripts{
+@section Scripts {
 
     <script>
 
-
         const showSwal = (id) => {
+
             Swal.fire({
-                title: `آیا از حذف ${id} مطمئن هستید؟`,
+                title: 'آیا از حذف مطمئن هستید؟',
                 icon: 'question',
                 showCancelButton: true,
                 confirmButtonText: 'حذف',
@@ -147,20 +147,22 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'GET',
+                        type: 'get',
                         url: `/admin/delete-user/${id}`,
-                        success: function (response) {
-                            console.log(response);
-                        }
+                        // success: function (response) {
+                        //     Swal.fire({
+                        //         title: 'نقش با موفقیت حذف شد',
+                        //         icon: 'success'
+                        //     })
+                        // }
                     })
                 }
             });
         }
 
-        $(document).ready(function (){
+        $(document).ready(function () {
 
             const deleteBtn = document.getElementById("deleteButton");
-
         })
 
     </script>

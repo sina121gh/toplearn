@@ -1,0 +1,28 @@
+﻿@model Role
+
+<div class="modal" id="roleModal">
+    <div class="modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" asp-for="Id"/>
+
+                <div class="mb-2">
+                    <label asp-for="Title"></label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="عنوان نقش"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-success" id="save" type="submit" onclick="InsertRole()">افزودن</button>
+
+                <button class="btn btn-primary" id="update" type="submit" onclick="UpdateRole()"
+                style="display:none;">
+                    ویرایش</button>
+                <button class="btn btn-danger" data-bs-dimiss="modal" onclick="HideModal()">لفو</button>
+            </div>
+        </div>
+    </div>
+</div>

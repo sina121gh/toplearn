@@ -11,9 +11,6 @@ namespace TopLearn.Core.Services
 {
     public class PermisionService : IPermisionService
     {
-
-        #region Dependency Injection
-
         private readonly TopLearnContext _context;
         private readonly IUserService _userService;
 
@@ -24,7 +21,12 @@ namespace TopLearn.Core.Services
 
         }
 
-        #endregion
+        public int AddRole(Role role)
+        {
+            _context.Roles.Add(role);
+            _context.SaveChanges();
+            return role.Id;
+        }
 
         public bool AddRolesToUser(IEnumerable<int> rolesIds, int userId)
         {
@@ -47,6 +49,27 @@ namespace TopLearn.Core.Services
                 return false;
             }
 
+        }
+
+        public bool DeleteRole(int roleId)
+        {
+            Role role = GetRoleById(roleId);
+
+            if (role != null)
+            {
+                try
+                {
+                    _context.Roles.Remove(role);
+                    _context.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+
+            return false;
         }
 
         public bool DeleteUserRoles(int userId)
@@ -78,6 +101,11 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public Role GetRoleById(int roleId)
+        {
+            return _context.Roles.Find(roleId);
+        }
+
         public IEnumerable<Role> GetRoles()
         {
             return _context.Roles.ToList();
@@ -96,6 +124,19 @@ namespace TopLearn.Core.Services
         public bool HasUserThisRole(int userId, int roleId)
         {
             return _context.UserRoles.Any(ur => ur.UserId == userId && ur.RoleId == roleId);
+        }
+
+        public bool UpdateRole(Role role)
+        {
+            try
+            {
+                _context.Roles.Update(role);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

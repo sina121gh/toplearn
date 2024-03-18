@@ -1,1183 +1,1187 @@
 {
   "Files": [
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.css",
       "PackagePath": "staticwebassets\\Admin\\css\\adminlte.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.css.map",
       "PackagePath": "staticwebassets\\Admin\\css\\adminlte.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\adminlte.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\adminlte.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap-rtl.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\bootstrap-rtl.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap-rtl.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\custom-style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\custom-style.css",
       "PackagePath": "staticwebassets\\Admin\\css\\custom-style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\persian-datepicker.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\css\\persian-datepicker.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\persian-datepicker.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Black.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Black.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Black.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Black.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Black.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Bold.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Bold.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Bold.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Bold.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Bold.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Light.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Light.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Light.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Light.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Light.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Medium.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Medium.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Medium.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Medium.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Medium.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Thin.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Thin.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Thin.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir-Thin.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir-Thin.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\fonts\\Vazir.woff2",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Vazir.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\AdminLTELogo.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\AdminLTELogo.png",
       "PackagePath": "staticwebassets\\Admin\\img\\AdminLTELogo.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar.png",
       "PackagePath": "staticwebassets\\Admin\\img\\avatar.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar04.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar04.png",
       "PackagePath": "staticwebassets\\Admin\\img\\avatar04.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar2.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar2.png",
       "PackagePath": "staticwebassets\\Admin\\img\\avatar2.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar3.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar3.png",
       "PackagePath": "staticwebassets\\Admin\\img\\avatar3.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar5.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\avatar5.png",
       "PackagePath": "staticwebassets\\Admin\\img\\avatar5.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\boxed-bg.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\boxed-bg.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\boxed-bg.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\boxed-bg.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\boxed-bg.png",
       "PackagePath": "staticwebassets\\Admin\\img\\boxed-bg.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\american-express.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\american-express.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\american-express.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\cirrus.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\cirrus.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\cirrus.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\mastercard.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\mastercard.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\mastercard.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\mestro.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\mestro.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\mestro.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\paypal.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\paypal.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\paypal.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\paypal2.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\paypal2.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\paypal2.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\visa.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\credit\\visa.png",
       "PackagePath": "staticwebassets\\Admin\\img\\credit\\visa.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\default-150x150.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\default-150x150.png",
       "PackagePath": "staticwebassets\\Admin\\img\\default-150x150.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\icons.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\icons.png",
       "PackagePath": "staticwebassets\\Admin\\img\\icons.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo1.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo1.png",
       "PackagePath": "staticwebassets\\Admin\\img\\photo1.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo2.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo2.png",
       "PackagePath": "staticwebassets\\Admin\\img\\photo2.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo3.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo3.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\photo3.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo4.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\photo4.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\photo4.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user1-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user1-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user1-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user2-160x160.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user2-160x160.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user2-160x160.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user3-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user3-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user3-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user4-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user4-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user4-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user5-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user5-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user5-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user6-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user6-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user6-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user7-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user7-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user7-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user8-128x128.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\img\\user8-128x128.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user8-128x128.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.js",
       "PackagePath": "staticwebassets\\Admin\\js\\adminlte.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\adminlte.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\adminlte.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\adminlte.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\adminlte.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\demo.js",
       "PackagePath": "staticwebassets\\Admin\\js\\demo.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard.js",
       "PackagePath": "staticwebassets\\Admin\\js\\pages\\dashboard.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard2.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard2.js",
       "PackagePath": "staticwebassets\\Admin\\js\\pages\\dashboard2.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard3.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\pages\\dashboard3.js",
       "PackagePath": "staticwebassets\\Admin\\js\\pages\\dashboard3.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\persian-date.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\persian-date.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\persian-date.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\persian-datepicker.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\persian-datepicker.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\persian-datepicker.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chart.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chart.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chart.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chart.js2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chart.js2",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chart.js2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\Chart.bundle.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\Chart.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\Chart.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\Chart.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\category.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\category.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\category.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\linear.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\linear.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\linear.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\logarithmic.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\logarithmic.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\logarithmic.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\time.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\time.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\cartesian\\time.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\labelling.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\labelling.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\labelling.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\linear.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\linear.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\radial\\linear.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\styling.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\styling.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\axes\\styling.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\area.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\area.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\area.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bar.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bar.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bar.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bubble.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bubble.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\bubble.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\doughnut.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\doughnut.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\doughnut.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\line.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\line.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\line.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\mixed.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\mixed.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\mixed.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\polar.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\polar.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\polar.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\radar.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\radar.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\radar.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\scatter.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\scatter.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\charts\\scatter.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\animations.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\animations.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\animations.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\elements.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\elements.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\elements.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\layout.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\layout.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\layout.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\legend.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\legend.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\legend.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\title.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\title.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\title.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\tooltip.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\tooltip.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\configuration\\tooltip.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\api.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\api.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\api.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\axes.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\axes.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\axes.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\charts.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\charts.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\charts.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\contributing.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\contributing.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\contributing.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\plugins.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\plugins.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\plugins.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\updates.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\updates.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\developers\\updates.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\colors.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\colors.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\colors.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\device-pixel-ratio.md",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\device-pixel-ratio.md",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\device-pixel-ratio.md"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\fonts.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\fonts.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\fonts.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\events.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\events.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\events.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\modes.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\modes.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\interactions\\modes.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\options.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\options.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\options.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\responsive.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\general\\responsive.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\general\\responsive.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\installation.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\installation.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\installation.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\integration.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\integration.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\integration.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\usage.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\usage.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\getting-started\\usage.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\FontAwesome.otf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\FontAwesome.otf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\fonts\\fontawesome\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-anchorjs\\anchor-style.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-anchorjs\\anchor-style.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-anchorjs\\anchor-style.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.bundle.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\Chart.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\chartjs-plugin-deferred.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\style.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-chartjs\\style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\fontsettings.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\fontsettings.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\fontsettings.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\website.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\website.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-fontsettings\\website.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-ga\\plugin.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-ga\\plugin.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-ga\\plugin.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\ebook.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\ebook.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\ebook.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\website.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\website.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-highlight\\website.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\jquery.mark.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\jquery.mark.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\jquery.mark.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-search-plus\\search.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-sharing\\buttons.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-sharing\\buttons.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook-plugin-sharing\\buttons.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\gitbook.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\apple-touch-icon-precomposed-152.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\apple-touch-icon-precomposed-152.png",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\apple-touch-icon-precomposed-152.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\favicon.ico",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\images\\favicon.ico"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\style.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\theme.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\theme.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\gitbook\\theme.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\comparison.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\comparison.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\comparison.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\extensions.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\extensions.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\extensions.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\index.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\index.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\index.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\license.html",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\license.html",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\notes\\license.html"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\search_plus_index.json",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\search_plus_index.json",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\search_plus_index.json"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\chartjs2\\docs\\style.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\chartjs2\\docs\\style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\css\\font-awesome.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\FontAwesome.otf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\core.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\core.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\core.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.min.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.min.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.min.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.slim.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.slim.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.min.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper-utils.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper-utils.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\esm\\popper.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\esm\\popper.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper-utils.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper-utils.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper-utils.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper-utils.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper-utils.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\popper.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\popper.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper-utils.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper-utils.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\js\\plugins\\popper\\umd\\popper.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\js\\plugins\\popper\\umd\\popper.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\css\\font-awesome.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.css.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.css.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\css\\font-awesome.css.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\css\\font-awesome.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\FontAwesome.otf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\Admin\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\core.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\core.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\core.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.min.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.min.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.min.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.slim.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.slim.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.min.map",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\Admin\\plugins\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg",
       "PackagePath": "staticwebassets\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
       "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap-rtl.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap-rtl.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-rtl.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.eot",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\BYekan-webfont.woff",
       "PackagePath": "staticwebassets\\css\\fonts\\BYekan-webfont.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.eot",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.eot",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.eot"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.svg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.svg",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.svg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.ttf",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.ttf"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.woff"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff2",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Material-Design-Iconic-Font.woff2",
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.woff2"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
       "PackagePath": "staticwebassets\\css\\material-design-iconic-font.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\style.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\EmailActivation.png",
       "PackagePath": "staticwebassets\\images\\EmailActivation.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\captcha.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\captcha.jpg",
       "PackagePath": "staticwebassets\\images\\captcha.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pattern.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pattern.png",
       "PackagePath": "staticwebassets\\images\\pattern.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\1.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\1.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\1.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\2.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\2.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\2.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\3.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\3.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\3.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\4.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\4.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\4.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\5.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\5.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\5.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\6.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\6.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\6.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\7.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\7.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\7.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\8.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\8.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\8.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\avatar.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\avatar.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\avatar.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\big-thumb.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\big-thumb.jpg",
       "PackagePath": "staticwebassets\\images\\pic\\big-thumb.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad-1.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad-1.png",
       "PackagePath": "staticwebassets\\images\\pic\\namad-1.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad.png",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\pic\\namad.png",
       "PackagePath": "staticwebassets\\images\\pic\\namad.png"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\slide.jpg",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\images\\slide.jpg",
       "PackagePath": "staticwebassets\\images\\slide.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\Role.js",
+      "PackagePath": "staticwebassets\\js\\Role.js"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\modernizr-custom.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\modernizr-custom.js",
       "PackagePath": "staticwebassets\\js\\modernizr-custom.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.css",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.css",
       "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.css"
     },
     {
-      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
       "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.js"
     },
     {

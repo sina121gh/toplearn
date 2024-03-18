@@ -1,0 +1,65 @@
+﻿@page "/admin/create-role/"
+@model TopLearn.Web.Pages.Admin.Roles.CreateRoleModel
+@{
+    ViewData["Title"] = "افزودن نقش جدید";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">افزودن نقش جدید</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات نقش</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label>عنوان نقش</label>
+                                <input type="text" asp-for="Role.Title" class="form-control">
+                                <span class="text-danger" asp-validation-for="Role.Title"></span>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-success">افزودن</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">دسترسی های نقش</h3>
+                        </div>
+
+                        <div class="card-body">
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -101,6 +101,7 @@ namespace TopLearn.Web.Controllers
                     {
                         new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                         new Claim(ClaimTypes.Name, user.UserName),
+                        new Claim("Avatar", user.Avatar),
                     };
 
                     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

@@ -1,0 +1,82 @@
+﻿@page
+@model TopLearn.Web.Pages.Admin.Roles.IndexModel
+@* @model Role *@
+@{
+    ViewData["Title"] = "لیست نقش ها";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست نقش ها</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/create-role/" id="btnAdd" class="btn btn-success">افزودن نقش</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">لیست نقش ها</h3>
+        </div>
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                            <thead>
+                                <tr>
+                                    <th>عنوان نقش</th>
+                                    <th>دستورات</th>
+                                </tr>
+                            <tbody id="rolesList">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Modal *@
+@* <div class="modal fade" id="roleModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalTitle"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-2">
+                    <label asp-for="Title"></label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="عنوان نقش" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="save" type="submit" onclick="InsertRole()">افزودن</button>
+
+                <button class="btn btn-primary" id="update" type="submit" onclick="UpdateRole()"
+                        style="display:none;">
+                    ویرایش
+                </button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" onclick="hideModal()">لفو</button>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@section Scripts {
+    <script src="/js/Role.js"></script>
+
+}

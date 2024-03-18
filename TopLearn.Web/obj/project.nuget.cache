@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SAak6K+mdyig/7SNNm8z6PAYDX1/+ER4A9ii4l2uusojn/AmQniSdhRMw7AaIZz8Op+/6M4goQ1YF5IrB6ZinA==",
+  "dgSpecHash": "NzTNMT3UatSS521dUylDh9y6ls7QX8cKVYL1sfe2VWx4zMwfNsd71cDS8kL+J9SxMixr4trZS0X5ur7b/72y3w==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
+  "projectFilePath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\TopLearn.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sina1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -17,7 +17,8 @@ namespace TopLearn.Web.Pages.Admin.Users
         public IActionResult OnGet(int userId)
         {
             _userService.DeleteUser(userId);
-            return Content(JsonSerializer.Serialize(_userService.GetUsers()));
+            //return Content(JsonSerializer.Serialize(_userService.GetUsers()));
+            return Redirect("/admin/users/");
         }
     }
 }

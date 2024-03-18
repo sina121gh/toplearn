@@ -43,7 +43,7 @@ namespace TopLearn.Web.Pages.Admin.Users
 
             #endregion
 
-            return Redirect("/admin/users-list/");
+            return Redirect("/admin/users/");
         }
     }
 }

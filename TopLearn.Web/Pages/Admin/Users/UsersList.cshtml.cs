@@ -17,12 +17,11 @@ namespace TopLearn.Web.Pages.Admin.Users
 
         #endregion
 
-
         public UsersForAdminViewModel UsersViewModel { get; set; }
 
         public void OnGet(int take = 10, int pageId = 1, string userName = "", string email = "")
         {
-            UsersViewModel = _userService.GetUsers(take ,pageId, userName, email);
+            UsersViewModel = _userService.GetUsers(take, pageId, userName, email);
         }
     }
 }
