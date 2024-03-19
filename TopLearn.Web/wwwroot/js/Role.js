@@ -12,7 +12,7 @@ function getRoles() {
             if (response == null || response == undefined || response.length == 0) {
                 var object = '';
                 object += '<tr>';
-                object += '<td class="colspan="5">' + 'Roles not available' + '</td>';
+                object += '<td class="colspan="5">' + 'نقشی موجود نیست' + '</td>';
                 object += '</tr>';
                 $('#rolesList').html(object);
             } else {
@@ -23,7 +23,7 @@ function getRoles() {
                     object += '<td>' + `<a href="/admin/edit-role/${role.id}/" class="btn btn-primary btn-sm">
                                     ویرایش
                                     </a>
-                                            <a onclick="showSwal(${role.id})" class="btn btn-danger btn-sm text-white">
+                                            <a onclick="showSwal(${role.id}, '${role.title}')" class="btn btn-danger btn-sm text-white">
                                     حذف
                                     </a>` + '</td>';
                     object += '</tr>';
@@ -32,7 +32,10 @@ function getRoles() {
             }
         },
         error: function () {
-            alert('Unable to read the data');
+            Swal.fire({
+                title: 'مشکلی در دریافت اطلاعات به وجود آمد',
+                icon: 'error'
+            })
         }
     })
 }
@@ -53,7 +56,10 @@ function InsertRole() {
             type: 'post',
             success: function (response) {
                 if (response == null || response == undefined || response.length == 0) {
-                    alert('Unable to save the data');
+                    Swal.fire({
+                        title: 'مشکلی در ذخیره اطلاعات به وجود آمد',
+                        icon: 'error'
+                    })
                 } else {
                     hideModal()
                     getRoles();
@@ -61,7 +67,10 @@ function InsertRole() {
             },
             error: function () {
                 hideModal()
-                alert('Unable to save the data');
+                Swal.fire({
+                    title: 'مشکلی در دریافت اطلاعات به وجود آمد',
+                    icon: 'error'
+                })
             }
         })
     }
@@ -94,22 +103,22 @@ function ClearData() {
     $("#Title").css('border-color', 'lightgrey');
 }
 
-const showSwal = (id) => {
+const showSwal = (id, title) => {
 
     Swal.fire({
-        title: 'آیا از حذف مطمئن هستید؟',
+        title: `آیا از حذف نقش <u>${title}</u> مطمئن هستید؟`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'حذف',
         cancelButtonText: 'لغو',
-        confirmButtonColor: '#dc3545',
-        cancelButtonColor: '#e0a800',
+        //confirmButtonColor: '#dc3545',
+        //cancelButtonColor: '#e0a800',
         focusConfirm: false,
-        // customClass: {
-        //     confirmButton: 'btn btn-danger',
-        //     cancelButton: 'btn btn-warning mx-2',
-        // },
-        // buttonsStyling: false,
+         customClass: {
+             confirmButton: 'btn btn-outline-danger',
+             cancelButton: 'btn btn-outline-info mx-2',
+         },
+         buttonsStyling: false,
     }).then(result => {
         if (result.isConfirmed) {
             $.ajax({

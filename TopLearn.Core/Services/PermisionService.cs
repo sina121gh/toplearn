@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
+using TopLearn.DataLayer.Entities.Permissions;
 using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.Core.Services
@@ -19,6 +20,19 @@ namespace TopLearn.Core.Services
             _context = context;
             _userService = userService;
 
+        }
+
+        public bool AddPermissionsToRole(int roleId, IEnumerable<int> permissions)
+        {
+            foreach (int permissionId in permissions)
+            {
+                _context.RolePermissions.Add(new RolePermission()
+                {
+                    PermissionId = permissionId,
+                    RoleId = roleId
+                });
+            }
+            return _context.SaveChanges() > 0;
         }
 
         public int AddRole(Role role)
@@ -72,6 +86,22 @@ namespace TopLearn.Core.Services
             return false;
         }
 
+        public bool DeleteRolePermissions(int roleId)
+        {
+            try
+            {
+                _context.RolePermissions
+                .Where(rp => rp.RoleId == roleId)
+                .ToList().ForEach(rp => _context.Remove(rp));
+
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool DeleteUserRoles(int userId)
         {
             try
@@ -101,6 +131,11 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public ICollection<Permission> GetPermissions()
+        {
+            return _context.Permissions.ToList();
+        }
+
         public Role GetRoleById(int roleId)
         {
             return _context.Roles.Find(roleId);
@@ -121,9 +156,28 @@ namespace TopLearn.Core.Services
                 });
         }
 
+        public bool HasPermissionChildren(int permissionId)
+        {
+            return _context.Permissions.Any(p => p.ParentId == permissionId);
+        }
+
+        public bool HasRoleThisPermission(int roleId, int permissionId)
+        {
+            return _context.RolePermissions
+                .Any(rp => rp.RoleId == roleId && rp.PermissionId == permissionId);
+        }
+
         public bool HasUserThisRole(int userId, int roleId)
         {
             return _context.UserRoles.Any(ur => ur.UserId == userId && ur.RoleId == roleId);
+        }
+
+        public IEnumerable<int> RolePermissionsIds(int roleId)
+        {
+            return _context.RolePermissions
+                 .Where(rp => rp.RoleId == roleId)
+                 .Select(rp => rp.PermissionId)
+                 .ToList();
         }
 
         public bool UpdateRole(Role role)
@@ -132,6 +186,20 @@ namespace TopLearn.Core.Services
             {
                 _context.Roles.Update(role);
                 return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateRolePermissions(int roleId, IEnumerable<int> permissionsIds)
+        {
+            try
+            {
+                DeleteRolePermissions(roleId);
+                AddPermissionsToRole(roleId, permissionsIds);
+                return true;
             }
             catch (Exception)
             {

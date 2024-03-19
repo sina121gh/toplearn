@@ -20,12 +20,13 @@ namespace TopLearn.Web.Pages.Admin.Roles
             Role = _permisionService.GetRoleById(roleId);
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(IEnumerable<int> selectedPermissionsIds)
         {
             if (!ModelState.IsValid)
                 return Page();
 
             _permisionService.UpdateRole(Role);
+            _permisionService.UpdateRolePermissions(Role.Id, selectedPermissionsIds);
 
             return Redirect("/admin/roles/");
         }

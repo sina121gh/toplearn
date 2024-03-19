@@ -1,6 +1,8 @@
 ﻿@page "/admin/edit-role/{roleId}"
 @model TopLearn.Web.Pages.Admin.Roles.EditRoleModel
+@inject IPermisionService _permissionService;
 @{
+    IEnumerable<Permission> permissions = _permissionService.GetPermissions();
     ViewData["Title"] = "ویرایش نقش";
 }
 
@@ -9,6 +11,12 @@
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0 text-dark">ویرایش نقش</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/users/">لیست نقش ها</a></li>
+                    <li class="breadcrumb-item active">ویرایش نقش</li>
+                </ol>
             </div>
         </div>
     </div>
@@ -53,6 +61,59 @@
                         </div>
 
                         <div class="card-body">
+
+                            <ul class="px-3">
+                                @foreach (Permission permission in permissions.Where(p => p.ParentId == null))
+                                {
+                                    <li>
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input"
+                                                   value="@permission.Id" name="selectedPermissionsIds"
+                                            @(_permissionService.HasRoleThisPermission(Model.Role.Id, permission.Id) ? "checked" : "")>
+                                            @permission.Title
+                                        </label>
+                                    </li>
+
+                                    @if (_permissionService.HasPermissionChildren(permission.Id))
+                                    {
+                                        <ul class="px-4">
+
+                                            @foreach (Permission subPermission in permissions.Where(p => p.ParentId == permission.Id))
+                                            {
+                                                <li>
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"
+                                                               value="@subPermission.Id" name="selectedPermissionsIds"
+                                                        @(_permissionService.HasRoleThisPermission(Model.Role.Id, subPermission.Id) ? "checked" : "")>
+                                                        @subPermission.Title
+                                                    </label>
+                                                </li>
+
+                                                @if (_permissionService.HasPermissionChildren(subPermission.Id))
+                                                {
+                                                    <ul class="px-4">
+
+                                                        @foreach (Permission subPermission2 in permissions.Where(p => p.ParentId == subPermission.Id))
+                                                        {
+                                                            <li>
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                           value="@subPermission2.Id" name="selectedPermissionsIds"
+                                                                    @(_permissionService.HasRoleThisPermission(Model.Role.Id, subPermission2.Id) ? "checked" : "")>
+                                                                    @subPermission2.Title
+                                                                </label>
+                                                            </li>
+                                                        }
+
+                                                    </ul>
+                                                }
+                                            }
+
+                                        </ul>
+                                    }
+                                }
+                            </ul>
+
                         </div>
 
                     </div>

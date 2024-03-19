@@ -5,3 +5,4 @@ global using TopLearn.Core.Generator;
 global using TopLearn.DataLayer.Entities.User;
 global using TopLearn.DataLayer.Entities;
 global using TopLearn.Core.Services.Interfaces;
+global using TopLearn.DataLayer.Entities.Permissions;

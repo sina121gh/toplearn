@@ -19,12 +19,14 @@ namespace TopLearn.Web.Pages.Admin.Roles
         {
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(List<int> selectedPermissionsIds)
         {
             if (!ModelState.IsValid)
                 return Page();
 
-            int roleId = _permisionService.AddRole(Role);         
+            int roleId = _permisionService.AddRole(Role);
+
+            _permisionService.AddPermissionsToRole(roleId, selectedPermissionsIds);
             
             //Todo Add Permission
 
