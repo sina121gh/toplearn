@@ -50,6 +50,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 #region Routes
+
 app.MapControllerRoute(
     name: "areas",
       pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
@@ -57,6 +58,7 @@ app.MapControllerRoute(
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
+
 #endregion
 
 app.UseAuthentication();

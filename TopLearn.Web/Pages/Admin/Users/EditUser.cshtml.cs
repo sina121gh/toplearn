@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
+    [PermissionChecker("ویرایش کاربر")]
     public class EditUserModel : PageModel
     {
 

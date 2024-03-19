@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "خطا";
+}
+@if (ViewBag.Error != null)
+{
+    <main class="client-page">
+        <div class="container-content">
+            <div class="alert alert-danger">
+                <h1 class="text-danger">خطا</h1>
+                <h2 class="text-danger">@ViewBag.Error</h2>
+            </div>
+        </div>
+    </main>
+}
+else
+{
+    <main class="client-page">
+        <div class="container-content">
+            <div class="alert alert-danger">
+                <h1 class="text-danger">خطا</h1>
+                <h2 class="text-danger">متاسفانه اجرای عملیات با شکست مواجه شد لطفا مجددا تلاش کنید.</h2>
+            </div>
+        </div>
+    </main>
+}

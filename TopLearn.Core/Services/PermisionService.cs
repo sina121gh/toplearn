@@ -131,6 +131,17 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public int GetPermissionIdByTitle(string permissionTitle)
+        {
+            Permission permission = _context.Permissions
+                .SingleOrDefault(p => p.Title == permissionTitle);
+
+            if (permission != null)
+                return permission.Id;
+
+            return 0;
+        }
+
         public ICollection<Permission> GetPermissions()
         {
             return _context.Permissions.ToList();
@@ -146,6 +157,14 @@ namespace TopLearn.Core.Services
             return _context.Roles.ToList();
         }
 
+        public IEnumerable<int> GetRolesIdsByPermission(int permissionId)
+        {
+            return _context.RolePermissions
+                .Where(rp => rp.PermissionId == permissionId)
+                .Select(rp => rp.RoleId)
+                .ToList();
+        }
+
         public IEnumerable<Role> GetUserRoles(int userId)
         {
             return _userService.GetUserById(userId).UserRoles
@@ -154,6 +173,16 @@ namespace TopLearn.Core.Services
                     Id = r.Role.Id,
                     Title = r.Role.Title,
                 });
+        }
+
+        public IEnumerable<int> GetUserRolesIds(string userName)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+
+            return _context.UserRoles
+                .Where(r => r.UserId == userId)
+                .Select(r => r.RoleId)
+                .ToList();
         }
 
         public bool HasPermissionChildren(int permissionId)
@@ -165,6 +194,19 @@ namespace TopLearn.Core.Services
         {
             return _context.RolePermissions
                 .Any(rp => rp.RoleId == roleId && rp.PermissionId == permissionId);
+        }
+
+        public bool HasUserThisPermission(int permissionId, string userName)
+        {
+            List<int> userRolesIds = GetUserRolesIds(userName).ToList();
+
+            if (!userRolesIds.Any())
+                return false;
+
+            IEnumerable<int> acceptedRolesIds = GetRolesIdsByPermission(permissionId);
+
+            return acceptedRolesIds
+                .Any(r => userRolesIds.Contains(r));
         }
 
         public bool HasUserThisRole(int userId, int roleId)

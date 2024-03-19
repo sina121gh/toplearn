@@ -80,7 +80,7 @@
                                             <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
-                                            <a onclick="showSwal(@user.Id)" class="btn btn-danger btn-sm text-white">
+                                            <a onclick="showSwal(@user.Id, '@user.UserName')" class="btn btn-danger btn-sm text-white">
                                                 حذف
                                             </a>
                                         </td>
@@ -128,22 +128,21 @@
 
     <script>
 
-        const showSwal = (id) => {
-
+        const showSwal = (id, title) => {
             Swal.fire({
-                title: 'آیا از حذف مطمئن هستید؟',
+                title: `آیا از حذف <u>${title}</u> مطمئن هستید؟`,
                 icon: 'question',
                 showCancelButton: true,
                 confirmButtonText: 'حذف',
                 cancelButtonText: 'لغو',
-                confirmButtonColor: '#dc3545',
-                cancelButtonColor: '#e0a800',
+                // confirmButtonColor: '#dc3545',
+                // cancelButtonColor: '#e0a800',
                 focusConfirm: false,
-                // customClass: {
-                //     confirmButton: 'btn btn-danger',
-                //     cancelButton: 'btn btn-warning mx-2',
-                // },
-                // buttonsStyling: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-danger',
+                    cancelButton: 'btn btn-outline-info mx-2',
+                },
+                buttonsStyling: false,
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({

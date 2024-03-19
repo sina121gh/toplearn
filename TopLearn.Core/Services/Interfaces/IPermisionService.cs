@@ -28,7 +28,11 @@ namespace TopLearn.Core.Services.Interfaces
         #region Permissions
 
         ICollection<Permission> GetPermissions();
+        IEnumerable<int> GetRolesIdsByPermission(int permissionId);
         IEnumerable<int> RolePermissionsIds(int roleId);
+        IEnumerable<int> GetUserRolesIds(string userName);
+        int GetPermissionIdByTitle(string permissionTitle);
+        bool HasUserThisPermission(int permissionId, string userName);
         bool HasPermissionChildren(int permissionId);
         bool AddPermissionsToRole(int roleId, IEnumerable<int> permissions);
         bool HasRoleThisPermission(int roleId, int permissionId);

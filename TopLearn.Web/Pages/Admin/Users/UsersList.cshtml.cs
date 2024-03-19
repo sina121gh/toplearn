@@ -1,9 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
+    [PermissionChecker("مدیریت کاربران")]
     public class UsersListModel : PageModel
     {
         #region Dependency Injection

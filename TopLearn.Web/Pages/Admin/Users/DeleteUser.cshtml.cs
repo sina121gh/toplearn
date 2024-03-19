@@ -1,9 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.Json;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
+    [PermissionChecker("حذف کاربر")]
     public class DeleteUserModel : PageModel
     {
 

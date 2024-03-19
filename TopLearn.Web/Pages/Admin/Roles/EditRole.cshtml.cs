@@ -1,8 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TopLearn.Core.Security;
 
 namespace TopLearn.Web.Pages.Admin.Roles
 {
+    [PermissionChecker("ویرایش نقش")]
     public class EditRoleModel : PageModel
     {
         private readonly IPermisionService _permisionService;
