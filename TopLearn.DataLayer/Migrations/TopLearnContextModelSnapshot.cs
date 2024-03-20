@@ -22,6 +22,29 @@ namespace TopLearn.DataLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("CourseGroups");
+                });
+
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Permissions.Permission", b =>
                 {
                     b.Property<int>("Id")
@@ -246,6 +269,13 @@ namespace TopLearn.DataLayer.Migrations
                     b.ToTable("Wallets");
                 });
 
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseGroup", b =>
+                {
+                    b.HasOne("TopLearn.DataLayer.Entities.Course.CourseGroup", null)
+                        .WithMany("CourseGroups")
+                        .HasForeignKey("ParentId");
+                });
+
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Permissions.Permission", b =>
                 {
                     b.HasOne("TopLearn.DataLayer.Entities.Permissions.Permission", null)
@@ -319,6 +349,11 @@ namespace TopLearn.DataLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseGroup", b =>
+                {
+                    b.Navigation("CourseGroups");
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Permissions.Permission", b =>

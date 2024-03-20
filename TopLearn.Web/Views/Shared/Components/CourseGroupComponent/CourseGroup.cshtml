@@ -1,0 +1,27 @@
+﻿@model IEnumerable<CourseGroup>
+@inject ICourseService _courseService;
+
+<div class="main-menu">
+    <div class="container">
+        <nav>
+            <span class="responsive-sign"><i class="zmdi zmdi-menu"></i></span>
+            <ul>
+                @foreach (CourseGroup group in Model.Where(g => g.ParentId == null))
+                {
+                    <li>
+                        <a href=""> @group.Title </a>
+                        @if (_courseService.HasSubGroup(group.Id))
+                        {
+                            <ul>
+                            @foreach (CourseGroup subGroup in _courseService.GetSubGroups(group.Id))
+                            {
+                                <li><a href=""> @subGroup.Title </a></li>
+                            }
+                            </ul>
+                        }
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

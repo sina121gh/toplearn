@@ -25,6 +25,7 @@ builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
 builder.Services.AddTransient<IPaymentService, PaymentService>();
 builder.Services.AddTransient<IPermisionService, PermisionService>();
 builder.Services.AddTransient<IFileService, FileService>();
+builder.Services.AddTransient<ICourseService, CourseService>();
 
 #endregion
 
