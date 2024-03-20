@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopLearn.DataLayer.Entities.Course;
 using TopLearn.DataLayer.Entities.Wallet;
 
 namespace TopLearn.DataLayer.Entities.User
@@ -59,6 +60,7 @@ namespace TopLearn.DataLayer.Entities.User
         public virtual IEnumerable<UserRole>? UserRoles { get; set; }
         public virtual Wallet.Wallet Wallet { get; set; }
         public virtual IEnumerable<Transaction> Transactions { get; set; }
+        public virtual IEnumerable<Course.Course> Courses { get; set; }
 
         #endregion
     }

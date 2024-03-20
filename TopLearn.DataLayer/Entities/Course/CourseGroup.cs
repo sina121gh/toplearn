@@ -23,5 +23,6 @@ namespace TopLearn.DataLayer.Entities.Course
 
         [ForeignKey("ParentId")]
         public List<CourseGroup>? CourseGroups { get; set; }
+        public List<Course> Courses { get; set; }
     }
 }
