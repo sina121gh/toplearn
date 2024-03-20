@@ -44,6 +44,10 @@ namespace TopLearn.DataLayer.Context
         #region Course
 
         public DbSet<CourseGroup> CourseGroups { get; set; }
+        public DbSet<CourseLevel> CourseLevels { get; set; }
+        public DbSet<CourseStatus> CourseStatuses { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<CourseEpisode> CourseEpisodes { get; set; }
 
         #endregion
 
@@ -60,6 +64,171 @@ namespace TopLearn.DataLayer.Context
 
             #region Seed Data
 
+            #region Role
+
+            modelBuilder.Entity<Role>()
+                .HasData(
+                new Role()
+                {
+                    Id = 1,
+                    Title = "مدیر سایت",
+                },
+
+                new Role()
+                {
+                    Id = 2,
+                    Title = "استاد",
+                },
+
+                new Role()
+                {
+                    Id = 3,
+                    Title = "کاربر عادی",
+                }
+                );
+
+            #endregion
+
+            #region Permission
+
+            modelBuilder.Entity<Permission>()
+                .HasData(
+                new Permission()
+                {
+                    Id = 1,
+                    Title = "پنل مدیریت",
+                },
+
+                new Permission()
+                {
+                    Id = 2,
+                    Title = "مدیریت کاربران",
+                    ParentId = 1,
+                },
+
+                new Permission()
+                {
+                    Id = 3,
+                    Title = "افزودن کاربر",
+                    ParentId = 2,
+                },
+
+                new Permission()
+                {
+                    Id = 4,
+                    Title = "ویرایش کاربر",
+                    ParentId = 2,
+                },
+
+                new Permission()
+                {
+                    Id = 5,
+                    Title = "حذف کاربر",
+                    ParentId = 2,
+                },
+
+                new Permission()
+                {
+                    Id = 6,
+                    Title = "مدیریت نقش ها",
+                },
+
+                new Permission()
+                {
+                    Id = 7,
+                    Title = "افزودن نقش",
+                    ParentId = 6,
+                },
+
+                new Permission()
+                {
+                    Id = 8,
+                    Title = "ویرایش نقش",
+                    ParentId = 6,
+                },
+
+                new Permission()
+                {
+                    Id = 9,
+                    Title = "حذف نقش",
+                    ParentId = 6,
+                }
+                );
+
+            #endregion
+
+            #region Role Permission
+
+            modelBuilder.Entity<RolePermission>()
+                .HasData(
+                new RolePermission()
+                {
+                    Id = 1,
+                    RoleId = 1,
+                    PermissionId = 1,
+                },
+
+                new RolePermission()
+                {
+                    Id = 2,
+                    RoleId = 1,
+                    PermissionId = 2,
+                },
+
+                new RolePermission()
+                {
+                    Id = 3,
+                    RoleId = 1,
+                    PermissionId = 3,
+                },
+
+                new RolePermission()
+                {
+                    Id = 4,
+                    RoleId = 1,
+                    PermissionId = 4,
+                },
+
+                new RolePermission()
+                {
+                    Id = 5,
+                    RoleId = 1,
+                    PermissionId = 5,
+                },
+
+                new RolePermission()
+                {
+                    Id = 6,
+                    RoleId = 1,
+                    PermissionId = 6,
+                },
+
+                new RolePermission()
+                {
+                    Id = 7,
+                    RoleId = 1,
+                    PermissionId = 7,
+                },
+
+                new RolePermission()
+                {
+                    Id = 8,
+                    RoleId = 1,
+                    PermissionId = 8,
+                },
+
+                new RolePermission()
+                {
+                    Id = 9,
+                    RoleId = 1,
+                    PermissionId = 9,
+                }
+                );
+
+            #endregion
+
+            #region Transaction Type
+
             modelBuilder.Entity<TransactionType>().HasData(
                 new TransactionType()
                 {
@@ -73,6 +242,59 @@ namespace TopLearn.DataLayer.Context
                     Title = "برداشت"
                 }
                 );
+
+            #endregion
+
+            #region Course Level
+
+            modelBuilder.Entity<CourseLevel>()
+                .HasData(
+                new CourseLevel()
+                {
+                    Id = 1,
+                    Title = "مقدماتی"
+                },
+
+                new CourseLevel()
+                {
+                    Id = 2,
+                    Title = "متوسط"
+                },
+
+                new CourseLevel()
+                {
+                    Id = 3,
+                    Title = "پیشرفته"
+                },
+
+                new CourseLevel()
+                {
+                    Id = 4,
+                    Title = "خیلی پیشرفته"
+                }
+
+                );
+
+            #endregion
+
+            #region Course Status
+
+            modelBuilder.Entity<CourseStatus>()
+                .HasData(
+                new CourseStatus()
+                {
+                    Id = 1,
+                    Title = "درحال برگزاری",
+                },
+
+                new CourseStatus()
+                {
+                    Id = 2,
+                    Title = "کامل شده",
+                }
+                );
+
+            #endregion
 
             #endregion
 

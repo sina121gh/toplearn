@@ -19,8 +19,8 @@ namespace TopLearn.DataLayer.Entities.Course
         public int GroupId { get; set; }
 
 
-        [Required(ErrorMessage = "لطفا {0}‌ را وارد کنید")]
-        public int SubGroupId { get; set; }
+        public int? SubGroupId { get; set; }
+
 
         [Required(ErrorMessage = "لطفا {0}‌ را وارد کنید")]
         public int TeacherId { get; set; }
@@ -78,11 +78,11 @@ namespace TopLearn.DataLayer.Entities.Course
 
 
         [ForeignKey("GroupId")]
-        public CourseGroup CourseGroup { get; set; }
+        public CourseGroup Group { get; set; }
 
 
         [ForeignKey("SubGroupId")]
-        public CourseGroup CourseSubGroup { get; set; }
+        public CourseGroup SubGroup { get; set; }
 
 
         [ForeignKey("StatusId")]
@@ -91,6 +91,10 @@ namespace TopLearn.DataLayer.Entities.Course
 
         [ForeignKey("LevelId")]
         public CourseLevel CourseLevel { get; set; }
+
+
+        public List<CourseEpisode> CourseEpisodes { get; set; }
+
         #endregion
     }
 }
