@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "evOmwAGjs2BMy5y1JdR5U658Ixq9Z/92KyxOKEf81buhtALvvpmxW8z8LbssbkUjmrI2OeIt2aC6vbCAawLabA==",
+  "dgSpecHash": "w7TVow2+6BQXc0PIr5X9kvVWLzqxgJxVT6OysBOVJM80NlonxQxC1nyEtRV3IsqUidnYzkQF47mtSczTybeUQw==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
+  "projectFilePath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sina1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -102,6 +102,7 @@
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\sina1\\.nuget\\packages\\runtime.osx.10.10-x64.corecompat.system.drawing\\6.0.5.128\\runtime.osx.10.10-x64.corecompat.system.drawing.6.0.5.128.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple\\4.3.0\\runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\sina1\\.nuget\\packages\\runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

@@ -53,15 +53,15 @@ namespace TopLearn.DataLayer.Entities.Course
 
 
         [MaxLength(600, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد")]
-        public string Tags { get; set; }
+        public string? Tags { get; set; }
 
 
         [MaxLength(50)]
-        public string CourseImageName { get; set; }
+        public string? ImageName { get; set; }
 
 
         [MaxLength(100)]
-        public string DemoFileName { get; set; }
+        public string? DemoFileName { get; set; }
 
 
         [Required]
@@ -74,26 +74,26 @@ namespace TopLearn.DataLayer.Entities.Course
         #region Relations
 
         [ForeignKey("TeacherId")]
-        public User.User User { get; set; }
+        public User.User? User { get; set; }
 
 
         [ForeignKey("GroupId")]
-        public CourseGroup Group { get; set; }
+        public CourseGroup? Group { get; set; }
 
 
         [ForeignKey("SubGroupId")]
-        public CourseGroup SubGroup { get; set; }
+        public CourseGroup? SubGroup { get; set; }
 
 
         [ForeignKey("StatusId")]
-        public CourseStatus CourseStatus { get; set; }
+        public CourseStatus? CourseStatus { get; set; }
 
 
         [ForeignKey("LevelId")]
-        public CourseLevel CourseLevel { get; set; }
+        public CourseLevel? CourseLevel { get; set; }
 
 
-        public List<CourseEpisode> CourseEpisodes { get; set; }
+        public List<CourseEpisode>? CourseEpisodes { get; set; }
 
         #endregion
     }

@@ -30,16 +30,10 @@ namespace TopLearn.DataLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CourseImageName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DemoFileName")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -49,6 +43,10 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("LevelId")
                         .HasColumnType("int");
@@ -63,7 +61,6 @@ namespace TopLearn.DataLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Tags")
-                        .IsRequired()
                         .HasMaxLength(600)
                         .HasColumnType("nvarchar(600)");
 
@@ -147,6 +144,47 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("CourseGroups");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Title = "برنامه نویسی موبایل"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ParentId = 1,
+                            Title = "Xamarin"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ParentId = 1,
+                            Title = "React Native"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Title = "برنامه نویسی وب"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ParentId = 4,
+                            Title = "Asp.Net Core"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ParentId = 4,
+                            Title = "Laravel"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Title = "برنامه نویسی ویندوز"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseLevel", b =>
@@ -293,6 +331,29 @@ namespace TopLearn.DataLayer.Migrations
                             Id = 9,
                             ParentId = 6,
                             Title = "حذف نقش"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Title = "مدیریت دوره ها"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ParentId = 10,
+                            Title = "افزودن دوره"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ParentId = 10,
+                            Title = "ویرایش دوره"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ParentId = 10,
+                            Title = "حذف دوره"
                         });
                 });
 
@@ -371,6 +432,30 @@ namespace TopLearn.DataLayer.Migrations
                         {
                             Id = 9,
                             PermissionId = 9,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            PermissionId = 10,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            PermissionId = 11,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            PermissionId = 12,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            PermissionId = 13,
                             RoleId = 1
                         });
                 });

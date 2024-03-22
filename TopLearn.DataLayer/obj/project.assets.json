@@ -4089,11 +4089,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
+      "projectUniqueName": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
       "projectName": "TopLearn.DataLayer",
-      "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
+      "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj",
       "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\obj\\",
+      "outputPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sina1\\AppData\\Roaming\\NuGet\\NuGet.Config",

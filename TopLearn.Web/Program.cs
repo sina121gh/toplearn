@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using TopLearn.Convertors;
 using TopLearn.Core.Services;
@@ -44,6 +45,11 @@ builder.Services.AddAuthentication(options =>
 });
 
 #endregion
+
+//builder.Services.Configure<FormOptions>(options =>
+//{
+//    options.MultipartBodyLengthLimit = 52428800;
+//});
 
 var app = builder.Build();
 

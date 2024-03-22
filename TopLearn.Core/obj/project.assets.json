@@ -1840,6 +1840,101 @@
           }
         }
       },
+      "runtime.osx.10.10-x64.CoreCompat.System.Drawing/6.0.5.128": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/runtime.osx.10.10-x64.CoreCompat.System.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/runtime.osx.10.10-x64.CoreCompat.System.Drawing.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx-x64/native/libX11.6.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libXau.6.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libXdmcp.6.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libXext.6.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libXrender.1.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libcairo.2.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libfontconfig.1.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libfreetype.6.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libgdiplus.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libgdiplus.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libgif.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libglib-2.0.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libintl.8.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libjpeg.9.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libpcre.1.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libpixman-1.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libpng16.16.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libtiff.5.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libxcb-render.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libxcb-shm.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libxcb.1.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          }
+        }
+      },
       "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -5747,6 +5842,39 @@
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "runtime.osx.10.10-x64.CoreCompat.System.Drawing/6.0.5.128": {
+      "sha512": "rjnyMb0Tk3k4DB5YeEeUBg9jbOY+VrT84o8Npkxayv2Vz1qSqgCfLATbvZ1oCuplSqHLINsSRMvkDup39pTIPw==",
+      "type": "package",
+      "path": "runtime.osx.10.10-x64.corecompat.system.drawing/6.0.5.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/runtime.osx.10.10-x64.CoreCompat.System.Drawing.dll",
+        "runtime.osx.10.10-x64.corecompat.system.drawing.6.0.5.128.nupkg.sha512",
+        "runtime.osx.10.10-x64.corecompat.system.drawing.nuspec",
+        "runtimes/osx-x64/native/libX11.6.dylib",
+        "runtimes/osx-x64/native/libXau.6.dylib",
+        "runtimes/osx-x64/native/libXdmcp.6.dylib",
+        "runtimes/osx-x64/native/libXext.6.dylib",
+        "runtimes/osx-x64/native/libXrender.1.dylib",
+        "runtimes/osx-x64/native/libcairo.2.dylib",
+        "runtimes/osx-x64/native/libfontconfig.1.dylib",
+        "runtimes/osx-x64/native/libfreetype.6.dylib",
+        "runtimes/osx-x64/native/libgdiplus.0.dylib",
+        "runtimes/osx-x64/native/libgdiplus.dylib",
+        "runtimes/osx-x64/native/libgif.dylib",
+        "runtimes/osx-x64/native/libglib-2.0.0.dylib",
+        "runtimes/osx-x64/native/libintl.8.dylib",
+        "runtimes/osx-x64/native/libjpeg.9.dylib",
+        "runtimes/osx-x64/native/libpcre.1.dylib",
+        "runtimes/osx-x64/native/libpixman-1.0.dylib",
+        "runtimes/osx-x64/native/libpng16.16.dylib",
+        "runtimes/osx-x64/native/libtiff.5.dylib",
+        "runtimes/osx-x64/native/libxcb-render.0.dylib",
+        "runtimes/osx-x64/native/libxcb-shm.0.dylib",
+        "runtimes/osx-x64/native/libxcb.1.dylib"
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
@@ -9928,7 +10056,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
       "TopLearn.DataLayer >= 1.0.0",
-      "Zarinpal >= 3.0.1"
+      "Zarinpal >= 3.0.1",
+      "runtime.osx.10.10-x64.CoreCompat.System.Drawing >= 6.0.5.128"
     ]
   },
   "packageFolders": {
@@ -9937,11 +10066,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
+      "projectUniqueName": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
       "projectName": "TopLearn.Core",
-      "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
+      "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\TopLearn.Core.csproj",
       "packagesPath": "C:\\Users\\sina1\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Core\\obj\\",
+      "outputPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sina1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9958,8 +10087,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
-              "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
+            "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj": {
+              "projectPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.DataLayer\\TopLearn.DataLayer.csproj"
             }
           }
         }
@@ -10003,6 +10132,10 @@
           "Zarinpal": {
             "target": "Package",
             "version": "[3.0.1, )"
+          },
+          "runtime.osx.10.10-x64.CoreCompat.System.Drawing": {
+            "target": "Package",
+            "version": "[6.0.5.128, )"
           }
         },
         "imports": [

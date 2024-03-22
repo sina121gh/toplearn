@@ -39,4 +39,9 @@
     <ProjectReference Include="..\TopLearn.DataLayer\TopLearn.DataLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\courses\demos\" />
+    <Folder Include="wwwroot\courses\thumbnails\" />
+  </ItemGroup>
+
 </Project>

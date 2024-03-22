@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TopLearn.Web.Pages.Admin.Courses
 {
-    [PermissionChecker("مدیریت دوره ها")]
+    [PermissionChecker("افزودن دوره")]
     public class CreateCourseModel : PageModel
     {
         #region DI
@@ -26,9 +26,14 @@ namespace TopLearn.Web.Pages.Admin.Courses
         {
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(IFormFile? courseImageInput, IFormFile? demoFile)
         {
-            return Page();
+            if (!ModelState.IsValid)
+                return Page();
+
+            _courseService.AddCourse(Course, courseImageInput, demoFile);
+
+            return Redirect("/admin/courses/");
         }
     }
 }
