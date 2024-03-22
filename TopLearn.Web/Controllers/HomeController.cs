@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TopLearn.Web.Controllers
 {
@@ -7,11 +8,15 @@ namespace TopLearn.Web.Controllers
     {
         private readonly IPermisionService _permisionService;
         private readonly IUserService _userService;
+        private readonly ICourseService _courseService;
 
-        public HomeController(IPermisionService permisionService, IUserService userService)
+        public HomeController(IPermisionService permisionService,
+            IUserService userService,
+            ICourseService courseService)
         {
             _permisionService = permisionService;
             _userService = userService;
+            _courseService = courseService;
 
         }
 
@@ -59,6 +64,17 @@ namespace TopLearn.Web.Controllers
                 Password = u.Password,
                 Salt = u.Salt,
             }));
+        }
+
+        [Route("/get-sub-groups/{groupId}")]
+        public JsonResult GetSubGroups(int groupId)
+        {
+            //List<SelectListItem> subGroups = new List<SelectListItem>()
+            //{
+            //    new SelectListItem(){ Text = "انتخاب کنید", Value = "0", Selected = true, Disabled = true, },
+            //};
+            //subGroups.AddRange(_courseService.GetSubGroupsForManageCourse(groupId));
+            return Json(_courseService.GetSubGroupsForManageCourse(groupId));
         }
     }
 }

@@ -1137,10 +1137,6 @@
       "PackagePath": "staticwebassets\\images\\slide.jpg"
     },
     {
-      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\Role.js",
-      "PackagePath": "staticwebassets\\js\\Role.js"
-    },
-    {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
@@ -1171,6 +1167,10 @@
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\modernizr-custom.js",
       "PackagePath": "staticwebassets\\js\\modernizr-custom.js"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\role.js",
+      "PackagePath": "staticwebassets\\js\\role.js"
     },
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",

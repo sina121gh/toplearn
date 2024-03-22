@@ -152,6 +152,33 @@ namespace TopLearn.DataLayer.Context
                     Id = 9,
                     Title = "حذف نقش",
                     ParentId = 6,
+                },
+
+                new Permission()
+                {
+                    Id = 10,
+                    Title = "مدیریت دوره ها",
+                },
+
+                new Permission()
+                {
+                    Id = 11,
+                    Title = "افزودن دوره",
+                    ParentId = 10,
+                },
+
+                new Permission()
+                {
+                    Id = 12,
+                    Title = "ویرایش دوره",
+                    ParentId = 10,
+                },
+
+                new Permission()
+                {
+                    Id = 13,
+                    Title = "حذف دوره",
+                    ParentId = 10,
                 }
                 );
 
@@ -222,6 +249,34 @@ namespace TopLearn.DataLayer.Context
                     Id = 9,
                     RoleId = 1,
                     PermissionId = 9,
+                },
+
+                new RolePermission()
+                {
+                    Id = 10,
+                    RoleId = 1,
+                    PermissionId = 10,
+                },
+
+                new RolePermission()
+                {
+                    Id = 11,
+                    RoleId = 1,
+                    PermissionId = 11,
+                },
+
+                new RolePermission()
+                {
+                    Id = 12,
+                    RoleId = 1,
+                    PermissionId = 12,
+                },
+
+                new RolePermission()
+                {
+                    Id = 13,
+                    RoleId = 1,
+                    PermissionId = 13,
                 }
                 );
 
@@ -291,6 +346,59 @@ namespace TopLearn.DataLayer.Context
                 {
                     Id = 2,
                     Title = "کامل شده",
+                }
+                );
+
+            #endregion
+
+            #region Course Group
+
+            modelBuilder.Entity<CourseGroup>()
+                .HasData(
+                new CourseGroup()
+                {
+                    Id = 1,
+                    Title = "برنامه نویسی موبایل",
+                },
+
+                new CourseGroup()
+                {
+                    Id = 2,
+                    Title = "Xamarin",
+                    ParentId = 1,
+                },
+
+                new CourseGroup()
+                {
+                    Id = 3,
+                    Title = "React Native",
+                    ParentId = 1,
+                },
+
+                new CourseGroup()
+                {
+                    Id = 4,
+                    Title = "برنامه نویسی وب",
+                },
+
+                new CourseGroup()
+                {
+                    Id = 5,
+                    Title = "Asp.Net Core",
+                    ParentId = 4,
+                },
+
+                new CourseGroup()
+                {
+                    Id = 6,
+                    Title = "Laravel",
+                    ParentId = 4,
+                },
+
+                new CourseGroup()
+                {
+                    Id = 7,
+                    Title = "برنامه نویسی ویندوز",
                 }
                 );
 

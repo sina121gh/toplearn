@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xe/COQfwDDHWSMzYgNnh8JbwWFbbSblMz7HR26ytc5c=",
+  "Hash": "pr7HaiPP3TJU/DzAfrLuD6vef0REtgDa27T/ANJoPL0=",
   "Source": "TopLearn.Web",
   "BasePath": "_content/TopLearn.Web",
   "Mode": "Default",
@@ -5584,12 +5584,12 @@
       "OriginalItemSpec": "wwwroot\\js\\modernizr-custom.js"
     },
     {
-      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\Role.js",
+      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\role.js",
       "SourceId": "TopLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\",
       "BasePath": "_content/TopLearn.Web",
-      "RelativePath": "js/Role.js",
+      "RelativePath": "js/role.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5600,7 +5600,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Role.js"
+      "OriginalItemSpec": "wwwroot\\js\\role.js"
     },
     {
       "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\js\\script.js",

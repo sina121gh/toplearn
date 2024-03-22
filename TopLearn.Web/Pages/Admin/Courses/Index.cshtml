@@ -1,0 +1,83 @@
+﻿@page "/admin/courses"
+@model TopLearn.Web.Pages.Courses.IndexModel
+@{
+    ViewData["Title"] = "لیست دوره ها";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست دوره ها</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a class="btn btn-success" href="/admin/create-course/">افزودن دوره</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">لیست دوره های سایت</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <form>
+                            <div class="row mb-3">
+
+                                <div class="col-2">
+                                    <input name="take" type="number" class="form-control form-control-sm" placeholder="تعداد نمایش" />
+                                </div>
+                                <div class="col-2">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-info btn-sm">جستجو</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="/admin/users" class="btn btn-sm btn-outline-dark">ریست</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                            <thead>
+                                <tr>
+                                    <th>نام کاربری</th>
+                                    <th>ایمیل</th>
+                                    <th>وضعیت</th>
+                                    <th>تاریخ ثبت نام</th>
+                                    <th>دستورات</th>
+                                </tr>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers">
+                            <ul class="pagination">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</section>
