@@ -36,7 +36,7 @@ namespace TopLearn.Web.Pages.Admin.Users
             _userService.EditUserFromAdmin(EditUserViewModel);
             _permisionService.EditUserRoles(EditUserViewModel.UserId, SelectedRolesIds);
 
-            return Redirect("/admin/users-list/");
+            return Redirect("/admin/users/");
         }
     }
 }

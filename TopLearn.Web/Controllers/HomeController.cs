@@ -66,15 +66,40 @@ namespace TopLearn.Web.Controllers
             }));
         }
 
-        [Route("/get-sub-groups/{groupId}")]
-        public JsonResult GetSubGroups(int groupId)
+        [Route("/get-sub-groups/{groupId}/{selectedGroupId?}")]
+        public JsonResult GetSubGroups(int groupId, int selectedGroupId = 0)
         {
             //List<SelectListItem> subGroups = new List<SelectListItem>()
             //{
             //    new SelectListItem(){ Text = "انتخاب کنید", Value = "0", Selected = true, Disabled = true, },
             //};
             //subGroups.AddRange(_courseService.GetSubGroupsForManageCourse(groupId));
-            return Json(_courseService.GetSubGroupsForManageCourse(groupId));
+            return Json(_courseService.GetSubGroupsForManageCourse(groupId, selectedGroupId));
+        }
+
+
+        [HttpPost]
+        [Route("/file-upload")]
+        public JsonResult UploadFile(IFormFile upload, string CKEditorFuncNum, string CKEditor, string langCode)
+        {
+            if (upload.Length <= 0) return null;
+
+            var fileName = MyGenerator.GenerateCode() + Path.GetExtension(upload.FileName).ToLower();
+
+            var path = Path.Combine(
+                Directory.GetCurrentDirectory(), "wwwroot/uploadedImages",
+                fileName);
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                upload.CopyTo(stream);
+
+            }
+
+            var url = $"{"/uploadedImages/"}{fileName}";
+
+
+            return Json(new { uploaded = true, url });
         }
     }
 }

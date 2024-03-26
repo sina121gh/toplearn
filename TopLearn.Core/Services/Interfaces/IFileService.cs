@@ -22,6 +22,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         string SaveImage(IFormFile image);
         void DeleteImage(string imageName);
+        void DeleteThumbnail(string thumbnailName);
 
         #endregion
 

@@ -36,7 +36,7 @@ namespace TopLearn.Core.Services
             if (course.SubGroupId == 0)
                 course.SubGroupId = null;
 
-            //Todo Check Image
+            // Check Image
             if (courseImg != null && courseImg.IsImage())
             {
                 course.ImageName = _fileService.SaveImage(courseImg);
@@ -72,6 +72,11 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public Course GetCourseById(int courseId)
+        {
+            return _context.Courses.Find(courseId);
+        }
+
         public CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1)
         {
             IQueryable<CourseViewModel> result = _context.Courses
@@ -103,34 +108,38 @@ namespace TopLearn.Core.Services
             return _context.CourseGroups.ToList();
         }
 
-        public IEnumerable<SelectListItem> GetLevels()
+        public IEnumerable<SelectListItem> GetLevels(int selectedLevelId = 0)
         {
             return _context.CourseLevels
                 .Select(l => new SelectListItem()
                 {
                     Value = l.Id.ToString(),
-                    Text = l.Title
+                    Text = l.Title,
+                    Selected = selectedLevelId == l.Id,
                 }).ToList();
         }
 
-        public IEnumerable<SelectListItem> GetMainGroupsForManageCourse()
+        public IEnumerable<SelectListItem> GetMainGroupsForManageCourse(int selectedGroupId = 0)
         {
+
             return _context.CourseGroups
                 .Where(g => g.ParentId == null)
                 .Select(g => new SelectListItem()
                 {
                     Text = g.Title,
                     Value = g.Id.ToString(),
+                    Selected = selectedGroupId == g.Id
                 }).ToList();
         }
 
-        public IEnumerable<SelectListItem> GetStatuses()
+        public IEnumerable<SelectListItem> GetStatuses(int selectedStatusId = 0)
         {
             return _context.CourseStatuses
                 .Select(s => new SelectListItem()
                 {
                     Text = s.Title,
                     Value = s.Id.ToString(),
+                    Selected = selectedStatusId == s.Id,
                 }).ToList();
         }
 
@@ -141,7 +150,7 @@ namespace TopLearn.Core.Services
                 .ToList();
         }
 
-        public IEnumerable<SelectListItem> GetSubGroupsForManageCourse(int groupId)
+        public IEnumerable<SelectListItem> GetSubGroupsForManageCourse(int groupId, int selectedGroupId = 0)
         {
             return _context.CourseGroups
                 .Where(g => g.ParentId == groupId)
@@ -149,10 +158,11 @@ namespace TopLearn.Core.Services
                 {
                     Text = g.Title,
                     Value = g.Id.ToString(),
+                    Selected = selectedGroupId == g.Id
                 }).ToList();
         }
 
-        public IEnumerable<SelectListItem> GetTeachers()
+        public IEnumerable<SelectListItem> GetTeachers(int selectedTeacherId)
         {
             return _context.UserRoles
                 .Where(ur => ur.RoleId == 2)
@@ -161,6 +171,7 @@ namespace TopLearn.Core.Services
                 {
                     Text = ur.User.UserName,
                     Value = ur.User.Id.ToString(),
+                    Selected = selectedTeacherId == ur.Id,
                 })
                 .ToList();
         }
@@ -169,6 +180,55 @@ namespace TopLearn.Core.Services
         {
             return _context.CourseGroups
                 .Any(g => g.ParentId == groupId);
+        }
+
+        public bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo)
+        {
+            course.UpdateDate = DateTime.Now;
+
+            if (course.SubGroupId == 0)
+                course.SubGroupId = null;
+
+            // Check Image
+            if (courseImg != null && courseImg.IsImage())
+            {
+                // Deletes Previous Images
+                _fileService.DeleteImage(course.ImageName);
+                _fileService.DeleteThumbnail(course.ImageName);
+
+                course.ImageName = _fileService.SaveImage(courseImg);
+
+                Convertors.ImageConvertor.Image_resize(
+                Path.Combine(
+                Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "images",
+                    course.ImageName),
+                Path.Combine(
+                Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "thumbnails",
+                    course.ImageName),
+                150);
+            }
+
+            if (courseDemo != null)
+            {
+                _fileService.DeleteDemo(course.DemoFileName);
+                course.DemoFileName = _fileService.SaveDemo(courseDemo);
+            }
+                
+            try
+            {
+                _context.Courses.Update(course);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ function getRoles() {
                 $.each(response, function (index, role) {
                     object += '<tr>';
                     object += '<td>' + role.title + '</td>';
-                    object += '<td>' + `<a href="/admin/edit-role/${role.id}/" class="btn btn-primary btn-sm">
+                    object += '<td>' + `<a href="/admin/roles/edit/${role.id}/" class="btn btn-primary btn-sm">
                                     ویرایش
                                     </a>
                                             <a onclick="showSwal(${role.id}, '${role.title}')" class="btn btn-danger btn-sm text-white">
@@ -51,7 +51,7 @@ function InsertRole() {
         formData.title = $('#Title').val();
 
         $.ajax({
-            url: '/create-role/',
+            url: '/admin/roles/create/',
             data: formData,
             type: 'post',
             success: function (response) {
@@ -123,7 +123,7 @@ const showSwal = (id, title) => {
         if (result.isConfirmed) {
             $.ajax({
                 type: 'get',
-                url: `/admin/delete-role/${id}/`,
+                url: `/admin/roles/delete/${id}/`,
                 success: function (response) {
                     Swal.fire({
                         title: 'نقش با موفقیت حذف شد',

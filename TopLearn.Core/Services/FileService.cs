@@ -51,6 +51,20 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public void DeleteThumbnail(string thumbnailName)
+        {
+            if (thumbnailName != "DefaultCourseImage.png")
+            {
+                string imagePath = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "thumbnails",
+                    thumbnailName);
+                if (File.Exists(imagePath))
+                    File.Delete(imagePath);
+            }
+        }
+
         public string SaveAvatar(IFormFile avatar)
         {
             string avatarName = MyGenerator.GenerateCode() + Path.GetExtension(avatar.FileName);

@@ -67,7 +67,8 @@
 
                             <div class="form-group">
                                 <label>شرح دوره</label>
-                                <textarea asp-for="Course.Description" class="form-control">
+                                <textarea
+                                    asp-for="Course.Description" class="form-control" id="description" rows="20">
                                 </textarea>
                                 <span class="text-danger" asp-validation-for="Course.Description"></span>
                             </div>
@@ -189,11 +190,26 @@
                     courseImage.src = URL.createObjectURL(file)
                 }
             }
-
-
-        // $("#courseImageInput").rules("add", {
-        //     accept: "jpg|jpeg|png|ico|bmp"
-        // });
         
     </script>
+
+    @* <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script> *@
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+        // ClassicEditor
+        //     .create(document.querySelector('#description'), {
+        //         language: 'fa',
+        //         simpleUpload: {
+        //             uploadUrl: '/file-upload',
+        //         },
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //     });
+
+        CKEDITOR.replace('description', {
+            customConfig: '/js/ckeditorConfig.js'
+        });
+    </script>
+    
 }

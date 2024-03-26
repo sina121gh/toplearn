@@ -1,4 +1,4 @@
-﻿@page "/admin/edit-user/{userId}/"
+﻿@page "/admin/users/edit/{userId}/"
 @inject IPermisionService _permisionService;
 @model TopLearn.Web.Pages.Admin.Users.EditUserModel
 @{
@@ -53,11 +53,11 @@
 
                             <div class="form-group">
                                 <label>کلمه عبور</label>
+                                <span class="help-block text-info">
+                                    (درصورت وارد کردن کلمه عبور ، کلمه عبور کاربر تغییر خواهد کرد)
+                                </span>
                                 <input type="text" asp-for="EditUserViewModel.Password" class="form-control">
                                 <span class="text-danger" asp-validation-for="EditUserViewModel.Password"></span>
-                                <p class="help-block text-info">
-                                    درصورت وارد کردن کلمه عبور ، کلمه عبور کاربر تغییر خواهد کرد
-                                </p>
                             </div>
 
                             <div class="form-check mb-3">
@@ -105,7 +105,7 @@
                         <div class="card-body">
                             <img id="userAvatar" class="img-fluid img-thumbnail" src="/UsersAvatars/@Model.EditUserViewModel.CurrentAvatar" />
 
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input asp-for="EditUserViewModel.UserAvater" type="file" class="custom-file-input" id="avatarInput">

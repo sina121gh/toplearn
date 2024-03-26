@@ -15,11 +15,11 @@ namespace TopLearn.Core.Services.Interfaces
         #region Group
 
         IEnumerable<CourseGroup> GetGroups();
-        IEnumerable<SelectListItem> GetMainGroupsForManageCourse();
-        IEnumerable<SelectListItem> GetSubGroupsForManageCourse(int groupId);
-        IEnumerable<SelectListItem> GetTeachers();
-        IEnumerable<SelectListItem> GetLevels();
-        IEnumerable<SelectListItem> GetStatuses();
+        IEnumerable<SelectListItem> GetMainGroupsForManageCourse(int selectedGroupId = 0);
+        IEnumerable<SelectListItem> GetSubGroupsForManageCourse(int groupId, int selectedGroupId = 0);
+        IEnumerable<SelectListItem> GetTeachers(int selectedTeacherId = 0);
+        IEnumerable<SelectListItem> GetLevels(int selectedLevelId = 0);
+        IEnumerable<SelectListItem> GetStatuses(int selectedStatusId = 0);
         IEnumerable<CourseGroup> GetSubGroups(int groupId);
         bool HasSubGroup(int groupId);
 
@@ -29,6 +29,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1);
         int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
+        Course GetCourseById(int courseId);
+        bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
 
         #endregion
     }

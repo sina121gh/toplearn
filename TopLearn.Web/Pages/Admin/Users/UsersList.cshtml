@@ -13,7 +13,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
-                    <li class="breadcrumb-item"><a class="btn btn-success" href="/admin/create-user/">افزودن کاربر</a></li>
+                    <li class="breadcrumb-item"><a class="btn btn-success" href="/admin/users/create/">افزودن کاربر</a></li>
                 </ol>
             </div>
         </div>
@@ -77,7 +77,7 @@
                                         <td><span class="btn-sm @(user.IsActive ? "btn-success" : "btn-warning")">@(user.IsActive ? "فعال" : "غیر فعال")</span></td>
                                         <td>@user.RegisterDate.ToShamsi()</td>
                                         <td>
-                                            <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
+                                            <a href="/admin/users/edit/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
                                             <a onclick="showSwal(@user.Id, '@user.UserName')" class="btn btn-danger btn-sm text-white">
@@ -147,13 +147,14 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'get',
-                        url: `/admin/delete-user/${id}`,
+                        url: `/admin/users/delete/${id}/`,
                         // success: function (response) {
                         //     Swal.fire({
                         //         title: 'نقش با موفقیت حذف شد',
                         //         icon: 'success'
                         //     })
                         // }
+                        success: location.reload(),
                     })
                 }
             });
