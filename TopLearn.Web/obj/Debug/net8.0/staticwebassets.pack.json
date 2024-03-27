@@ -1021,8 +1021,20 @@
       "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
     },
     {
+      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\img7.rar",
+      "PackagePath": "staticwebassets\\courses\\episodes\\img7.rar"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\test.rar",
+      "PackagePath": "staticwebassets\\courses\\episodes\\test.rar"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\images\\16318a36ae7c41778593edeb21b02e25.jpg",
       "PackagePath": "staticwebassets\\courses\\images\\16318a36ae7c41778593edeb21b02e25.jpg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\images\\66290c4a15ee49c9931c46420e65c823.jpg",
+      "PackagePath": "staticwebassets\\courses\\images\\66290c4a15ee49c9931c46420e65c823.jpg"
     },
     {
       "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\images\\DefaultCourseImage.png",
@@ -1031,6 +1043,10 @@
     {
       "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\images\\ae74c7dafbde4628b882e67a60096a03.jpg",
       "PackagePath": "staticwebassets\\courses\\images\\ae74c7dafbde4628b882e67a60096a03.jpg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\thumbnails\\66290c4a15ee49c9931c46420e65c823.jpg",
+      "PackagePath": "staticwebassets\\courses\\thumbnails\\66290c4a15ee49c9931c46420e65c823.jpg"
     },
     {
       "Id": "E:\\Documents\\VS\\Asp.Net Core\\Advanced\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\thumbnails\\DefaultCourseImage.png",

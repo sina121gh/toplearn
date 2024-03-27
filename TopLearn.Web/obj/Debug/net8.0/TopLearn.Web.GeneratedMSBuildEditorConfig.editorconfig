@@ -70,6 +70,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xFZGl0Q291cnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Pages/Admin/Courses/Episodes/CourseEpisodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xFcGlzb2Rlc1xDb3Vyc2VFcGlzb2Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Pages/Admin/Courses/Episodes/CreateEpisode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xFcGlzb2Rlc1xDcmVhdGVFcGlzb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Pages/Admin/Courses/Episodes/EditEpisode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xFcGlzb2Rlc1xFZGl0RXBpc29kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/VS/Asp.Net Core/Advanced/TopLearn/TopLearn.Web/Pages/Admin/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -26,12 +26,13 @@ namespace TopLearn.DataLayer.Entities.Course
 
         [Display(Name = "زمان بخش")]
         [Required(ErrorMessage = "لطفا {0}‌ را وارد کنید")]
-        public TimeSpan EpisodeTime { get; set; }
+        public TimeSpan Time { get; set; }
 
 
 
         [Display(Name = "نام فایل")]
-        public string EpisodeFileName { get; set; }
+        [MaxLength(100)]
+        public string? FileName { get; set; }
 
 
         [Display(Name = "رایگان")]
@@ -39,6 +40,6 @@ namespace TopLearn.DataLayer.Entities.Course
 
 
         [ForeignKey("CourseId")]
-        public Course Course { get; set; }
+        public Course? Course { get; set; }
     }
 }

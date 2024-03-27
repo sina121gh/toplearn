@@ -1,0 +1,76 @@
+﻿@page "/admin/courses/{courseId}/episodes"
+@model TopLearn.Web.Pages.Admin.Courses.Episodes.CourseEpisodesModel
+@{
+    ViewData["Title"] = "بخش های دوره";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست بخش های @Model.CourseTitle</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/courses/@Model.CourseId/create-episode/" class="btn btn-success">افزودن بخش</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">لیست بخش ها</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                            <thead>
+                                <tr>
+                                    <th>عنوان بخش</th>
+                                    <th>زمان</th>
+                                    <th>دسترسی</th>
+                                    <th>دستورات</th>
+                                </tr>
+                            <tbody>
+                                    @foreach (CourseEpisode episode in Model.CourseEpisodes)
+                                    {
+                                    <tr>
+                                        <td>@episode.Title</td>
+                                        <td>@episode.Time</td>
+                                        <td><span class="btn-sm @(episode.IsFree ? "btn-success" : "btn-warning")">@(episode.IsFree ? "رایگان" : "پولی")</span></td>
+                                        <td>
+                                            <a href="/admin/course-episodes/@episode.Id/edit/" class="btn btn-primary btn-sm">
+                                                ویرایش
+                                            </a>
+                                            <a onclick="showSwal(@episode.Id, '@episode.Title')" class="btn btn-danger btn-sm text-white">
+                                                حذف
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers">
+                            <ul class="pagination">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</section>

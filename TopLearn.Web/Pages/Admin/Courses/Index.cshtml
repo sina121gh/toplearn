@@ -68,8 +68,12 @@
                                         <td>@course.Title</td>
                                         <td>@course.EpisodeCount</td>
                                         <td>
-                                            <a href="/admin/courses/edit/@course.Id/" class="btn btn-primary btn-sm">
+                                            <a href="/admin/courses/@course.Id/edit/" class="btn btn-primary btn-sm">
                                                 ویرایش
+                                            </a>
+
+                                            <a href="/admin/courses/@course.Id/episodes" class="btn btn-primary btn-sm">
+                                                بخش ها
                                             </a>
                                         </td>
                                     </tr>

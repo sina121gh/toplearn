@@ -37,6 +37,18 @@ namespace TopLearn.Core.Services
                 File.Delete(demoPath);
         }
 
+        public void DeleteEpisode(string episodeName)
+        {
+            string episodePath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "episodes",
+                    episodeName);
+            if (File.Exists(episodePath))
+                File.Delete(episodePath);
+        }
+
         public void DeleteImage(string imageName)
         {
             if (imageName != "DefaultCourseImage.png")
@@ -95,6 +107,22 @@ namespace TopLearn.Core.Services
             }
 
             return demoName;
+        }
+
+        public string SaveEpisodeFile(IFormFile episodeFile)
+        {
+            //string episodeName = MyGenerator.GenerateCode() + Path.GetExtension(episodeFile.FileName);
+            string episodePath = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "episodes",
+                    episodeFile.FileName);
+            using (FileStream stream = new FileStream(episodePath, FileMode.Create))
+            {
+                episodeFile.CopyTo(stream);
+            }
+
+            return episodeFile.FileName;
         }
 
         public string SaveImage(IFormFile image)

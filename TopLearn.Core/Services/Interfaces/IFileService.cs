@@ -33,6 +33,13 @@ namespace TopLearn.Core.Services.Interfaces
 
         #endregion
 
+        #region Episode
+
+        string SaveEpisodeFile(IFormFile episodeFile);
+        void DeleteEpisode(string episodeName);
+
+        #endregion
+
         #endregion
 
     }

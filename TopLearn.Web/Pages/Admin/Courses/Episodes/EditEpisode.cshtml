@@ -1,0 +1,90 @@
+﻿@page "/admin/course-episodes/{episodeId}/edit"
+@model TopLearn.Web.Pages.Admin.Courses.Episodes.EditEpisodeModel
+@{
+    ViewData["Title"] = "ویرایش بخش";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">ویرایش بخش</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات بخش</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <input type="hidden" asp-for="Episode.Id" />
+                            <input type="hidden" asp-for="Episode.CourseId" />
+                            <input type="hidden" asp-for="Episode.FileName" />
+
+                            <div class="form-group">
+                                <label>عنوان بخش</label>
+                                <input type="text" asp-for="Episode.Title" class="form-control">
+                                <span class="text-danger" asp-validation-for="Episode.Title"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>زمان بخش</label>
+                                <input type="text" asp-for="Episode.Time" class="form-control">
+                                <span class="text-danger" asp-validation-for="Episode.Time"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>فایل بخش</label>
+                                <span class="help-block text-danger">(فایل اجباری است)</span>
+                                <input class="form-control-file" type="file" name="episodeFile">
+                                <span class="text-danger" asp-validation-for="Episode.FileName"></span>
+                            </div>
+
+                            <div class="form-check mb-3">
+
+                                <label class="form-check-label">
+                                    <input asp-for="Episode.IsFree" type="checkbox" class="form-check-input">
+                                    @Html.DisplayNameFor(Model => Model.Episode.IsFree)
+                                </label>
+
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">ویرایش</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @if (ViewData["DoesFileExist"] != null)
+    {
+        <script>
+            Swal.fire({
+                title: 'نام فایل معتبر نمی باشد',
+                icon: 'error'
+            })
+        </script>
+    }
+}

@@ -29,8 +29,20 @@ namespace TopLearn.Core.Services.Interfaces
 
         CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1);
         int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
+        string GetCourseTitleById(int courseId);
         Course GetCourseById(int courseId);
         bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
+
+        #endregion
+
+
+        #region Episode
+
+        IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
+        int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
+        bool DoesEpisodeExist(string fileName);
+        bool UpdateEpisode(CourseEpisode episode, IFormFile episodeFile);
+        CourseEpisode GetEpisodeById(int episodeId);
 
         #endregion
     }

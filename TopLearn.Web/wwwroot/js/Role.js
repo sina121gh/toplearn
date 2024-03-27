@@ -20,7 +20,7 @@ function getRoles() {
                 $.each(response, function (index, role) {
                     object += '<tr>';
                     object += '<td>' + role.title + '</td>';
-                    object += '<td>' + `<a href="/admin/roles/edit/${role.id}/" class="btn btn-primary btn-sm">
+                    object += '<td>' + `<a href="/admin/roles/${role.id}/edit/" class="btn btn-primary btn-sm">
                                     ویرایش
                                     </a>
                                             <a onclick="showSwal(${role.id}, '${role.title}')" class="btn btn-danger btn-sm text-white">
@@ -123,7 +123,7 @@ const showSwal = (id, title) => {
         if (result.isConfirmed) {
             $.ajax({
                 type: 'get',
-                url: `/admin/roles/delete/${id}/`,
+                url: `/admin/roles/${id}/delete/`,
                 success: function (response) {
                     Swal.fire({
                         title: 'نقش با موفقیت حذف شد',

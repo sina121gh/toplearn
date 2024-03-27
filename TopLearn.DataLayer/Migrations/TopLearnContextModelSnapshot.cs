@@ -87,7 +87,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseEpisode", b =>
@@ -101,15 +101,15 @@ namespace TopLearn.DataLayer.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<string>("EpisodeFileName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<TimeSpan>("EpisodeTime")
-                        .HasColumnType("time");
+                    b.Property<string>("FileName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("IsFree")
                         .HasColumnType("bit");
+
+                    b.Property<TimeSpan>("Time")
+                        .HasColumnType("time");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -120,7 +120,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("CourseEpisodes");
+                    b.ToTable("CourseEpisodes", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseGroup", b =>
@@ -143,7 +143,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("CourseGroups");
+                    b.ToTable("CourseGroups", (string)null);
 
                     b.HasData(
                         new
@@ -202,7 +202,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CourseLevels");
+                    b.ToTable("CourseLevels", (string)null);
 
                     b.HasData(
                         new
@@ -242,7 +242,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CourseStatuses");
+                    b.ToTable("CourseStatuses", (string)null);
 
                     b.HasData(
                         new
@@ -277,7 +277,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Permissions");
+                    b.ToTable("Permissions", (string)null);
 
                     b.HasData(
                         new
@@ -377,7 +377,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RolePermissions");
+                    b.ToTable("RolePermissions", (string)null);
 
                     b.HasData(
                         new
@@ -475,7 +475,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
 
                     b.HasData(
                         new
@@ -541,7 +541,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserRole", b =>
@@ -564,7 +564,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRoles");
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.Transaction", b =>
@@ -600,7 +600,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transactions", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.TransactionType", b =>
@@ -615,7 +615,7 @@ namespace TopLearn.DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransactionsTypes");
+                    b.ToTable("TransactionsTypes", (string)null);
 
                     b.HasData(
                         new
@@ -652,7 +652,7 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Wallets");
+                    b.ToTable("Wallets", (string)null);
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.Course", b =>

@@ -77,7 +77,7 @@
                                         <td><span class="btn-sm @(user.IsActive ? "btn-success" : "btn-warning")">@(user.IsActive ? "فعال" : "غیر فعال")</span></td>
                                         <td>@user.RegisterDate.ToShamsi()</td>
                                         <td>
-                                            <a href="/admin/users/edit/@user.Id/" class="btn btn-primary btn-sm">
+                                            <a href="/admin/users/@user.Id/edit/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
                                             <a onclick="showSwal(@user.Id, '@user.UserName')" class="btn btn-danger btn-sm text-white">
@@ -147,7 +147,7 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'get',
-                        url: `/admin/users/delete/${id}/`,
+                        url: `/admin/users/${id}/delete/`,
                         // success: function (response) {
                         //     Swal.fire({
                         //         title: 'نقش با موفقیت حذف شد',

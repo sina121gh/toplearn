@@ -72,9 +72,44 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public int AddEpisode(CourseEpisode episode, IFormFile episodeFile)
+        {
+            episode.FileName = episodeFile.FileName;
+            _fileService.SaveEpisodeFile(episodeFile);
+
+            try
+            {
+                _context.CourseEpisodes.Add(episode);
+                _context.SaveChanges();
+                return episode.Id;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public bool DoesEpisodeExist(string fileName)
+        {
+            string episodePath = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "courses",
+                    "episodes",
+                    fileName);
+
+            return File.Exists(episodePath);
+        }
+
         public Course GetCourseById(int courseId)
         {
             return _context.Courses.Find(courseId);
+        }
+
+        public IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId)
+        {
+            return _context.CourseEpisodes
+                .Where(e => e.CourseId == courseId)
+                .ToList();
         }
 
         public CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1)
@@ -101,6 +136,18 @@ namespace TopLearn.Core.Services
             viewModel.HasPreviousPage = viewModel.CurrentPage > 1;
 
             return viewModel;
+        }
+
+        public string GetCourseTitleById(int courseId)
+        {
+            return _context.Courses
+                .Find(courseId)
+                .Title;
+        }
+
+        public CourseEpisode GetEpisodeById(int episodeId)
+        {
+            return _context.CourseEpisodes.Find(episodeId);
         }
 
         public IEnumerable<CourseGroup> GetGroups()
@@ -223,6 +270,25 @@ namespace TopLearn.Core.Services
             try
             {
                 _context.Courses.Update(course);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateEpisode(CourseEpisode episode, IFormFile episodeFile)
+        {
+            if (episodeFile != null)
+            {
+                _fileService.DeleteEpisode(episode.FileName);
+                episode.FileName = _fileService.SaveEpisodeFile(episodeFile);
+            }
+
+            try
+            {
+                _context.CourseEpisodes.Update(episode);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception)
