@@ -101,5 +101,12 @@ namespace TopLearn.Web.Controllers
 
             return Json(new { uploaded = true, url });
         }
+
+        [HttpGet]
+        [Route("/courses/{courseId}/episodes")]
+        public JsonResult GetEpisodes(int courseId)
+        {
+            return Json(_courseService.GetCourseEpisodes(courseId));
+        }
     }
 }

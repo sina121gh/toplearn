@@ -89,6 +89,29 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public bool DeleteEpisode(int episodeId)
+        {
+            CourseEpisode episode = GetEpisodeById(episodeId);
+
+            if (episode != null)
+            {
+                try
+                {
+                    _context.CourseEpisodes.Remove(episode);
+                    _fileService.DeleteEpisode(episode.FileName);
+                    return _context.SaveChanges() > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+                
+            }
+
+            return false;
+            
+        }
+
         public bool DoesEpisodeExist(string fileName)
         {
             string episodePath = Path.Combine(Directory.GetCurrentDirectory(),

@@ -37,15 +37,15 @@
                                     <th>دسترسی</th>
                                     <th>دستورات</th>
                                 </tr>
-                            <tbody>
-                                    @foreach (CourseEpisode episode in Model.CourseEpisodes)
+                            <tbody id="episodes">
+                                    @* @foreach (CourseEpisode episode in Model.CourseEpisodes)
                                     {
                                     <tr>
                                         <td>@episode.Title</td>
                                         <td>@episode.Time</td>
                                         <td><span class="btn-sm @(episode.IsFree ? "btn-success" : "btn-warning")">@(episode.IsFree ? "رایگان" : "پولی")</span></td>
                                         <td>
-                                            <a href="/admin/course-episodes/@episode.Id/edit/" class="btn btn-primary btn-sm">
+                                            <a href="/admin/courses/@Model.CourseId/episodes/@episode.Id/edit/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
                                             <a onclick="showSwal(@episode.Id, '@episode.Title')" class="btn btn-danger btn-sm text-white">
@@ -53,7 +53,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    }
+                                    } *@
                             </tbody>
                         </table>
                     </div>
@@ -74,3 +74,76 @@
         <!-- /.card-body -->
     </div>
 </section>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            getEpisodes(@Model.CourseId);
+        })
+
+        function getEpisodes(id) {
+            $.ajax({
+                url: `/courses/${id}/episodes`,
+                type: 'get',
+                success: function (response) {
+                    if (response == null || response == undefined || response.lenght == 0) {
+                        var object = "";
+                        object += "<tr>";
+                        object += "<td>" + "بخشی موجود نیست";
+                        object += "</td>"
+                        object += "</tr>";
+                        $("#episodes").html(object);
+                    } else {
+                        var object = "";
+                        $.each(response, function (index, episode) {
+                            object += "<tr>";
+                            object += "<td>" + episode.title + "</td>";
+                            object += "<td>" + episode.time + "</td>";
+                            object += '<td>' + `<span class='btn-sm ${(episode.isFree ? 'btn-success' : 'btn-warning')}'>` + (episode.isFree ? 'رایگان' : 'پولی') + "</span>" + '</td>';
+                            object += '<td>' + `<a href="/admin/courses/@Model.CourseId/episodes/${episode.id}/edit/" class="btn btn-primary btn-sm">
+                                            ویرایش
+                                            </a>
+                                                    <a onclick="deleteEpisode(${episode.id}, '${episode.title}')" class="btn btn-danger btn-sm text-white">
+                                            حذف
+                                            </a>` + '</td>';
+                            object += '</tr>';
+                        });
+                        $("#episodes").html(object);
+                    }
+                }
+            })
+        }
+
+        function deleteEpisode(id, title) {
+            Swal.fire({
+                title: `آیا از حذف بخش <u>${title}</u> مطمئن هستید؟`,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'لغو',
+                //confirmButtonColor: '#dc3545',
+                //cancelButtonColor: '#e0a800',
+                focusConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-danger',
+                    cancelButton: 'btn btn-outline-info mx-2',
+                },
+                buttonsStyling: false,
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'get',
+                        url: `/admin/course-episodes/${id}/delete/`,
+                        success: function (response) {
+                            Swal.fire({
+                                title: 'بخش با موفقیت حذف شد',
+                                icon: 'success'
+                            })
+                            getEpisodes();
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+}

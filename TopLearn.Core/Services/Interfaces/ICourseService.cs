@@ -42,6 +42,7 @@ namespace TopLearn.Core.Services.Interfaces
         int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
         bool DoesEpisodeExist(string fileName);
         bool UpdateEpisode(CourseEpisode episode, IFormFile episodeFile);
+        bool DeleteEpisode(int episodeId);
         CourseEpisode GetEpisodeById(int episodeId);
 
         #endregion
