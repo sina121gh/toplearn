@@ -14,7 +14,7 @@ namespace TopLearn.Web.Pages.Courses
             _courseService = courseService;
         }
 
-        public CoursesForAdminViewModel CoursesViewModel { get; set; }
+        public CoursesListForAdminViewModel CoursesViewModel { get; set; }
 
         public void OnGet()
         {

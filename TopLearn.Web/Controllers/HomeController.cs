@@ -20,7 +20,10 @@ namespace TopLearn.Web.Controllers
 
         }
 
-        public IActionResult Index() => View();
+        public IActionResult Index()
+        {
+            return View(_courseService.GetCourses());
+        }
 
         [Route("/error")]
         public IActionResult Error() => View();

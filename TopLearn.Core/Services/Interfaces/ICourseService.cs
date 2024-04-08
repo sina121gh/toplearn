@@ -27,7 +27,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Course
 
-        CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1);
+        CoursesListForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1);
         int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
         string GetCourseTitleById(int courseId);
         Course GetCourseById(int courseId);
@@ -38,6 +38,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Episode
 
+        IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
+            string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null);
         IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
         int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
         bool DoesEpisodeExist(string fileName);

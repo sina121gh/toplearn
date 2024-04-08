@@ -135,10 +135,70 @@ namespace TopLearn.Core.Services
                 .ToList();
         }
 
-        public CoursesForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1)
+        public IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "",
+            string getType = "all", string orderBy = "createDate",
+            int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null)
         {
-            IQueryable<CourseViewModel> result = _context.Courses
-                .Select(c => new CourseViewModel()
+            if (take == 0)
+                take = 8;
+
+            IQueryable<Course> result = _context.Courses;
+
+            if (!string.IsNullOrEmpty(filter))
+                result = result.Where(c => c.Title.Contains(filter));
+
+            switch (getType)
+            {
+                case "all":
+                    break;
+
+                case "buyable":
+                    result = result.Where(c => c.Price > 0);
+                    break;
+                case "free":
+                    result = result.Where(c => c.Price == 0);
+                    break;
+            }
+
+            switch (orderBy)
+            {
+                case "createDate":
+                    result = result.OrderByDescending(c => c.CreateDate);
+                    break;
+
+                case "updateDate":
+                    result = result.OrderByDescending(c => c.UpdateDate);
+                    break;
+            }
+
+            if (startPrice > 0)
+                result = result.Where(c => c.Price >= startPrice);
+
+            if (endPrice > 0)
+                result = result.Where(c => c.Price <= endPrice);
+
+            if (selectedGroups != null && selectedGroups.Any())
+            {
+                // TODO
+            }
+
+            int skip = (pageId - 1) * take;
+            return result.Include(c => c.CourseEpisodes).Skip(skip)
+            .Take(take).ToList()
+                .Select(c => new ShowCoursesListViewModel()
+                {
+                    Id = c.Id,
+                    Title = c.Title,
+                    Price = c.Price,
+                    ImageName = c.ImageName,
+                    TotalTime = new TimeSpan(c.CourseEpisodes.Sum(e => e.Time.Ticks)),
+                });
+        }
+
+        public CoursesListForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1)
+        {
+            IQueryable<CourseForAdminViewModel> result = _context.Courses
+                .Select(c => new CourseForAdminViewModel()
                 {
                     Id = c.Id,
                     Title = c.Title,
@@ -148,7 +208,7 @@ namespace TopLearn.Core.Services
 
             int skip = (pageId - 1) * take;
 
-            CoursesForAdminViewModel viewModel = new CoursesForAdminViewModel()
+            CoursesListForAdminViewModel viewModel = new CoursesListForAdminViewModel()
             {
                 Courses = result.OrderBy(c => c.Id).Skip(skip).Take(take).ToList(),
                 PageCount = (int)Math.Ceiling(result.Count() / (double)take),
