@@ -15,6 +15,7 @@ namespace TopLearn.Core.Services.Interfaces
         #region Group
 
         IEnumerable<CourseGroup> GetGroups();
+        IEnumerable<CourseGroup> GetMainGroups();
         IEnumerable<SelectListItem> GetMainGroupsForManageCourse(int selectedGroupId = 0);
         IEnumerable<SelectListItem> GetSubGroupsForManageCourse(int groupId, int selectedGroupId = 0);
         IEnumerable<SelectListItem> GetTeachers(int selectedTeacherId = 0);
@@ -39,7 +40,7 @@ namespace TopLearn.Core.Services.Interfaces
         #region Episode
 
         IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
-            string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null);
+            string orderBy = "createDate", int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null);
         IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
         int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
         bool DoesEpisodeExist(string fileName);

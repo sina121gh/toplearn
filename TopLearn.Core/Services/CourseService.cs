@@ -137,7 +137,7 @@ namespace TopLearn.Core.Services
 
         public IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "",
             string getType = "all", string orderBy = "createDate",
-            int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null)
+            int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null)
         {
             if (take == 0)
                 take = 8;
@@ -171,15 +171,18 @@ namespace TopLearn.Core.Services
                     break;
             }
 
-            if (startPrice > 0)
-                result = result.Where(c => c.Price >= startPrice);
+            if (minPrice > 0)
+                result = result.Where(c => c.Price >= minPrice);
 
-            if (endPrice > 0)
-                result = result.Where(c => c.Price <= endPrice);
+            if (maxPrice > 0)
+                result = result.Where(c => c.Price <= maxPrice);
 
             if (selectedGroups != null && selectedGroups.Any())
             {
-                // TODO
+                foreach (int groupId in selectedGroups)
+                {
+                    result = result.Where(c => c.GroupId == groupId || c.SubGroupId == groupId);
+                }
             }
 
             int skip = (pageId - 1) * take;
@@ -247,6 +250,11 @@ namespace TopLearn.Core.Services
                     Text = l.Title,
                     Selected = selectedLevelId == l.Id,
                 }).ToList();
+        }
+
+        public IEnumerable<CourseGroup> GetMainGroups()
+        {
+            return _context.CourseGroups.Where(g => g.ParentId == null).ToList();
         }
 
         public IEnumerable<SelectListItem> GetMainGroupsForManageCourse(int selectedGroupId = 0)
