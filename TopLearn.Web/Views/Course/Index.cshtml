@@ -1,5 +1,8 @@
-﻿@model IEnumerable<ShowCoursesListViewModel>
-@inject ICourseService _courseService;
+﻿@model ShowCoursesListViewModel
+@{
+    IEnumerable<CourseGroup> groups = ViewData["Groups"] as IEnumerable<CourseGroup>;
+    IEnumerable<int> selectedGroups = ViewData["SelectedGroups"] as IEnumerable<int>;
+}
 @{
     ViewData["Title"] = "";
 }
@@ -15,7 +18,9 @@
 </div>
 
 <div class="container">
-    <form action="/course" method="get">
+    <form action="/courses" method="get">
+
+        <input type="hidden" id="pageId" name="pageId" value="@ViewData["PageId"].ToString()" />
 
         <section class="term-categories">
 
@@ -32,11 +37,11 @@
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
                         <div class="switch-field available">
-                            <input id="available-filter-1" name="getType" value="all" checked="" type="radio">
+                            <input onclick="filterCourses()" id="available-filter-1" name="getType" value="all" type="radio" @(ViewData["GetType"] == "all" ? "checked" : "")>
                             <label for="available-filter-1"> همه </label>
-                            <input id="available-filter-2" name="getType" value="buyable" type="radio">
+                            <input onclick="filterCourses()" id="available-filter-2" name="getType" value="buyable" type="radio" @(ViewData["GetType"] == "buyable" ? "checked" : "")>
                             <label for="available-filter-2"> خریدنی </label>
-                            <input id="available-filter-3" name="getType" value="free" type="radio">
+                            <input onclick="filterCourses()" id="available-filter-3" name="getType" value="free" type="radio" @(ViewData["GetType"] == "free" ? "checked" : "")>
                             <label for="available-filter-3"> رایگان </label>
                         </div>
                     </div>
@@ -71,12 +76,31 @@
                         <header><h3> دسته بندی موضوعات </h3></header>
                         <div class="inner">
                             <ul>
-                                @foreach (CourseGroup group in _courseService.GetMainGroups())
+                                @foreach (CourseGroup group in groups.Where(g => g.ParentId == null))
                                 {
                                     <li>
-                                        <input type="checkbox" name="" id="cat-1">
-                                        <label for="cat-1"> @group.Title </label>
+                                        
+                                        <label>
+                                            <input @(selectedGroups != null && selectedGroups.Any(sg => sg == group.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@group.Id">
+                                            @group.Title
+                                        </label>
                                     </li>
+
+                                    @if (groups.Any(g => g.ParentId == group.Id))
+                                    {
+                                        <ul>
+                                            @foreach (CourseGroup subGroup in groups.Where(g => g.ParentId == group.Id))
+                                            {
+                                                <li>
+                                                    
+                                                    <label>
+                                                        <input @(selectedGroups != null && selectedGroups.Any(sg => sg == subGroup.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@subGroup.Id">
+                                                        @subGroup.Title 
+                                                    </label>
+                                                </li>
+                                            }
+                                        </ul>
+                                    }
                                 }
 
                             </ul>
@@ -89,7 +113,7 @@
 
                     <section class="terms-items">
                         <div class="row">
-                            @foreach (var course in Model)
+                            @foreach (var course in Model.Courses)
                             {
                                 <partial name="_CourseBox" model="course"></partial>
                             }
@@ -98,16 +122,17 @@
 
                         <nav aria-label="Page navigation">
                             <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
+                                <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
+                                    <a class="page-link" onclick="changePage(@ViewData["PageId"] - 1)" href="#" aria-label="Previous">
                                         <span aria-hidden="true"><i class="zmdi zmdi-chevron-right"></i></span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
+                                @for (int i = 1; i <= Model.PageCount; i++)
+                                {
+                                    <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
+                                }
+                                <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
+                                    <a class="page-link" onclick="changePage(@ViewData["PageId"] + 1)" href="#" aria-label="Next">
                                         <span aria-hidden="true"><i class="zmdi zmdi-chevron-left"></i></span>
                                     </a>
                                 </li>
@@ -125,6 +150,16 @@
 @section Scripts {
     <script src="/noUiSlider/nouislider.min.js"></script>
     <script>
+
+        function changePage(pageId){
+            $('#pageId').val(pageId);
+            filterCourses();
+        }
+
+        function filterCourses() {
+            $("form").submit();
+        }
+
         $(function () {
 
             var slider = document.getElementById('priceFilter');
@@ -182,6 +217,10 @@
                     }
                 });
             }
+
+            
         });
+
+
     </script>
 }

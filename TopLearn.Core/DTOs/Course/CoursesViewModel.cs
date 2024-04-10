@@ -24,12 +24,20 @@ namespace TopLearn.Core.DTOs.Course
         public int EpisodeCount { get; set; }
     }
 
-    public class ShowCoursesListViewModel
+    public class ShowCourseItemViewModel
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string ImageName { get; set; }
         public int Price { get; set; }
         public TimeSpan TotalTime { get; set; }
+    }
+
+    public class ShowCoursesListViewModel
+    {
+        public IEnumerable<ShowCourseItemViewModel> Courses { get; set; }
+        public int PageCount { get; set; }
+        public bool HasNextPage { get; set; }
+        public bool HasPreviousPage { get; set; }
     }
 }

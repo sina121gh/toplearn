@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShowCoursesListViewModel>
+﻿@model ShowCoursesListViewModel
 @{
     ViewData["Title"] = "خانه";
 }
@@ -12,7 +12,7 @@
         <h3> با کمترین هزینه خودت یاد بگیر </h3>
     </header>
     <div class="search-form">
-        <form action="/course" method="get">
+        <form action="/courses" method="get">
             <input type="text" name="filter" placeholder="چی دوست داری یاد بگیری ؟">
             <button><i class="zmdi zmdi-search"></i></button>
         </form>
@@ -26,7 +26,7 @@
                 <a href=""> مشاهده همه دوره ها </a>
             </header>
             <div class="row">
-                @foreach (var course in Model)
+                @foreach (var course in Model.Courses)
                 {
                     <partial name="_CourseBox" model="course"></partial>
                 }

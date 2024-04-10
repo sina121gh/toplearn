@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TopLearn.DataLayer
-build_property.ProjectDir = E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.DataLayer\
+build_property.ProjectDir = E:\Documents\VS\Asp.Net Core\Advance\TopLearn\TopLearn.DataLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

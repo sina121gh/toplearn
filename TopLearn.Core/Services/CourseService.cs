@@ -135,7 +135,7 @@ namespace TopLearn.Core.Services
                 .ToList();
         }
 
-        public IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "",
+        public ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "",
             string getType = "all", string orderBy = "createDate",
             int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null)
         {
@@ -186,9 +186,10 @@ namespace TopLearn.Core.Services
             }
 
             int skip = (pageId - 1) * take;
-            return result.Include(c => c.CourseEpisodes).Skip(skip)
+
+            var query = result.Include(c => c.CourseEpisodes).Skip(skip)
             .Take(take).ToList()
-                .Select(c => new ShowCoursesListViewModel()
+                .Select(c => new ShowCourseItemViewModel()
                 {
                     Id = c.Id,
                     Title = c.Title,
@@ -196,6 +197,16 @@ namespace TopLearn.Core.Services
                     ImageName = c.ImageName,
                     TotalTime = new TimeSpan(c.CourseEpisodes.Sum(e => e.Time.Ticks)),
                 });
+
+            int pageCount = (int)Math.Ceiling(result.Count() / (double)take);
+
+            return new ShowCoursesListViewModel()
+            {
+                Courses = query,
+                PageCount = pageCount,
+                HasNextPage = pageId < pageCount,
+                HasPreviousPage = pageId >= pageCount,
+            };
         }
 
         public CoursesListForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1)

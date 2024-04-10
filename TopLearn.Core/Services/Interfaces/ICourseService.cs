@@ -39,7 +39,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Episode
 
-        IEnumerable<ShowCoursesListViewModel> GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
+        ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
             string orderBy = "createDate", int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null);
         IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
         int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
