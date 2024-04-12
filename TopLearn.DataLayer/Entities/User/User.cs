@@ -59,10 +59,16 @@ namespace TopLearn.DataLayer.Entities.User
         #region Relations
 
         public virtual IEnumerable<UserRole>? UserRoles { get; set; }
+
         public virtual Wallet.Wallet Wallet { get; set; }
+
         public virtual IEnumerable<Transaction> Transactions { get; set; }
+
         public virtual IEnumerable<Course.Course> Courses { get; set; }
+
         public virtual IEnumerable<Order.Order> Orders { get; set; }
+
+        public IEnumerable<UserCourse>? UserCourses { get; set; }
 
         #endregion
     }

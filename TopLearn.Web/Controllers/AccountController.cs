@@ -78,15 +78,15 @@ namespace TopLearn.Web.Controllers
 
         #region Login
         [Route("Login")]
-        public IActionResult Login(bool EditProfile = false)
+        public IActionResult Login(bool editProfile = false)
         {
-            ViewBag.EditProfile = EditProfile;
+            ViewBag.EditProfile = editProfile;
             return View();
         }
 
         [HttpPost]
         [Route("Login")]
-        public IActionResult Login(LoginViewModel login, string returnUrl = "/userpanel")
+        public IActionResult Login(LoginViewModel login, string returnUrl = "/user-panel")
         {
             if (!ModelState.IsValid)
                 return View(login);

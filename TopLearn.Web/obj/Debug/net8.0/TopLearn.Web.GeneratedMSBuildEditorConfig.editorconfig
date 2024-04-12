@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Documents/VS/Asp.Net Core/Advance/TopLearn/TopLearn.Web/Areas/UserPanel/Views/MyOrders/ShowOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXE15T3JkZXJzXFNob3dPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/VS/Asp.Net Core/Advance/TopLearn/TopLearn.Web/Areas/UserPanel/Views/Shared/_SideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFNoYXJlZFxfU2lkZUJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

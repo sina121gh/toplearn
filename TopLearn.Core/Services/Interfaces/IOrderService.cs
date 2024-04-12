@@ -11,8 +11,10 @@ namespace TopLearn.Core.Services.Interfaces
     {
         int AddOrder(string userName, int courseId);
         bool DoesUserHaveOpenOrder(int userId);
+        bool SubmitOrder(string userName, int orderId);
         Order? GetOrderByUserId(int userId);
         Order GetOrderById(int orderId);
+        Order GetOrderForUserPanel(string userName, int orderId);
         OrderDetail? GetOrderDetailByOrderIdAndCourseId(int orderId, int courseId);
     }
 }

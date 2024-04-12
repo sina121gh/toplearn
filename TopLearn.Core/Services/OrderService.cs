@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.Order;
@@ -76,10 +78,10 @@ namespace TopLearn.Core.Services
                     _context.OrderDetails.Add(detail);
                 }
 
-                order.TotalPrice += coursePrice;
+                order.TotalPrice = coursePrice;
                 _context.Orders.Update(order);
                 _context.SaveChanges();
-                
+
             }
 
             return order.Id;
@@ -106,6 +108,47 @@ namespace TopLearn.Core.Services
         {
             return _context.OrderDetails
                 .FirstOrDefault(od => od.OrderId == orderId && od.CourseId == courseId);
+        }
+
+        public Order GetOrderForUserPanel(string userName, int orderId)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+            return _context.Orders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Course)
+                .SingleOrDefault(o => o.UserId == userId && o.Id == orderId);
+        }
+
+        public bool SubmitOrder(string userName, int orderId)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+            Order order = GetOrderForUserPanel(userName, orderId);
+
+            if (order == null || order.IsFinally)
+                return false;
+
+            if (_userService.GetWalletBalance(userName) >= order.TotalPrice)
+            {
+                order.IsFinally = true;
+                _userService.WithdrawWallet(userName, order.TotalPrice, $"پرداخت فاکتور شماره #{orderId}", true);
+
+                _context.Orders.Update(order);
+
+                foreach (OrderDetail orderDetail in order.OrderDetails)
+                {
+                    _context.UserCourses.Add(new DataLayer.Entities.Course.UserCourse()
+                    {
+                        UserId = userId,
+                        CourseId = orderDetail.CourseId,
+                    });
+                }
+
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

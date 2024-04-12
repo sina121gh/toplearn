@@ -20,15 +20,16 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             _userService = userService;
         }
 
+        [Route("user-panel")]
         public IActionResult Index() => View(_userService.GetUserInformation(User.Identity.Name));
 
         #region Edit Profile
 
-        [Route("/UserPanel/EditProfile")]
+        [Route("/user-panel/edit-profile")]
         public IActionResult EditProfile() => View(_userService.GetUserForEdit(User.Identity.Name));
 
         [HttpPost]
-        [Route("/UserPanel/EditProfile")]
+        [Route("/user-panel/edit-profile")]
         public IActionResult EditProfile(EditProfileViewModel profile)
         {
             if (!ModelState.IsValid)
@@ -66,17 +67,17 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
 
-            return Redirect("/Login?EditProfile=true");
+            return Redirect("/login?editProfile=true");
         }
 
         #endregion
 
         #region Change Password
-        [Route("UserPanel/ChangePassword")]
+        [Route("user-panel/change-password")]
         public IActionResult ChangePassword() => View();
 
         [HttpPost]
-        [Route("UserPanel/ChangePassword")]
+        [Route("user-panel/change-password")]
         public IActionResult ChangePassword(ChangePasswordViewModel changePass)
         {
             if (!ModelState.IsValid)

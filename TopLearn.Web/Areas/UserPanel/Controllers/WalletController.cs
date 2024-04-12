@@ -27,16 +27,16 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
 
         #endregion
 
-        [Route("UserPanel/Transactions")]
+        [Route("user-panel/transactions")]
         public IActionResult Transactions() => View(_userService.GetTransactions(User.Identity.Name));
 
         #region Charge Wallet
 
-        [Route("UserPanel/ChargeWallet")]
+        [Route("user-panel/charge-wallet")]
         public IActionResult ChargeWallet() => View();
 
         [HttpPost]
-        [Route("UserPanel/ChargeWallet")]
+        [Route("user-panel/charge-wallet")]
         public async Task<IActionResult> ChargeWallet(ChargeWalletViewModel charge)
         {
             if (!ModelState.IsValid)
@@ -59,7 +59,7 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
 
         #region Validate Payment
 
-        [Route("ValidatePayment/{transactionId}")]
+        [Route("validate-payment/{transactionId}")]
         public async Task<IActionResult> ValidatePayment(int transactionId)
         {
             if (HttpContext.Request.Query["Status"] != "" &&

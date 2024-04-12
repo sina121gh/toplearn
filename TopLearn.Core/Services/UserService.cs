@@ -269,6 +269,7 @@ namespace TopLearn.Core.Services
             try
             {
                 _context.Transactions.Add(transaction);
+                UpdateWalletBalance(transaction);
                 _context.SaveChanges();
                 return transaction.Id;
             }
@@ -504,6 +505,28 @@ namespace TopLearn.Core.Services
         {
             _context.Add(wallet);
             return _context.SaveChanges() > 0 ? true : false;
+        }
+
+        public int WithdrawWallet(string userName, int amount, string description, bool isSuccess = true)
+        {
+            Transaction transaction = new Transaction()
+            {
+                UserId = GetUserIdByUserName(userName),
+                Amount = amount,
+                CreateDate = DateTime.Now,
+                Description = description,
+                IsSuccess = isSuccess,
+                TypeId = 2,
+            };
+
+            try
+            {
+                return AddTransaction(transaction);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

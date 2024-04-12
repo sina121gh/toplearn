@@ -20,7 +20,7 @@ namespace TopLearn.Core.Services
             var result = await payment.Request(new DtoRequestWithExtra()
             {
                 Amount = amount,
-                CallbackUrl = $"https://localhost:7168/ValidatePayment/{transactionId}",
+                CallbackUrl = $"https://localhost:7168/validate-payment/{transactionId}",
                 Description = description,
                 Email = email,
                 Mobile = mobile,

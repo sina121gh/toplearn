@@ -42,6 +42,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Wallet
 
+        int WithdrawWallet(string userName, int amount, string description, bool isSuccess = true);
         int ChargeWallet(string userName, int amount, string description, bool isSuccess = false);
         int AddTransaction(Transaction transaction);
         int GetWalletBalance(string userName);

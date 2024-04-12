@@ -1,0 +1,126 @@
+﻿@model Order
+@inject IUserService _userService;
+@{
+    ViewData["Title"] = $"فاکتور شماره {Model.Id}";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> نمایش فاکتور </li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+
+                <partial name="_SideBar"></partial>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <section class="user-account-content">
+                        <header><h1> فاکتور شما </h1></header>
+                        @if(ViewBag.IsFinally == true)
+                        {
+                            
+                        }
+                        <div class="inner">
+                            <div class="account-information">
+                                <h3> لیست تراکنش ها </h3>
+                                <table class="table table-bordered table-hover table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>دوره</th>
+                                            <th>تعداد</th>
+                                            <th>قیمت</th>
+                                            <th>جمع ردیف</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (OrderDetail orderDetail in Model.OrderDetails)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <a href="/courses/@orderDetail.Course.Id" target="_blank">
+                                                        @orderDetail.Course.Title
+                                                    </a>
+                                                </td>
+                                                <td>@orderDetail.Count</td>
+                                                <td>@(orderDetail.Price.ToString("#,0")) تومان</td>
+                                                <td>@((orderDetail.Count * orderDetail.Price).ToString("#,0")) تومان</td>
+                                            </tr>
+                                        }
+
+                                        
+
+                                        <tr>
+                                            <td colspan="3" class="text-left">جمع کل</td>
+                                            <td class="bg-warning">@Model.TotalPrice.ToString("#,0") تومان</td>
+                                        </tr>
+
+                                        
+
+                                        @if (!Model.IsFinally)
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-left">کد تخفیف</td>
+                                                <td>
+                                                    <input type="text" class="form-control" />
+                                                    <input style="margin-top:5px;" type="submit" class="btn btn-primary btn-block" value="اعمال" />
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="text-left"></td>
+                                                <td colspan="2">
+                                                    @if (_userService.GetWalletBalance(User.Identity.Name) >= Model.TotalPrice)
+                                                    {
+                                                        <a class="btn btn-success btn-block" href="/user-panel/my-orders/@Model.Id/submit">
+                                                            تایید فاکتور
+                                                        </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="btn btn-success btn-block" disabled>
+                                                            تایید فاکتور
+                                                        </a>
+                                                        <div class="alert alert-warning" style="margin-top:4px;">
+                                                            موجودی کیف پول شما کافی نمیباشد. لطفا از طریق
+                                                            <a class="alert-link" href="/user-panel/charge-wallet/">این لینک</a>
+                                                            نسبت به شارژ آن اقدام کنید
+                                                        </div>
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @if(ViewBag.IsFinally == true)
+    {
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'با تشکر از شما، فاکتور با موفقیت پرداخت گردید',
+                timer: '3000',
+                confirmButtonText: 'تایید',
+                focusConfirm: false,
+            });
+        </script>
+    }
+}

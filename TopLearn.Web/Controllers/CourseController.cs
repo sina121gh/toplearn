@@ -47,8 +47,8 @@ namespace TopLearn.Web.Controllers
         [Route("/courses/{courseId}/buy")]
         public IActionResult BuyCourse(int courseId)
         {
-            _orderService.AddOrder(User.Identity.Name, courseId);
-            return Redirect($"/courses/{courseId}/");
+            int orderId = _orderService.AddOrder(User.Identity.Name, courseId);
+            return Redirect($"/user-panel/my-orders/{orderId}/");
         }
     }
 }

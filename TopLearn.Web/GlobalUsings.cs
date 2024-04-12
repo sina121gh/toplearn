@@ -7,3 +7,4 @@ global using TopLearn.DataLayer.Entities;
 global using TopLearn.DataLayer.Entities.Course;
 global using TopLearn.Core.Services.Interfaces;
 global using TopLearn.Core.DTOs.Course;
+global using TopLearn.DataLayer.Entities.Order;
