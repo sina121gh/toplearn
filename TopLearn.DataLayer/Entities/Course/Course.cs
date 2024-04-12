@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopLearn.DataLayer.Entities.Order;
 using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.DataLayer.Entities.Course
@@ -94,6 +95,8 @@ namespace TopLearn.DataLayer.Entities.Course
 
 
         public List<CourseEpisode>? CourseEpisodes { get; set; }
+
+        public List<OrderDetail> OrderDetails { get; set; }
 
         #endregion
     }

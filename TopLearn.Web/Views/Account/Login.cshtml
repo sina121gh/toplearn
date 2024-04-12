@@ -18,10 +18,11 @@
                 <p class="help-block">ورود با موفقیت انجام شد</p>
             </div>
 
-            <script>
-                // Your delay in milliseconds
+            <script>"/UserPanel";
+                // Delay in milliseconds
                 var delay = 1000;
-                setTimeout(function () { window.location = "/UserPanel"; }, delay);
+
+                setTimeout(function () { window.location = "@ViewBag.ReturnUrl"; }, delay);
             </script>
         }
         @if (ViewBag.EditProfile == true)

@@ -86,7 +86,7 @@ namespace TopLearn.Web.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public IActionResult Login(LoginViewModel login)
+        public IActionResult Login(LoginViewModel login, string returnUrl = "/userpanel")
         {
             if (!ModelState.IsValid)
                 return View(login);
@@ -116,6 +116,7 @@ namespace TopLearn.Web.Controllers
                     HttpContext.SignInAsync(principal, properties);
 
                     ViewBag.IsSuccess = true;
+                    ViewBag.ReturnUrl = returnUrl;
                     return View();
                 }
                     

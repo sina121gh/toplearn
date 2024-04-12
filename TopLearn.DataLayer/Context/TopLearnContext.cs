@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TopLearn.DataLayer.Entities.Course;
+using TopLearn.DataLayer.Entities.Order;
 using TopLearn.DataLayer.Entities.Permissions;
 using TopLearn.DataLayer.Entities.User;
 using TopLearn.DataLayer.Entities.Wallet;
@@ -13,9 +14,9 @@ namespace TopLearn.DataLayer.Context
 {
     public class TopLearnContext : DbContext
     {
-        public TopLearnContext(DbContextOptions<TopLearnContext> options) : base (options)
+        public TopLearnContext(DbContextOptions<TopLearnContext> options) : base(options)
         {
-            
+
         }
 
         #region User
@@ -51,11 +52,25 @@ namespace TopLearn.DataLayer.Context
 
         #endregion
 
+        #region Order
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        #endregion
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Query Filter
+
+            var cascadeFKs = modelBuilder.Model.GetEntityTypes()
+            .SelectMany(t => t.GetForeignKeys())
+            .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            foreach (var fk in cascadeFKs)
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
 
             modelBuilder.Entity<User>()
                 .HasQueryFilter(u => !u.IsDeleted);

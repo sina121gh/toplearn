@@ -32,6 +32,7 @@ namespace TopLearn.Core.Services.Interfaces
         ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
             string orderBy = "createDate", int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null);
         CoursesListForAdminViewModel GetCoursesForAdmin(int take = 10, int pageId = 1);
+        int? GetCoursePriceById(int courseId);
         int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
         string GetCourseTitleById(int courseId);
         Course GetCourseById(int courseId);

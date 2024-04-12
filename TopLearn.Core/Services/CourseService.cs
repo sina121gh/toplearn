@@ -145,6 +145,14 @@ namespace TopLearn.Core.Services
                 .SingleOrDefault(c => c.Id == courseId);
         }
 
+        public int? GetCoursePriceById(int courseId)
+        {
+            int? price = _context.Courses
+                .Find(courseId).Price;
+
+            return price;
+        }
+
         public ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "",
             string getType = "all", string orderBy = "createDate",
             int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null)

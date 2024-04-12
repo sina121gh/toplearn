@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TopLearn.Web.Controllers
 {
@@ -8,10 +9,12 @@ namespace TopLearn.Web.Controllers
         #region DI
 
         private readonly ICourseService _courseService;
+        private readonly IOrderService _orderService;
 
-        public CourseController(ICourseService courseService)
+        public CourseController(ICourseService courseService, IOrderService orderService)
         {
             _courseService = courseService;
+            _orderService = orderService;
         }
 
         #endregion
@@ -38,6 +41,14 @@ namespace TopLearn.Web.Controllers
                 return NotFound();
 
             return View(course);
+        }
+
+        [Authorize]
+        [Route("/courses/{courseId}/buy")]
+        public IActionResult BuyCourse(int courseId)
+        {
+            _orderService.AddOrder(User.Identity.Name, courseId);
+            return Redirect($"/courses/{courseId}/");
         }
     }
 }

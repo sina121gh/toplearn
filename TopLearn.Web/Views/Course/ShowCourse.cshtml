@@ -172,7 +172,7 @@
                         </li>
                     </ul>
 
-                    <a href=""> شرکت در دوره : @(Model.Price != 0 ? Model.Price.ToString("#,0") + " تومان"  : "رایگان") </a>
+                    <a href="/courses/@Model.Id/buy"> شرکت در دوره : @(Model.Price != 0 ? Model.Price.ToString("#,0") + " تومان"  : "رایگان") </a>
                 </div>
 
                 <article class="teacher-info">
@@ -199,7 +199,7 @@
                     <a href=""><i class="zmdi zmdi-linkedin"></i></a>
                 </div>
 
-                @if(Model.Tags.Any())
+                @if(Model.Tags != null)
                 {
                     <div class="tags-layer">
                         @foreach (string tag in Model.Tags.Split('-', StringSplitOptions.RemoveEmptyEntries))
