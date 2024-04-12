@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using TopLearn.Core.DTOs.Order;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.Order;
@@ -87,10 +88,46 @@ namespace TopLearn.Core.Services
             return order.Id;
         }
 
+        public DiscountCodeTypes ApplyDiscount(int orderId, string discountCode)
+        {
+            Discount discount = GetDiscountByCode(discountCode);
+
+            if (discount == null)
+                return DiscountCodeTypes.Invalid;
+
+            if (discount.StartDate != null && discount.StartDate > DateTime.Now)
+                return DiscountCodeTypes.Expired;
+
+            if (discount.EndDate != null && discount.EndDate < DateTime.Now)
+                return DiscountCodeTypes.Expired;
+
+            if (discount.UsableCount != null && discount.UsableCount == 0)
+                return DiscountCodeTypes.Finished;
+
+            Order order = GetOrderById(orderId);
+
+            order.TotalPrice -= ((order.TotalPrice * discount.Precent) / 100);
+            UpdateOrder(order);
+
+            if (discount.UsableCount != null)
+            {
+                discount.UsableCount -= 1;
+                UpdateDiscount(discount);
+            }
+
+            return DiscountCodeTypes.Success;
+        }
+
         public bool DoesUserHaveOpenOrder(int userId)
         {
             return _context.Orders
                 .Any(o => o.UserId == userId && !o.IsFinally);
+        }
+
+        public Discount GetDiscountByCode(string discountCode)
+        {
+            return _context.Discounts
+                .SingleOrDefault(d => d.Code == discountCode);
         }
 
         public Order GetOrderById(int orderId)
@@ -117,6 +154,14 @@ namespace TopLearn.Core.Services
                 .Include(o => o.OrderDetails)
                 .ThenInclude(od => od.Course)
                 .SingleOrDefault(o => o.UserId == userId && o.Id == orderId);
+        }
+
+        public IEnumerable<Order> GetUserOrders(string userName)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+            return _context.Orders
+                .Where(o => o.UserId == userId)
+                .ToList();
         }
 
         public bool SubmitOrder(string userName, int orderId)
@@ -146,6 +191,32 @@ namespace TopLearn.Core.Services
                 return _context.SaveChanges() > 0;
             }
             else
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateDiscount(Discount discount)
+        {
+            try
+            {
+                _context.Discounts.Update(discount);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateOrder(Order order)
+        {
+            try
+            {
+                _context.Orders.Update(order);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
             {
                 return false;
             }

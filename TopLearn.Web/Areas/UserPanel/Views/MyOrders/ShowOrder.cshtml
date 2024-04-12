@@ -28,7 +28,6 @@
                         }
                         <div class="inner">
                             <div class="account-information">
-                                <h3> لیست تراکنش ها </h3>
                                 <table class="table table-bordered table-hover table-responsive">
                                     <thead>
                                         <tr>
@@ -68,8 +67,11 @@
                                             <tr>
                                                 <td colspan="3" class="text-left">کد تخفیف</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
-                                                    <input style="margin-top:5px;" type="submit" class="btn btn-primary btn-block" value="اعمال" />
+                                                    <form action="/user-panel/my-orders/apply-discount" method="post">
+                                                        <input type="hidden" name="orderId" value="@Model.Id"/>
+                                                        <input type="text" name="discountCode" class="form-control" />
+                                                        <input type="submit" class="btn btn-primary btn-block" style="margin-top:5px;" value="اعمال" />
+                                                    </form>
                                                 </td>
                                             </tr>
 
@@ -87,7 +89,7 @@
                                                         <a class="btn btn-success btn-block" disabled>
                                                             تایید فاکتور
                                                         </a>
-                                                        <div class="alert alert-warning" style="margin-top:4px;">
+                                                        <div class="alert alert-danger" style="margin-top:4px;">
                                                             موجودی کیف پول شما کافی نمیباشد. لطفا از طریق
                                                             <a class="alert-link" href="/user-panel/charge-wallet/">این لینک</a>
                                                             نسبت به شارژ آن اقدام کنید
@@ -122,5 +124,60 @@
                 focusConfirm: false,
             });
         </script>
+    }
+
+    @if (ViewBag.Type != null)
+    {
+        @switch (ViewBag.Type)
+        {
+            case "Success":
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'کد تخفیف با موفقیت اعمال گردید',
+                        timer: '1500',
+                        confirmButtonText: 'تایید',
+                        focusConfirm: false,
+                    });
+                </script>
+                break;
+
+            case "Invalid":
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'کد تخفیف وارد شده اشتباه است',
+                        timer: '1500',
+                        confirmButtonText: 'تایید',
+                        focusConfirm: false,
+                    });
+                </script>
+                break;
+
+            case "Expired":
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'کد تخفیف وارد شده منقضی شده است',
+                        timer: '1500',
+                        confirmButtonText: 'تایید',
+                        focusConfirm: false,
+                    });
+                </script>
+                break;
+
+            case "Finished":
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'تعداد دفعات استفاده از تخفیف تخفیف به اتمام رسیده است',
+                        timer: '1500',
+                        confirmButtonText: 'تایید',
+                        focusConfirm: false,
+                    });
+                </script>
+                break;
+
+        }
     }
 }

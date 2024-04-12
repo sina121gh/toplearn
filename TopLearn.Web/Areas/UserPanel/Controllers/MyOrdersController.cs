@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TopLearn.Core.DTOs.Order;
 using TopLearn.DataLayer.Entities.Order;
 
 namespace TopLearn.Web.Areas.UserPanel.Controllers
@@ -21,14 +22,14 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
         #endregion
 
 
-        [Route("")]
+        [Route("user-panel/my-orders")]
         public IActionResult Index()
         {
-            return View();
+            return View(_orderService.GetUserOrders(User.Identity.Name));
         }
 
         [Route("user-panel/my-orders/{orderId}")]
-        public IActionResult ShowOrder(int orderId, bool isFinally = false)
+        public IActionResult ShowOrder(int orderId, string type, bool isFinally = false)
         {
             Order order = _orderService.GetOrderForUserPanel(User.Identity.Name, orderId);
 
@@ -36,6 +37,7 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
                 return NotFound();
 
             ViewBag.IsFinally = isFinally;
+            ViewBag.Type = type;
             return View(order);
         }
 
@@ -48,6 +50,14 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             }
 
             return BadRequest();
+        }
+
+        [Route("user-panel/my-orders/apply-discount")]
+        public IActionResult ApplyDiscount(int orderId, string discountCode)
+        {
+            DiscountCodeTypes type = _orderService.ApplyDiscount(orderId, discountCode);
+
+            return Redirect($"/user-panel/my-orders/{orderId}?type={type.ToString()}");
         }
     }
 }

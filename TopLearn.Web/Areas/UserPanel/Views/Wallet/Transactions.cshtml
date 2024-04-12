@@ -43,7 +43,10 @@
                                                 <tr class="@(!transaction.Status ? "bg-warning" : transaction.Type ? "bg-success" : "bg-danger")">
                                                     <td>@(transaction.Type ? "واریز" : "برداشت")</td>
                                                     <td>@transaction.Amout.ToString("#,0")‌ تومان</td>
-                                                    <td>@transaction.Description</td>
+                                                    @{
+                                                        string href = $"<a href='/user-panel/my-orders/{transaction.Description.Replace("پرداخت فاکتور شماره #", "")}'>#</a>";
+                                                    }
+                                                    <td>@Html.Raw(transaction.Description.Replace("#", href))</td>
                                                     <td>@transaction.Date.ToShamsi()</td>
                                                     <td>@(transaction.Status ? "موفق" : "ناموفق")</td>
                                                 </tr>
