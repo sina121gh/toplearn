@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<CourseGroup>
-@inject ICourseService _courseService;
 
 <div class="main-menu">
     <div class="container">
@@ -9,13 +8,13 @@
                 @foreach (CourseGroup group in Model.Where(g => g.ParentId == null))
                 {
                     <li>
-                        <a href=""> @group.Title </a>
-                        @if (_courseService.HasSubGroup(group.Id))
+                        <a href="/courses?selectedGroups=@group.Id"> @group.Title </a>
+                        @if (Model.Any(g => g.ParentId == group.Id))
                         {
                             <ul>
-                            @foreach (CourseGroup subGroup in _courseService.GetSubGroups(group.Id))
+                            @foreach (CourseGroup subGroup in Model.Where(sg => sg.ParentId == group.Id))
                             {
-                                <li><a href=""> @subGroup.Title </a></li>
+                                <li><a href="/courses?selectedGroups=@subGroup.Id"> @subGroup.Title </a></li>
                             }
                             </ul>
                         }

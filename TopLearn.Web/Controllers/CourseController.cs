@@ -28,5 +28,16 @@ namespace TopLearn.Web.Controllers
             return View(_courseService.GetCourses(pageId, 1, filter, getType, orderBy,
                 minPrice, maxPrice, selectedGroups));
         }
+
+        [Route("courses/{courseId}")]
+        public IActionResult ShowCourse(int courseId)
+        {
+            Course course = _courseService.GetCourseForShowDetails(courseId);
+
+            if (course == null) 
+                return NotFound();
+
+            return View(course);
+        }
     }
 }

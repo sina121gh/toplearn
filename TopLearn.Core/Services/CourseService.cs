@@ -135,6 +135,16 @@ namespace TopLearn.Core.Services
                 .ToList();
         }
 
+        public Course GetCourseForShowDetails(int courseId)
+        {
+            return _context.Courses
+                .Include(c => c.CourseEpisodes)
+                .Include(c => c.CourseStatus)
+                .Include(c => c.CourseLevel)
+                .Include(c => c.User)
+                .SingleOrDefault(c => c.Id == courseId);
+        }
+
         public ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "",
             string getType = "all", string orderBy = "createDate",
             int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null)
@@ -145,7 +155,7 @@ namespace TopLearn.Core.Services
             IQueryable<Course> result = _context.Courses;
 
             if (!string.IsNullOrEmpty(filter))
-                result = result.Where(c => c.Title.Contains(filter));
+                result = result.Where(c => c.Title.Contains(filter) || c.Tags.Contains(filter));
 
             switch (getType)
             {

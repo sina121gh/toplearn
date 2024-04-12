@@ -81,7 +81,7 @@
                                     <li>
                                         
                                         <label>
-                                            <input @(selectedGroups != null && selectedGroups.Any(sg => sg == group.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@group.Id">
+                                            <input @(selectedGroups != null && selectedGroups.Any(g => g == group.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@group.Id">
                                             @group.Title
                                         </label>
                                     </li>

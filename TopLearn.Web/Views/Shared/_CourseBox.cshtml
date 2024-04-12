@@ -1,8 +1,8 @@
 ﻿@model ShowCourseItemViewModel
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 term-col">
     <article>
-        <a href="" class="img-layer"><img src="/courses/images/@Model.ImageName"></a>
-        <h2><a href=""> @Model.Title </a></h2>
+        <a href="/courses/@Model.Id" class="img-layer"><img src="/courses/images/@Model.ImageName"></a>
+        <h2><a href="/courses/@Model.Id"> @Model.Title </a></h2>
         <span> @(Model.Price == 0 ? "رایگان" : Model.Price.ToString("#,0") + " تومان") </span>
         <i>@Model.TotalTime</i>
     </article>
