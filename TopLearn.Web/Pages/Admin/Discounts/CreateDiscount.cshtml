@@ -1,4 +1,4 @@
-﻿@page "/admin/discounts/create"
+﻿@page "/admin/discounts/create/{handler?}"
 @model TopLearn.Web.Pages.Admin.Discounts.CreateDiscountModel
 @{
     ViewData["Title"] = "افزودن کد تخفیف";
@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label>کد تخفیف</label>
-                                <input type="text" asp-for="Discount.Code" class="form-control">
+                                <input type="text" asp-for="Discount.Code" id="code" class="form-control">
                                 <span class="text-danger" asp-validation-for="Discount.Code"></span>
                             </div>
 
@@ -87,6 +87,20 @@
     <script>
         jalaliDatepicker.startWatch({
             minDate: "today",
+        });
+
+        $("#code").blur(function () {
+            $.ajax({
+                type: 'get',
+                url: '/admin/discounts/create/validatecode?code=' + $('#code').val(),
+            }).done(function (res) {
+                if (res === 'False') {
+                    Swal.fire({
+                        title: 'کد تخفیف تکراری است',
+                        icon: 'error'
+                    });
+                }
+            })
         });
     </script>
 }

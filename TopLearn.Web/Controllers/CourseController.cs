@@ -37,7 +37,7 @@ namespace TopLearn.Web.Controllers
         {
             Course course = _courseService.GetCourseForShowDetails(courseId);
 
-            if (course == null) 
+            if (course == null)
                 return NotFound();
 
             return View(course);
@@ -49,6 +49,38 @@ namespace TopLearn.Web.Controllers
         {
             int orderId = _orderService.AddOrder(User.Identity.Name, courseId);
             return Redirect($"/user-panel/my-orders/{orderId}/");
+        }
+
+        [Route("download/{episodeId}")]
+        public IActionResult DownloadFile(int episodeId)
+        {
+            CourseEpisode episode = _courseService.GetEpisodeById(episodeId);
+
+            string fileName = episode.FileName;
+
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(),
+                "wwwroot",
+                "courses",
+                "episodes",
+                fileName);
+
+
+            if (episode.IsFree)
+            {
+                byte[] file = System.IO.File.ReadAllBytes(filePath);
+                return File(file, "application/force-download", fileName);
+            }
+
+            if (User.Identity.IsAuthenticated)
+            {
+                if (_orderService.IsUserInCourse(User.Identity.Name, episode.CourseId))
+                {
+                    byte[] file = System.IO.File.ReadAllBytes(filePath);
+                    return File(file, "application/force-download", fileName);
+                }
+            }
+
+            return Forbid();
         }
     }
 }

@@ -1,6 +1,14 @@
 ﻿@model Course
+@inject IOrderService _orderService;
 @{
     ViewData["Title"] = @Model.Title;
+
+    bool isUserInCourse = false;
+
+    if (User.Identity.IsAuthenticated)
+    {
+        isUserInCourse = _orderService.IsUserInCourse(User.Identity.Name, Model.Id);
+    }
 }
 
 <div class="container">
@@ -24,11 +32,37 @@
 
                     @Html.Raw(Model.Description)
 
+                    @if (!isUserInCourse)
+                    {
+                        <div class="alert alert-info">
+                            <p>
+                                بعد از ثبت نام در این دوره و تایید فاکتور لینک های دانلود برای شما فعال خواهد شد
+                            </p>
+                        </div>
+                    }
+
                     <h2> سرفصل های این دوره : </h2>
                     <ul>
                         @foreach (CourseEpisode episode in Model.CourseEpisodes)
                         {
-                            <li> <h3> @episode.Time </h3> <i> @(episode.IsFree ? "رایگان" : "نقدی") </i> <span>@episode.Time</span></li>
+                            <li>
+                                @if (episode.IsFree || isUserInCourse)
+                                {
+                                    <h3>
+                                        <a href="/download/@episode.Id">
+                                            @episode.Title
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
+                                        @episode.Title
+                                    </h3>
+                                }
+                                <i> @(episode.IsFree ? "رایگان" : "نقدی") </i>
+                                <span>@episode.Time</span>
+                            </li>
                         }
                     </ul>
                 </section>
@@ -168,11 +202,20 @@
                         </li>
                         <li>
                             <span> تعداد دانشجوها </span>
-                            <i> 0 نفر </i>
+                            <i> @Model.UserCourses.Count نفر </i>
                         </li>
                     </ul>
 
-                    <a href="/courses/@Model.Id/buy"> شرکت در دوره : @(Model.Price != 0 ? Model.Price.ToString("#,0") + " تومان"  : "رایگان") </a>
+                    @if (!isUserInCourse)
+                    {
+                        <a href="/courses/@Model.Id/buy"> شرکت در دوره : @(Model.Price != 0 ? Model.Price.ToString("#,0") + " تومان" : "رایگان") </a>
+                    }
+                    else
+                    {
+                        <a>
+                            شما قبلا این دوره را خریداری کرده اید
+                        </a>
+                    }
                 </div>
 
                 <article class="teacher-info">
@@ -199,7 +242,7 @@
                     <a href=""><i class="zmdi zmdi-linkedin"></i></a>
                 </div>
 
-                @if(Model.Tags != null)
+                @if (Model.Tags != null)
                 {
                     <div class="tags-layer">
                         @foreach (string tag in Model.Tags.Split('-', StringSplitOptions.RemoveEmptyEntries))

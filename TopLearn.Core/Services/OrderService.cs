@@ -164,6 +164,13 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public bool DoesCodeExist(string code)
+        {
+            return _context
+                .Discounts
+                .Any(d => d.Code == code);
+        }
+
         public bool DoesUserHaveOpenOrder(int userId)
         {
             return _context.Orders
@@ -179,6 +186,11 @@ namespace TopLearn.Core.Services
         public Discount GetDiscountById(int discountId)
         {
             return _context.Discounts.Find(discountId);
+        }
+
+        public string GetDiscountCodeById(int discountId)
+        {
+            return _context.Discounts.Find(discountId).Code;
         }
 
         public List<Discount> GetDiscounts()
@@ -224,6 +236,15 @@ namespace TopLearn.Core.Services
         {
             return _context.UserDiscounts
                 .Any(ud => ud.UserId == userId && ud.DiscountId == discountId);
+        }
+
+        public bool IsUserInCourse(string userName, int courseId)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+
+            return _context
+                .UserCourses
+                .Any(uc => uc.UserId == userId && uc.CourseId == courseId);
         }
 
         public bool SubmitOrder(string userName, int orderId)

@@ -17,12 +17,14 @@ namespace TopLearn.Web.Pages.Admin.Discounts
 
         #endregion
 
-        public void OnGet(int discountId)
+        public IActionResult OnGet(int discountId)
         {
             Discount discount = _orderService.GetDiscountById(discountId);
 
             if (discount != null)
-                _orderService.DeleteDiscount(discountId);
+                return Content(_orderService.DeleteDiscount(discountId).ToString());
+
+            return Content("False");
         }
     }
 }

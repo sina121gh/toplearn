@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MkGq0tERvPwPvwFf5r3KimELYGbjtM4P+ah6dKIP9IU=",
+  "Hash": "7qpFJXKk4hEKb+m5SdqHqFTO7XHDyGf1PQIRsG2+pD8=",
   "Source": "TopLearn.Web",
   "BasePath": "_content/TopLearn.Web",
   "Mode": "Default",
@@ -4881,12 +4881,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\plugins\\jquery\\jquery.slim.min.map"
     },
     {
-      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\img11.rar",
+      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\1.rar",
       "SourceId": "TopLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\",
       "BasePath": "_content/TopLearn.Web",
-      "RelativePath": "courses/episodes/img11.rar",
+      "RelativePath": "courses/episodes/1.rar",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4897,15 +4897,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\courses\\episodes\\img11.rar"
+      "OriginalItemSpec": "wwwroot\\courses\\episodes\\1.rar"
     },
     {
-      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\test.rar",
+      "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\2.rar",
       "SourceId": "TopLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\",
       "BasePath": "_content/TopLearn.Web",
-      "RelativePath": "courses/episodes/test.rar",
+      "RelativePath": "courses/episodes/2.rar",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4916,7 +4916,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\courses\\episodes\\test.rar"
+      "OriginalItemSpec": "wwwroot\\courses\\episodes\\2.rar"
     },
     {
       "Identity": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\images\\16318a36ae7c41778593edeb21b02e25.jpg",

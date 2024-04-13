@@ -15,6 +15,7 @@ namespace TopLearn.Core.Services.Interfaces
         bool DoesUserHaveOpenOrder(int userId);
         bool SubmitOrder(string userName, int orderId);
         bool UpdateOrder(Order order);
+        bool IsUserInCourse(string userName, int courseId);
         Order? GetOrderByUserId(int userId);
         Order GetOrderById(int orderId);
         Order GetOrderForUserPanel(string userName, int orderId);
@@ -30,10 +31,12 @@ namespace TopLearn.Core.Services.Interfaces
         DiscountCodeTypes ApplyDiscount(int orderId, string discountCode);
         Discount GetDiscountByCode(string discountCode);
         Discount GetDiscountById(int discountId);
+        string GetDiscountCodeById(int discountId);
         bool UpdateDiscount(Discount discount);
         bool DeleteDiscount(int discountId);
         bool HasDiscountUsedByUser(int userId, int discountId);
         bool AddDiscount(Discount discount);
+        bool DoesCodeExist(string code);
 
         #endregion
     }

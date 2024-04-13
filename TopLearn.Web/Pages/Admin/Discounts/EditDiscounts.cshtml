@@ -1,4 +1,4 @@
-﻿@page "/admin/discounts/{discountId}/edit"
+﻿@page "/admin/discounts/{discountId}/edit/{handler?}"
 @model TopLearn.Web.Pages.Admin.Discounts.EditDiscountsModel
 @{
     ViewData["Title"] = "ویرایش کد";
@@ -29,7 +29,7 @@
         <form method="post">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="card card-success">
+                    <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">اطلاعات کد</h3>
                         </div>
@@ -37,11 +37,11 @@
                         <!-- form start -->
                         <div class="card-body">
 
-                            <input type="hidden" asp-for="Discount.Id"/>
+                            <input type="hidden" asp-for="Discount.Id" id="id"/>
 
                             <div class="form-group">
                                 <label>کد تخفیف</label>
-                                <input type="text" asp-for="Discount.Code" class="form-control">
+                                <input type="text" asp-for="Discount.Code" id="code" class="form-control">
                                 <span class="text-danger" asp-validation-for="Discount.Code"></span>
                             </div>
 
@@ -90,5 +90,33 @@
         jalaliDatepicker.startWatch({
             minDate: "today",
         });
+
+        $("#code").blur(function () {
+            $.ajax({
+                type: 'get',
+                url: '/admin/discounts/' + $('#id').val() + '/edit/validatecode?id=' + $('#id').val() + '&code=' + $('#code').val(),
+                    }).done(function (res) {
+                    if (res === 'False') {
+                        Swal.fire({
+                            title: 'کد تخفیف تکراری است',
+                            icon: 'error'
+                        });
+                    }
+                })
+                });
+
+
     </script>
+
+    @if (ViewData["InvalidCode"] != null)
+        @if (bool.Parse(ViewData["InvalidCode"].ToString()) == true)
+        {
+            <script>
+                Swal.fire({
+                    title: 'کد تخفیف تکراری است',
+                    icon: 'error'
+                });
+            </script>
+        }
+    
 }

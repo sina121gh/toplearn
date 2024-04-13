@@ -52,7 +52,7 @@
 
 @section Scripts {
     <script>
-        
+
         $(document).ready(function () {
             getDiscounts();
         });
@@ -78,11 +78,11 @@
                             object += '<td>' + discount.startDate + '</td>';
                             object += '<td>' + discount.endDate + '</td>';
                             object += '<td>' + `<a href="/admin/discounts/${discount.id}/edit/" class="btn btn-primary btn-sm">
-                                                                    ویرایش
-                                                                    </a>
-                                                                            <a onclick="remove(${discount.id}, '${discount.code}')" class="btn btn-danger btn-sm text-white">
-                                                                    حذف
-                                                                    </a>` + '</td>';
+                                                                            ویرایش
+                                                                            </a>
+                                                                                    <a onclick="remove(${discount.id}, '${discount.code}')" class="btn btn-danger btn-sm text-white">
+                                                                            حذف
+                                                                            </a>` + '</td>';
                             object += '</tr>';
                         });
                         $('#discounts').html(object);
@@ -116,16 +116,23 @@
                     $.ajax({
                         type: 'get',
                         url: `/admin/discounts/${id}/delete/`,
-                        success: function (response) {
+                    }).done(function (res) {
+                        if (res === 'True') {
                             Swal.fire({
                                 title: 'کد با موفقیت حذف شد',
                                 icon: 'success'
-                            })
+                            });
                             getDiscounts();
+                        } else {
+                            Swal.fire({
+                                title: 'عملیات با شکست مواجه شد',
+                                icon: 'error'
+                            });
                         }
-                    })
+                    });
                 }
-            })
+            });
+
         }
     </script>
 }

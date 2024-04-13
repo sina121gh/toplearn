@@ -27,18 +27,37 @@ namespace TopLearn.Web.Pages.Admin.Discounts
 
         public IActionResult OnPost(string startDate = "", string endDate = "")
         {
-            if (startDate != "")
+            if (startDate != null)
                 Discount.StartDate = startDate.ToMiladi();
 
-            if (endDate != "")
+            if (endDate != null)
                 Discount.EndDate = endDate.ToMiladi();
 
             if (!ModelState.IsValid)
                 return Page();
 
+            string currentCode = _orderService.GetDiscountCodeById(Discount.Id);
+
+            if (currentCode != null && currentCode != Discount.Code)
+                if (_orderService.DoesCodeExist(Discount.Code))
+                {
+                    ViewData["InvalidCode"] = true;
+                    return Page();
+                }
+
             _orderService.UpdateDiscount(Discount);
 
             return Redirect("/admin/discounts");
+        }
+
+        public IActionResult OnGetValidateCode(int id ,string code)
+        {
+            string currentCode = _orderService.GetDiscountCodeById(id);
+
+            if (currentCode != code)
+                return Content((!_orderService.DoesCodeExist(code)).ToString());
+
+            return Content("True");
         }
     }
 }
