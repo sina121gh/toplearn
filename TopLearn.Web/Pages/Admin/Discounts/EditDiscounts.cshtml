@@ -1,0 +1,94 @@
+﻿@page "/admin/discounts/{discountId}/edit"
+@model TopLearn.Web.Pages.Admin.Discounts.EditDiscountsModel
+@{
+    ViewData["Title"] = "ویرایش کد";
+}
+
+<link type="text/css" rel="stylesheet" href="/jalalidatepicker/jalalidatepicker.min.css" />
+
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">ویرایش کد تخفیف</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/discounts/">لیست کد ها</a></li>
+                    <li class="breadcrumb-item active">ویرایش کد</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات کد</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <input type="hidden" asp-for="Discount.Id"/>
+
+                            <div class="form-group">
+                                <label>کد تخفیف</label>
+                                <input type="text" asp-for="Discount.Code" class="form-control">
+                                <span class="text-danger" asp-validation-for="Discount.Code"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>درصد تخفیف</label>
+                                <input type="number" asp-for="Discount.Precent" class="form-control">
+                                <span class="text-danger" asp-validation-for="Discount.Precent"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>تعداد دفعات استفاده</label>
+                                <input type="number" asp-for="Discount.UsableCount" class="form-control">
+                                <span class="text-danger" asp-validation-for="Discount.UsableCount"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>تاریخ شروع</label>
+                                <input type="text" name="startDate" value="@Model.Discount.StartDate?.ToShamsi()" data-jdp>
+                            </div>
+
+                            <div class="form-group">
+                                <label>تاریخ پایان</label>
+                                <input type="text" name="endDate" value="@Model.Discount.EndDate?.ToShamsi()" data-jdp>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">ویرایش</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="/jalalidatepicker/jalalidatepicker.min.js"></script>
+    <script>
+        jalaliDatepicker.startWatch({
+            minDate: "today",
+        });
+    </script>
+}

@@ -8,6 +8,6 @@ namespace TopLearn.Core.DTOs.Order
 {
     public enum DiscountCodeTypes
     {
-        Success, Expired, Invalid, Finished
+        Success, Expired, Invalid, Finished, Used
     }
 }

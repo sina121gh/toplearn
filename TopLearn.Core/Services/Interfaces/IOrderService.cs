@@ -10,6 +10,7 @@ namespace TopLearn.Core.Services.Interfaces
 {
     public interface IOrderService
     {
+        #region Order
         int AddOrder(string userName, int courseId);
         bool DoesUserHaveOpenOrder(int userId);
         bool SubmitOrder(string userName, int orderId);
@@ -20,12 +21,19 @@ namespace TopLearn.Core.Services.Interfaces
         OrderDetail? GetOrderDetailByOrderIdAndCourseId(int orderId, int courseId);
         IEnumerable<Order> GetUserOrders(string userName);
 
+        #endregion
+
 
         #region Discount
 
+        List<Discount> GetDiscounts();
         DiscountCodeTypes ApplyDiscount(int orderId, string discountCode);
         Discount GetDiscountByCode(string discountCode);
+        Discount GetDiscountById(int discountId);
         bool UpdateDiscount(Discount discount);
+        bool DeleteDiscount(int discountId);
+        bool HasDiscountUsedByUser(int userId, int discountId);
+        bool AddDiscount(Discount discount);
 
         #endregion
     }

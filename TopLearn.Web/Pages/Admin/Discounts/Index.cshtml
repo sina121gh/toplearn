@@ -1,0 +1,131 @@
+﻿@page
+@model TopLearn.Web.Pages.Admin.Discounts.IndexModel
+@{
+    ViewData["Title"] = "کدهای تخفیف";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست کد های تخفیف</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/discounts/create/" id="btnAdd" class="btn btn-success">افزودن کد تخفیف</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">لیست کد ها</h3>
+        </div>
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                            <thead>
+                                <tr>
+                                    <th>کد</th>
+                                    <th>درصد تخفیف</th>
+                                    <th>تعداد</th>
+                                    <th>تاریخ شروع</th>
+                                    <th>تاریخ پایان</th>
+                                    <th>دستورات</th>
+                                </tr>
+                            <tbody id="discounts">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        
+        $(document).ready(function () {
+            getDiscounts();
+        });
+
+        function getDiscounts() {
+            $.ajax({
+                url: "/get-discounts",
+                method: 'get',
+                success: function (response) {
+                    if (response == null || response == undefined || response.length == 0) {
+                        var object = '';
+                        object += '<tr>';
+                        object += '<td class="colspan="6">' + 'کد تخفیفی موجود نیست' + '</td>';
+                        object += '</tr>';
+                        $('#discounts').html(object);
+                    } else {
+                        var object = '';
+                        $.each(response, function (index, discount) {
+                            object += '<tr>';
+                            object += '<td>' + discount.code + '</td>';
+                            object += '<td>' + discount.precent + '</td>';
+                            object += '<td>' + discount.usableCount + '</td>';
+                            object += '<td>' + discount.startDate + '</td>';
+                            object += '<td>' + discount.endDate + '</td>';
+                            object += '<td>' + `<a href="/admin/discounts/${discount.id}/edit/" class="btn btn-primary btn-sm">
+                                                                    ویرایش
+                                                                    </a>
+                                                                            <a onclick="remove(${discount.id}, '${discount.code}')" class="btn btn-danger btn-sm text-white">
+                                                                    حذف
+                                                                    </a>` + '</td>';
+                            object += '</tr>';
+                        });
+                        $('#discounts').html(object);
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        title: 'مشکلی در دریافت اطلاعات به وجود آمد',
+                        icon: 'error'
+                    })
+                }
+            });
+        }
+
+        const remove = (id, code) => {
+
+            Swal.fire({
+                title: `آیا از حذف کد <u>${code}</u> مطمئن هستید؟`,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'لغو',
+                focusConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-danger',
+                    cancelButton: 'btn btn-outline-info mx-2',
+                },
+                buttonsStyling: false,
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'get',
+                        url: `/admin/discounts/${id}/delete/`,
+                        success: function (response) {
+                            Swal.fire({
+                                title: 'کد با موفقیت حذف شد',
+                                icon: 'success'
+                            })
+                            getDiscounts();
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+}

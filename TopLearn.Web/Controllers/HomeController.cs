@@ -9,15 +9,17 @@ namespace TopLearn.Web.Controllers
         private readonly IPermisionService _permisionService;
         private readonly IUserService _userService;
         private readonly ICourseService _courseService;
+        private readonly IOrderService _orderService;
 
         public HomeController(IPermisionService permisionService,
             IUserService userService,
-            ICourseService courseService)
+            ICourseService courseService,
+            IOrderService orderService)
         {
             _permisionService = permisionService;
             _userService = userService;
             _courseService = courseService;
-
+            _orderService = orderService;
         }
 
         public IActionResult Index()
@@ -110,6 +112,22 @@ namespace TopLearn.Web.Controllers
         public JsonResult GetEpisodes(int courseId)
         {
             return Json(_courseService.GetCourseEpisodes(courseId));
+        }
+
+        [HttpGet]
+        [Route("/get-discounts")]
+        public JsonResult GetDiscounts()
+        {
+            return Json(_orderService.GetDiscounts()
+                .Select(d => new
+                {
+                    Id = d.Id,
+                    Code = d.Code,
+                    Precent = d.Precent,
+                    UsableCount = d.UsableCount,
+                    StartDate = (d.StartDate != null)? d.StartDate.Value.ToShamsi() : "",
+                    EndDate = (d.EndDate != null) ? d.EndDate.Value.ToShamsi() : "",
+                }));
         }
     }
 }

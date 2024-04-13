@@ -142,6 +142,18 @@
                 </script>
                 break;
 
+            case "Used":
+                <script>
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'شما قبلا این کد تخفیف را اعمال کرده اید',
+                        timer: '1500',
+                        confirmButtonText: 'تایید',
+                        focusConfirm: false,
+                    });
+                </script>
+                break;
+
             case "Invalid":
                 <script>
                     Swal.fire({
@@ -169,8 +181,8 @@
             case "Finished":
                 <script>
                     Swal.fire({
-                        icon: 'error',
-                        title: 'تعداد دفعات استفاده از تخفیف تخفیف به اتمام رسیده است',
+                        icon: 'warning',
+                        title: 'تعداد دفعات استفاده از کد تخفیف به اتمام رسیده است',
                         timer: '1500',
                         confirmButtonText: 'تایید',
                         focusConfirm: false,

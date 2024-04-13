@@ -27,6 +27,19 @@ namespace TopLearn.Core.Services
             _courseService = courseService;
         }
 
+        public bool AddDiscount(Discount discount)
+        {
+            try
+            {
+                _context.Discounts.Add(discount);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public int AddOrder(string userName, int courseId)
         {
             int userId = _userService.GetUserIdByUserName(userName);
@@ -79,7 +92,7 @@ namespace TopLearn.Core.Services
                     _context.OrderDetails.Add(detail);
                 }
 
-                order.TotalPrice = coursePrice;
+                order.TotalPrice += coursePrice;
                 _context.Orders.Update(order);
                 _context.SaveChanges();
 
@@ -91,6 +104,8 @@ namespace TopLearn.Core.Services
         public DiscountCodeTypes ApplyDiscount(int orderId, string discountCode)
         {
             Discount discount = GetDiscountByCode(discountCode);
+
+            #region Discount Code Validation
 
             if (discount == null)
                 return DiscountCodeTypes.Invalid;
@@ -104,7 +119,12 @@ namespace TopLearn.Core.Services
             if (discount.UsableCount != null && discount.UsableCount == 0)
                 return DiscountCodeTypes.Finished;
 
+            #endregion
+
             Order order = GetOrderById(orderId);
+
+            if (HasDiscountUsedByUser(order.UserId, discount.Id))
+                return DiscountCodeTypes.Used;
 
             order.TotalPrice -= ((order.TotalPrice * discount.Precent) / 100);
             UpdateOrder(order);
@@ -115,7 +135,33 @@ namespace TopLearn.Core.Services
                 UpdateDiscount(discount);
             }
 
+            _context.UserDiscounts.Add(new UserDiscount()
+            {
+                UserId = order.UserId,
+                DiscountId = discount.Id,
+            });
+
+            _context.SaveChanges();
+
             return DiscountCodeTypes.Success;
+        }
+
+        public bool DeleteDiscount(int discountId)
+        {
+            Discount discount = GetDiscountById(discountId);
+
+            if (discount == null)
+                return false;
+
+            try
+            {
+                _context.Discounts.Remove(discount);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool DoesUserHaveOpenOrder(int userId)
@@ -128,6 +174,16 @@ namespace TopLearn.Core.Services
         {
             return _context.Discounts
                 .SingleOrDefault(d => d.Code == discountCode);
+        }
+
+        public Discount GetDiscountById(int discountId)
+        {
+            return _context.Discounts.Find(discountId);
+        }
+
+        public List<Discount> GetDiscounts()
+        {
+            return _context.Discounts.ToList();
         }
 
         public Order GetOrderById(int orderId)
@@ -164,6 +220,12 @@ namespace TopLearn.Core.Services
                 .ToList();
         }
 
+        public bool HasDiscountUsedByUser(int userId, int discountId)
+        {
+            return _context.UserDiscounts
+                .Any(ud => ud.UserId == userId && ud.DiscountId == discountId);
+        }
+
         public bool SubmitOrder(string userName, int orderId)
         {
             int userId = _userService.GetUserIdByUserName(userName);
@@ -175,7 +237,9 @@ namespace TopLearn.Core.Services
             if (_userService.GetWalletBalance(userName) >= order.TotalPrice)
             {
                 order.IsFinally = true;
-                _userService.WithdrawWallet(userName, order.TotalPrice, $"پرداخت فاکتور شماره #{orderId}", true);
+                int transactionId = _userService.WithdrawWallet(userName, order.TotalPrice,
+                    $"پرداخت فاکتور شماره #{orderId}", true);
+                _userService.UpdateWalletBalance(transactionId);
 
                 _context.Orders.Update(order);
 

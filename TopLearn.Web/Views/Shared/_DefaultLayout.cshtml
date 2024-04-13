@@ -30,16 +30,16 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <div class="loggein">
-                                    <i class="zmdi zmdi-account"></i><a href="/UserPanel"> @User.Identity.Name ، خوش آمدید </a> / 
-                                    <a href="/Logout"> خروج </a>
+                                    <i class="zmdi zmdi-account"></i><a href="/user-panel"> @User.Identity.Name ، خوش آمدید </a> / 
+                                    <a href="/logout"> خروج </a>
                                 </div>
                             }
                             else
                             {
                                 <div class="signin">
                                     <i class="zmdi zmdi-account"></i>
-                                    <a href="/Login"> ورود </a> /
-                                    <a href="/Register"> عضویت </a>
+                                    <a href="/login"> ورود </a> /
+                                    <a href="/register"> عضویت </a>
                                 </div>
                             }
                         </div>

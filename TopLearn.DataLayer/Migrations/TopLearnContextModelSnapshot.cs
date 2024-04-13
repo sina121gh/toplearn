@@ -653,6 +653,29 @@ namespace TopLearn.DataLayer.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserDiscount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DiscountId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiscountId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserDiscounts");
+                });
+
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserRole", b =>
                 {
                     b.Property<int>("Id")
@@ -898,6 +921,25 @@ namespace TopLearn.DataLayer.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserDiscount", b =>
+                {
+                    b.HasOne("TopLearn.DataLayer.Entities.Order.Discount", "Discount")
+                        .WithMany("UserDiscounts")
+                        .HasForeignKey("DiscountId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TopLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("UserDiscounts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Discount");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserRole", b =>
                 {
                     b.HasOne("TopLearn.DataLayer.Entities.User.Role", "Role")
@@ -975,6 +1017,11 @@ namespace TopLearn.DataLayer.Migrations
                     b.Navigation("Courses");
                 });
 
+            modelBuilder.Entity("TopLearn.DataLayer.Entities.Order.Discount", b =>
+                {
+                    b.Navigation("UserDiscounts");
+                });
+
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Order.Order", b =>
                 {
                     b.Navigation("OrderDetails");
@@ -1003,6 +1050,8 @@ namespace TopLearn.DataLayer.Migrations
                     b.Navigation("Transactions");
 
                     b.Navigation("UserCourses");
+
+                    b.Navigation("UserDiscounts");
 
                     b.Navigation("UserRoles");
 

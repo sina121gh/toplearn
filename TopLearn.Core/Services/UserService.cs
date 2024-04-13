@@ -269,7 +269,6 @@ namespace TopLearn.Core.Services
             try
             {
                 _context.Transactions.Add(transaction);
-                UpdateWalletBalance(transaction);
                 _context.SaveChanges();
                 return transaction.Id;
             }
@@ -527,6 +526,58 @@ namespace TopLearn.Core.Services
             {
                 return 0;
             }
+        }
+
+        public bool UpdateWalletBalance(int userId, int balance)
+        {
+            Wallet wallet = GetWalletByUserId(userId);
+            wallet.Balance = balance;
+
+            try
+            {
+                _context.Wallets.Update(wallet);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateWalletBalance(int transactionId)
+        {
+            Transaction transaction = GetTransactionById(transactionId);
+            Wallet wallet = GetWalletByUserId(transaction.UserId);
+
+            if (transaction.TypeId == 1)
+            {
+                wallet.Balance += transaction.Amount;
+                wallet.UpdateDate = DateTime.Now;
+            }
+
+
+            else if (transaction.TypeId == 2)
+                if (wallet.Balance >= transaction.Amount)
+                {
+                    wallet.Balance -= transaction.Amount;
+                    wallet.UpdateDate = DateTime.Now;
+                }
+                else
+                    return false;
+
+            return UpdateWallet(wallet);
+        }
+
+        public int GetUserIdByTransactionId(int transactionId)
+        {
+            int? userId = _context.Transactions
+                .Find(transactionId)?
+                .UserId;
+
+            if (userId != null)
+                return userId.Value;
+
+            return 0;
         }
     }
 }
