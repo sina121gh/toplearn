@@ -40,7 +40,6 @@ namespace TopLearn.Core.Services.Interfaces
 
         #endregion
 
-
         #region Episode
 
         IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
@@ -49,6 +48,14 @@ namespace TopLearn.Core.Services.Interfaces
         bool UpdateEpisode(CourseEpisode episode, IFormFile episodeFile);
         bool DeleteEpisode(int episodeId);
         CourseEpisode GetEpisodeById(int episodeId);
+
+        #endregion
+
+        #region Comment
+
+        CourseCommentsViewModel GetCourseComments(int courseId, int pageId = 1);
+        bool AddComment(CourseComment comment);
+        CourseComment GetCommentById(int commentId);
 
         #endregion
     }

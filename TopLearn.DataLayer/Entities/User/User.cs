@@ -72,6 +72,9 @@ namespace TopLearn.DataLayer.Entities.User
 
         public IEnumerable<UserDiscount>? UserDiscounts { get; set; }
 
+        public IEnumerable<CourseComment>? CourseComments { get; set; }
+
+
         #endregion
     }
 }

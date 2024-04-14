@@ -10,11 +10,15 @@ namespace TopLearn.Web.Controllers
 
         private readonly ICourseService _courseService;
         private readonly IOrderService _orderService;
+        private readonly IUserService _userService;
 
-        public CourseController(ICourseService courseService, IOrderService orderService)
+        public CourseController(ICourseService courseService,
+            IOrderService orderService,
+            IUserService userService)
         {
             _courseService = courseService;
             _orderService = orderService;
+            _userService = userService;
         }
 
         #endregion
@@ -81,6 +85,24 @@ namespace TopLearn.Web.Controllers
             }
 
             return Forbid();
+        }
+
+        //[Route("/courses/{courseId}/create-comment")]
+        [HttpPost]
+        public IActionResult CreateComment(CourseComment comment)
+        {
+            comment.CreateDate = DateTime.Now;
+            comment.HasAdminRead = false;
+            comment.UserId = _userService.GetUserIdByUserName(User.Identity.Name);
+            _courseService.AddComment(comment);
+
+            return View("ShowCourseComments", _courseService.GetCourseComments(comment.CourseId));
+        }
+
+        [Route("courses/{courseId}/comments")]
+        public IActionResult ShowCourseComments(int courseId, int pageId = 1)
+        {
+            return View(_courseService.GetCourseComments(courseId, pageId));
         }
     }
 }

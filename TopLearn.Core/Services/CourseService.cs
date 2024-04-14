@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,6 +27,19 @@ namespace TopLearn.Core.Services
             _context = context;
             _fileService = fileService;
 
+        }
+
+        public bool AddComment(CourseComment comment)
+        {
+            try
+            {
+                _context.CourseComments.Add(comment);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo)
@@ -105,11 +119,11 @@ namespace TopLearn.Core.Services
                 {
                     return false;
                 }
-                
+
             }
 
             return false;
-            
+
         }
 
         public bool DoesEpisodeExist(string fileName)
@@ -123,9 +137,38 @@ namespace TopLearn.Core.Services
             return File.Exists(episodePath);
         }
 
+        public CourseComment GetCommentById(int commentId)
+        {
+            return _context.CourseComments.Find(commentId);
+        }
+
         public Course GetCourseById(int courseId)
         {
             return _context.Courses.Find(courseId);
+        }
+
+        public CourseCommentsViewModel GetCourseComments(int courseId, int pageId = 1)
+        {
+            IQueryable<CourseComment> comments = _context.CourseComments
+                .Where(c => c.CourseId == courseId)
+                .Include(c => c.User)
+                .OrderByDescending(c => c.CreateDate);
+
+            int take = 5;
+            int skip = (pageId - 1) * take;
+            int pageCount = (int)Math.Ceiling(comments.Count() / (double)take);
+
+
+            var res = new CourseCommentsViewModel()
+            {
+                Comments = comments.Skip(skip).Take(take).ToList(),
+                CourseId = courseId,
+                CurrentPage = pageId,
+                PageCount = pageCount,
+                HasNextPage = pageId < pageCount,
+                HasPreviousPage = pageId > 1,
+            };
+            return res;
         }
 
         public IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId)
@@ -143,6 +186,7 @@ namespace TopLearn.Core.Services
                 .Include(c => c.CourseLevel)
                 .Include(c => c.User)
                 .Include(c => c.UserCourses)
+                .Include(c => c.CourseComments)
                 .SingleOrDefault(c => c.Id == courseId);
         }
 
@@ -387,7 +431,7 @@ namespace TopLearn.Core.Services
                 _fileService.DeleteDemo(course.DemoFileName);
                 course.DemoFileName = _fileService.SaveDemo(courseDemo);
             }
-                
+
             try
             {
                 _context.Courses.Update(course);
