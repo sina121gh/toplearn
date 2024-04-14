@@ -33,11 +33,11 @@ namespace TopLearn.Core.Security
                     string userName = context.HttpContext.User.Identity.Name;
 
                     if (!_permisionService.HasUserThisPermission(_permissionId, userName))
-                        context.Result = new RedirectResult("/login/");
+                        context.Result = new RedirectResult($"/login?{context.HttpContext.Request.Path}");
                 }
                 else
                 {
-                    context.Result = new RedirectResult("/error/");
+                    context.Result = new RedirectResult("/error");
                 }
                     
 

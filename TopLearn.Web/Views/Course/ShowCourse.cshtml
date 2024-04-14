@@ -11,6 +11,25 @@
     }
 }
 
+@section Metatags
+{
+    <meta name=googlebot content=index,follow>
+    <meta name=robots content=noodp,noydir>
+    <meta name=description content="شرح صفحه">
+
+    <meta property=og:site_name value="خودآموزش تاپ لرن">
+    <meta property=og:title content="@Model.Title">
+    <meta property=og:url content="https://localhost:7168/courses/@Model.Id" />
+    <meta property=og:image content="/courses/images/@Model.ImageName">
+    <meta property=og:image:url content="/courses/images/@Model.ImageName" />
+    <meta property=og:image:width content="700">
+
+    <meta property=og:image:type content="image/jpg">
+    <meta property=og:description content="">
+    <meta property=og:price:currency content="IRR">
+    <meta property=og:locale content="ir_FA">
+}
+
 <div class="container">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">

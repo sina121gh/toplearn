@@ -24,7 +24,7 @@ namespace TopLearn.Web.Controllers
 
         public IActionResult Index()
         {
-            return View(_courseService.GetCourses());
+            return View(Tuple.Create(_courseService.GetCourses(), _courseService.GetPopularCourses()));
         }
 
         [Route("/error")]

@@ -28,6 +28,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Course
 
+        IEnumerable<ShowCourseItemViewModel> GetPopularCourses();
         Course GetCourseForShowDetails(int courseId);
         ShowCoursesListViewModel GetCourses(int pageId = 1, int take = 0, string filter = "", string getType = "all",
             string orderBy = "createDate", int minPrice = 0, int maxPrice = 0, List<int> selectedGroups = null);
