@@ -40,8 +40,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\courses\demos\" />
     <Folder Include="wwwroot\courses\episodes\" />
+    <Folder Include="wwwroot\courses\demos\" />
     <Folder Include="wwwroot\courses\thumbnails\" />
     <Folder Include="wwwroot\uploadedImages\" />
   </ItemGroup>

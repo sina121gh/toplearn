@@ -105,6 +105,26 @@ namespace TopLearn.Web.Controllers
             return View(_courseService.GetCourseComments(courseId, pageId));
         }
 
+        [Route("courses/{courseId}/votes")]
+        public IActionResult CourseVotes(int courseId)
+        {
+            if (!_courseService.IsCourseFree(courseId))
+            {
+                if (!_orderService.IsUserInCourse(User.Identity.Name, courseId))
+                    ViewData["AccessDenied"] = false;
+            }
+            return PartialView(_courseService.GetCourseVotes(courseId));
+        }
+
+
+        [Authorize]
+        [Route("courses/{courseId}/votes/create")]
+        public IActionResult AddVote(int courseId, bool vote)
+        {
+            _courseService.AddVote(User.Identity.Name, courseId, vote);
+            return PartialView("CourseVotes", _courseService.GetCourseVotes(courseId));
+        }
+
         [Route("get-groups")]
         public IActionResult ShowGroups()
         {

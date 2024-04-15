@@ -21,12 +21,15 @@ namespace TopLearn.Core.Services
     {
         private readonly TopLearnContext _context;
         private readonly IFileService _fileService;
+        private readonly IUserService _userService;
 
-        public CourseService(TopLearnContext context, IFileService fileService)
+        public CourseService(TopLearnContext context,
+            IFileService fileService,
+            IUserService userService)
         {
             _context = context;
             _fileService = fileService;
-
+            _userService = userService;
         }
 
         public bool AddComment(CourseComment comment)
@@ -114,6 +117,26 @@ namespace TopLearn.Core.Services
             {
                 return false;
             }
+        }
+
+        public bool AddVote(string userName, int courseId, bool vote)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+
+            CourseVote existVote = _context.CourseVotes
+                .SingleOrDefault(v => v.UserId == userId && v.CourseId == courseId);
+
+            if (existVote != null)
+                existVote.Vote = vote;
+            else
+                _context.CourseVotes.Add(new CourseVote()
+                {
+                    CourseId = courseId,
+                    UserId = userId,
+                    Vote = vote,
+                });
+
+            return _context.SaveChanges() > 0;
         }
 
         public bool DeleteEpisode(int episodeId)
@@ -241,6 +264,7 @@ namespace TopLearn.Core.Services
                 .Include(c => c.User)
                 .Include(c => c.UserCourses)
                 .Include(c => c.CourseComments)
+                .Include(c => c.Group)
                 .SingleOrDefault(c => c.Id == courseId);
         }
 
@@ -359,6 +383,20 @@ namespace TopLearn.Core.Services
                 .Title;
         }
 
+        public CourseVotesViewModel GetCourseVotes(int courseId)
+        {
+            var votes = _context.CourseVotes
+                .Where(v => v.CourseId == courseId)
+                .Select(v => v.Vote)
+                .ToList();
+
+            return new CourseVotesViewModel()
+            {
+                LikeCount = votes.Count(v => v),
+                DislikeCount = votes.Count(v => !v),
+            };
+        }
+
         public CourseEpisode GetEpisodeById(int episodeId)
         {
             return _context.CourseEpisodes.Find(episodeId);
@@ -474,6 +512,13 @@ namespace TopLearn.Core.Services
                 .Any(g => g.ParentId == groupId);
         }
 
+        public bool IsCourseFree(int courseId)
+        {
+            return _context.Courses
+                .SingleOrDefault(c => c.Id == courseId)
+                .Price == 0;
+        }
+
         public bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo)
         {
             course.UpdateDate = DateTime.Now;
@@ -508,7 +553,9 @@ namespace TopLearn.Core.Services
 
             if (courseDemo != null)
             {
-                _fileService.DeleteDemo(course.DemoFileName);
+                if (!string.IsNullOrEmpty(course.DemoFileName))
+                    _fileService.DeleteDemo(course.DemoFileName);
+
                 course.DemoFileName = _fileService.SaveDemo(courseDemo);
             }
 

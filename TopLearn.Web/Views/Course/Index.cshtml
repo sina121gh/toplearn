@@ -10,8 +10,8 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">تاپ لرن</a></li>
-            <li class="breadcrumb-item active"><a href="#">دوره ها</a></li>
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active"><a href="/courses">دوره ها</a></li>
             <li class="breadcrumb-item active" aria-current="page"> برنامه نویسی وب </li>
         </ul>
     </nav>
@@ -26,7 +26,12 @@
 
             <div class="top-bar">
 
-                <header><h1> دوره های <span> برنامه نویسی وب </span> </h1> <span> 123 دوره </span></header>
+                <header>
+                    <h1>
+                        دوره های <span> برنامه نویسی وب </span>
+                    </h1>
+                    <span> @Model.Courses.Count() دوره </span>
+                </header>
 
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12 pull-right">
@@ -66,8 +71,8 @@
                             <input type="hidden" value="" id="min-value" name="minPrice">
                             <input type="hidden" value="" id="max-value" name="maxPrice">
                             <div class="price-bar"><div id="priceFilter"></div></div>
-                            <div class="max-price">تا <span id="max-text">500000</span> تومان</div>
-                            <div class="min-price">از <span id="min-text">20000</span> تومان</div>
+                            <div class="max-price">تا <span id="max-text">@Model.Courses.OrderByDescending(c => c.Price).First().Price</span> تومان</div>
+                            <div class="min-price">از <span id="min-text">@Model.Courses.OrderBy(c => c.Price).First().Price</span> تومان</div>
                             <div class="clearfix"></div>
                         </div>
                     </section>
@@ -79,7 +84,7 @@
                                 @foreach (CourseGroup group in groups.Where(g => g.ParentId == null))
                                 {
                                     <li>
-                                        
+
                                         <label>
                                             <input @(selectedGroups != null && selectedGroups.Any(g => g == group.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@group.Id">
                                             @group.Title
@@ -92,10 +97,10 @@
                                             @foreach (CourseGroup subGroup in groups.Where(g => g.ParentId == group.Id))
                                             {
                                                 <li>
-                                                    
+
                                                     <label>
                                                         <input @(selectedGroups != null && selectedGroups.Any(sg => sg == subGroup.Id) ? "checked" : "") onchange="filterCourses()" type="checkbox" name="selectedGroups" value="@subGroup.Id">
-                                                        @subGroup.Title 
+                                                        @subGroup.Title
                                                     </label>
                                                 </li>
                                             }
@@ -151,7 +156,7 @@
     <script src="/noUiSlider/nouislider.min.js"></script>
     <script>
 
-        function changePage(pageId){
+        function changePage(pageId) {
             $('#pageId').val(pageId);
             filterCourses();
         }
@@ -218,7 +223,7 @@
                 });
             }
 
-            
+
         });
 
 

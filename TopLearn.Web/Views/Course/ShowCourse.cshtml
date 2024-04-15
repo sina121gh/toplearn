@@ -33,9 +33,10 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"> تاپ لرن </a></li>
-            <li class="breadcrumb-item active"><a href="#"> دوره ها </a></li>
-            <li class="breadcrumb-item active" aria-current="page"> @Model.Title </li>
+            <li class="breadcrumb-item"><a href="/"> تاپ لرن </a></li>
+            <li class="breadcrumb-item"><a href="/courses"> دوره ها </a></li>
+            <li class="breadcrumb-item"> <a href="/courses?selectedGroups=@Model.GroupId"> @Model.Group.Title </a> </li>
+            <li class="breadcrumb-item" aria-current="page"> @Model.Title </li>
         </ul>
     </nav>
 </div>
@@ -50,6 +51,17 @@
                     <img src="/courses/images/@Model.ImageName">
 
                     @Html.Raw(Model.Description)
+
+                    @if (!string.IsNullOrEmpty(Model.DemoFileName))
+                    {
+                        <video style="width:100%;" poster="/courses/images/@Model.DemoFileName" controls>
+                            <source src="/courses/demos/@Model.DemoFileName"/>
+                        </video>
+                    }
+
+                    <div id="votes">
+                        
+                    </div>
 
                     @if (!isUserInCourse)
                     {
@@ -204,11 +216,27 @@
         }
 
         $(document).ready(function () {
-            $("#commentsList").load(`/courses/${@Model.Id}/comments`);
+            loadComments();
+            loadVotes();
         });
 
         function changePage(pageId) {
             $("#commentsList").load(`/courses/${@Model.Id}/comments?pageId=${pageId}`);
         }
+
+        function loadComments() {
+            $("#commentsList").load(`/courses/${@Model.Id}/comments`);
+        }
+
+        function loadVotes() {
+            $("#votes").load(`/courses/${@Model.Id}/votes`);
+        }
+
+        function submitVote(vote) {
+            $("#votes").fadeOut('slow');
+            $("#votes").load(`/courses/${@Model.Id}/votes/create?vote=${vote}`);
+            $("#votes").fadeIn('slow');
+        }
+
     </script>
 }

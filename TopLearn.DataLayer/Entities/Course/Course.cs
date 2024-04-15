@@ -102,6 +102,8 @@ namespace TopLearn.DataLayer.Entities.Course
 
         public List<CourseComment>? CourseComments { get; set; }
 
+        public List<CourseVote>? CourseVotes { get; set; }
+
         #endregion
     }
 }

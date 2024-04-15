@@ -1,0 +1,36 @@
+﻿@model CourseVotesViewModel
+
+@if (User.Identity.IsAuthenticated && ViewData["AccessDenied"] == null)
+{
+    <div class="row">
+        <p>
+            <a onclick="submitVote(true)" class="btn btn-success">میپسندم (@Model.LikeCount)</a>
+            <a onclick="submitVote(false)" class="btn btn-danger">نمی پسندم (@Model.DislikeCount)</a>
+        </p>
+    </div>
+}
+else if (!User.Identity.IsAuthenticated)
+{
+    <div class="row">
+        <div class="alert alert-danger">
+            برای ثبت نظر باید وارد سایت شوید
+            <a href="/login">ورود به سایت</a>
+        </div>
+        <p>
+            <a class="btn btn-success disabled">میپسندم (12)</a>
+            <a class="btn btn-danger disabled">نمی پسندم (5)</a>
+        </p>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="alert alert-danger">
+            برای ثبت نظر باید دوره را تهیه کنید
+        </div>
+        <p>
+            <a class="btn btn-success disabled">میپسندم (12)</a>
+            <a class="btn btn-danger disabled">نمی پسندم (5)</a>
+        </p>
+    </div>
+}

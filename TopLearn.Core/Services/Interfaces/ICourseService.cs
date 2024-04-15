@@ -45,6 +45,7 @@ namespace TopLearn.Core.Services.Interfaces
         string GetCourseTitleById(int courseId);
         Course GetCourseById(int courseId);
         bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
+        bool IsCourseFree(int courseId);
 
         #endregion
 
@@ -64,6 +65,13 @@ namespace TopLearn.Core.Services.Interfaces
         CourseCommentsViewModel GetCourseComments(int courseId, int pageId = 1);
         bool AddComment(CourseComment comment);
         CourseComment GetCommentById(int commentId);
+
+        #endregion
+
+        #region Vote
+
+        CourseVotesViewModel GetCourseVotes(int courseId);
+        bool AddVote(string userName, int courseId, bool vote);
 
         #endregion
     }
