@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CourseGroup>
+@{
+    Layout = null;
+}
+
+@foreach (CourseGroup group in Model.Where(g => g.ParentId == null))
+{
+    <tr>
+        <td>@group.Title</td>
+        <td>
+            @if (group.CourseGroups.Any())
+            {
+                <ul>
+                    @foreach (CourseGroup subGroup in group.CourseGroups)
+                    {
+                        <li class="is-invalid">@subGroup.Title</li>
+                    }
+                </ul>
+            }
+        </td>
+
+        <td>
+            <button onclick="showInsertSwal()" href="/admin/course-groups/@group.Id/create" class="btn btn-success btn-sm">
+                افزودن زیر گروه
+            </button>
+
+            <a href="/admin/course-groups/@group.Id/edit/" class="btn btn-primary btn-sm">
+                ویرایش
+            </a>
+        </td>
+    </tr>
+}

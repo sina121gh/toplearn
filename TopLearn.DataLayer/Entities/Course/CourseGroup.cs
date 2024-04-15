@@ -26,10 +26,10 @@ namespace TopLearn.DataLayer.Entities.Course
         public List<CourseGroup>? CourseGroups { get; set; }
 
         [InverseProperty("Group")]
-        public List<Course> Courses { get; set; }
+        public List<Course>? Courses { get; set; }
 
 
         [InverseProperty("SubGroup")]
-        public List<Course> CoursesList { get; set; }
+        public List<Course>? CoursesList { get; set; }
     }
 }

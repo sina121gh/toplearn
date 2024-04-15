@@ -103,6 +103,19 @@ namespace TopLearn.Core.Services
             }
         }
 
+        public bool AddGroup(CourseGroup group)
+        {
+            try
+            {
+                _context.CourseGroups.Add(group);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool DeleteEpisode(int episodeId)
         {
             CourseEpisode episode = GetEpisodeById(episodeId);
@@ -126,6 +139,40 @@ namespace TopLearn.Core.Services
 
         }
 
+        public bool DeleteGroup(int groupId)
+        {
+            CourseGroup group = GetGroupById(groupId);
+            if (group == null)
+                return false;
+
+            try
+            {
+                if (group.CourseGroups.Any())
+                    DeleteSubGroupsByGroupId(groupId);
+
+                _context.CourseGroups.Remove(group);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteSubGroupsByGroupId(int groupId)
+        {
+            List<CourseGroup> subGroups = GetSubGroups(groupId).ToList();
+            try
+            {
+                subGroups.ForEach(g => _context.CourseGroups.Remove(g));
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool DoesEpisodeExist(string fileName)
         {
             string episodePath = Path.Combine(Directory.GetCurrentDirectory(),
@@ -135,6 +182,13 @@ namespace TopLearn.Core.Services
                     fileName);
 
             return File.Exists(episodePath);
+        }
+
+        public IEnumerable<CourseGroup> GetAllGroupsIncludingSubGroups()
+        {
+            return _context.CourseGroups
+                .Include(g => g.CourseGroups)
+                .ToList();
         }
 
         public CourseComment GetCommentById(int commentId)
@@ -310,6 +364,13 @@ namespace TopLearn.Core.Services
             return _context.CourseEpisodes.Find(episodeId);
         }
 
+        public CourseGroup GetGroupById(int groupId)
+        {
+            return _context.CourseGroups
+                .Include(g => g.CourseGroups)
+                .SingleOrDefault(g => g.Id == groupId);
+        }
+
         public IEnumerable<CourseGroup> GetGroups()
         {
             return _context.CourseGroups.ToList();
@@ -473,6 +534,19 @@ namespace TopLearn.Core.Services
             try
             {
                 _context.CourseEpisodes.Update(episode);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateGroup(CourseGroup group)
+        {
+            try
+            {
+                _context.CourseGroups.Update(group);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception)

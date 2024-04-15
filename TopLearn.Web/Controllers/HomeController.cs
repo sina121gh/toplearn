@@ -56,7 +56,9 @@ namespace TopLearn.Web.Controllers
         [Route("/get-users")]
         public JsonResult GetUsers()
         {
-            return Json(_userService.GetUsers().Users.Select(u => new
+            return Json(_userService.GetUsers()
+                .Users
+                .Select(u => new
             {
                 Id = u.Id,
                 UserName = u.UserName,

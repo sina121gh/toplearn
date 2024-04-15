@@ -1,0 +1,190 @@
+﻿@page "/admin/course-groups"
+@model TopLearn.Web.Pages.Admin.CorseGroups.IndexModel
+@{
+    ViewData["Title"] = "افزودن گروه";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست گروه ها</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/course-groups/create/" id="btnAdd" class="btn btn-success">افزودن گروه</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">لیست گروه ها</h3>
+        </div>
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                            <thead>
+                                <tr>
+                                    <th>عنوان گروه</th>
+                                    <th>زیر گروه ها</th>
+                                    <th>دستورات</th>
+                                </tr>
+                            <tbody id="groups">
+                                    @foreach (CourseGroup group in Model.CourseGroups.Where(g => g.ParentId == null))
+                                    {
+                                    <tr>
+                                        <td>@group.Title</td>
+                                        <td>
+                                                @if (group.CourseGroups.Any())
+                                                {
+                                                <ul>
+                                                        @foreach (CourseGroup subGroup in group.CourseGroups)
+                                                        {
+                                                        <li>@subGroup.Title
+
+                                                            <a href="/admin/course-groups/@subGroup.Id/edit/" class="btn-sm btn-primary">
+                                                                ویرایش
+                                                            </a>
+                                                        </li>
+                                                        
+                                                        }
+                                                </ul>
+                                                }
+                                        </td>
+
+                                        <td>
+                                            <a href="/admin/course-groups/create/@group.Id" class="btn btn-success btn-sm">
+                                                افزودن زیر گروه
+                                            </a>
+
+                                            <a href="/admin/course-groups/@group.Id/edit/" class="btn btn-primary btn-sm">
+                                                ویرایش
+                                            </a>
+
+                                            <a onclick="remove(@group.Id, '@group.Title')"  class="btn btn-danger btn-sm">
+                                                حذف
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @* <script>
+
+        $(document).ready(function () {
+            loadGroups();
+        });
+
+        function loadGroups() {
+            $("#groups").load("/get-groups");
+        }
+
+        async function showInsertSwal() {
+            const { value: title } = await Swal.fire({
+                title: "نام گروه را وارد کنید",
+                input: "text",
+                showCancelButton: true,
+                confirmButtonText: "افزودن",
+                cancelButtonText: "لغو",
+                focusConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-success',
+                    cancelButton: 'btn btn-outline-danger mx-2',
+                },
+                buttonsStyling: false,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return "لطفا نام گروه را وارد کنید!";
+                    }
+                }
+            });
+            if (title) {
+
+                var group = new Object();
+                group.title = title;
+
+                insertGroup(group);
+            }
+        }
+
+        function insertGroup() {
+
+            $.ajax({
+                url: "/admin/course-groups/create",
+                data: group,
+                type: "post",
+
+                success: function (response) {
+                    if (response === "True") {
+                        Swal.fire({
+                            title: 'گروه با موفقیت اضافه شد',
+                            icon: 'success'
+                        })
+                        $("#groups").load("/get-groups");
+                    }
+                }
+            })
+        }
+
+        $('#btnAdd').click(function () {
+            $('#modal').modal('show')
+            $('#modalTitle').text('افزودن گروه')
+        })
+    </script> *@
+
+    <script>
+        const remove = (id, title) => {
+
+            Swal.fire({
+                title: `آیا از حذف کد <u>${title}</u> مطمئن هستید؟`,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'لغو',
+                focusConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-danger',
+                    cancelButton: 'btn btn-outline-info mx-2',
+                },
+                buttonsStyling: false,
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'get',
+                        url: `/admin/course-groups/${id}/delete/`,
+                    }).done(function (res) {
+                        if (res === 'True') {
+                            Swal.fire({
+                                title: 'گروه با موفقیت حذف شد',
+                                icon: 'success'
+                            });
+                            location.reload();
+                        } else {
+                            Swal.fire({
+                                title: 'عملیات با شکست مواجه شد',
+                                icon: 'error'
+                            });
+                        }
+                    });
+                }
+            });
+
+        }
+    </script>
+}

@@ -104,5 +104,11 @@ namespace TopLearn.Web.Controllers
         {
             return View(_courseService.GetCourseComments(courseId, pageId));
         }
+
+        [Route("get-groups")]
+        public IActionResult ShowGroups()
+        {
+            return View("/Pages/Admin/CourseGroups/GroupsListView.cshtml", _courseService.GetAllGroupsIncludingSubGroups());
+        }
     }
 }

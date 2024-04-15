@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TopLearn.Core.DTOs.Course;
 using TopLearn.DataLayer.Entities.Course;
@@ -14,6 +15,7 @@ namespace TopLearn.Core.Services.Interfaces
     {
         #region Group
 
+        IEnumerable<CourseGroup> GetAllGroupsIncludingSubGroups();
         IEnumerable<CourseGroup> GetGroups();
         IEnumerable<CourseGroup> GetMainGroups();
         IEnumerable<SelectListItem> GetMainGroupsForManageCourse(int selectedGroupId = 0);
@@ -22,7 +24,12 @@ namespace TopLearn.Core.Services.Interfaces
         IEnumerable<SelectListItem> GetLevels(int selectedLevelId = 0);
         IEnumerable<SelectListItem> GetStatuses(int selectedStatusId = 0);
         IEnumerable<CourseGroup> GetSubGroups(int groupId);
+        CourseGroup GetGroupById(int groupId);
         bool HasSubGroup(int groupId);
+        bool AddGroup(CourseGroup group);
+        bool UpdateGroup(CourseGroup group);
+        bool DeleteGroup(int groupId);
+        bool DeleteSubGroupsByGroupId(int groupId);
 
         #endregion
 

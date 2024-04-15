@@ -113,7 +113,7 @@ const showSwal = (id, title) => {
         cancelButtonText: 'لغو',
         //confirmButtonColor: '#dc3545',
         //cancelButtonColor: '#e0a800',
-        focusConfirm: false,
+        focousConfirm: false,
          customClass: {
              confirmButton: 'btn btn-outline-danger',
              cancelButton: 'btn btn-outline-info mx-2',

@@ -1,0 +1,61 @@
+﻿@page "/admin/course-groups/{groupId}/edit"
+@model TopLearn.Web.Pages.Admin.CourseGroups.EditGroupModel
+@{
+    ViewData["Title"] = "افزودن گروه";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">افزودن گروه جدید</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/admin/course-groups/">لیست گروه ها</a></li>
+                    <li class="breadcrumb-item active">افزودن گروه</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <form method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">اطلاعات گروه</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+
+                            <input type="hidden" asp-for="Group.Id" />
+                            <input type="hidden" asp-for="Group.ParentId" />
+
+                            <div class="form-group">
+                                <label>عنوان گروه</label>
+                                <input type="text" asp-for="Group.Title" id="code" class="form-control">
+                                <span class="text-danger" asp-validation-for="Group.Title"></span>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">ویرایش</button>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
