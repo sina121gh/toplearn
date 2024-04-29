@@ -1221,7 +1221,6 @@ E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TopLearn.Web.props
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\staticwebassets.pack.json
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\scopedcss\bundle\TopLearn.Web.styles.css
-E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.csproj.CopyComplete
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\refint\TopLearn.Web.dll
 E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.pdb
@@ -1570,3 +1569,4 @@ E:\Documents\VS\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\refi
 E:\Documents\VS\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.pdb
 E:\Documents\VS\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.Web.genruntimeconfig.cache
 E:\Documents\VS\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\ref\TopLearn.Web.dll
+E:\Documents\VS\Toplean\Asp.Net Core\Advance\TopLearn\TopLearn.Web\obj\Debug\net8.0\TopLearn.DB5EBED0.Up2Date

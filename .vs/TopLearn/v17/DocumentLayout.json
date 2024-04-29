@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.web\\views\\course\\showcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|solutionrelative:toplearn.web\\views\\course\\showcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|solutionrelative:toplearn.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1337924956:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:350743133:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1611166708:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f37f5141-198e-4181-9582-7b026ee8f915}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:449738905:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "TopLearn.Web\\Controllers\\CourseController.cs",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "TopLearn.Web\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAuwCgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:15:16.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShowCourse.cshtml",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "RelativeDocumentMoniker": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "RelativeToolTip": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "ViewState": "AQIAAEMAAAAAAAAAAIAwwFMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:11:52.141Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

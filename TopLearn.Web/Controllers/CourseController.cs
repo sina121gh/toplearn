@@ -37,12 +37,29 @@ namespace TopLearn.Web.Controllers
         }
 
         [Route("courses/{courseId}")]
-        public IActionResult ShowCourse(int courseId)
+        public IActionResult ShowCourse(int courseId, int episodeId = 0)
         {
             Course course = _courseService.GetCourseForShowDetails(courseId);
 
             if (course == null)
                 return NotFound();
+
+            if (episodeId != 0 && User.Identity.IsAuthenticated)
+            {
+                if (!course.CourseEpisodes.Any(e => e.Id == episodeId))
+                {
+                    return NotFound();
+                }
+                if (!course.CourseEpisodes.SingleOrDefault(e => e.Id == episodeId).IsFree)
+                {
+                    if (!_orderService.IsUserInCourse(User.Identity.Name, course.Id))
+                    {
+                        return NotFound();
+                    }
+                }
+
+                ViewBag.Episode = course.CourseEpisodes.SingleOrDefault(e => e.Id == episodeId);
+            }
 
             return View(course);
         }
@@ -130,5 +147,7 @@ namespace TopLearn.Web.Controllers
         {
             return View("/Pages/Admin/CourseGroups/GroupsListView.cshtml", _courseService.GetAllGroupsIncludingSubGroups());
         }
+
+        
     }
 }
