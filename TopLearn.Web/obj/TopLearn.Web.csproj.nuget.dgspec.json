@@ -254,6 +254,10 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "SharpCompress": {
+              "target": "Package",
+              "version": "[0.37.2, )"
+            },
             "Zarinpal": {
               "target": "Package",
               "version": "[3.0.1, )"

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SharpCompress.Archives;
 
 namespace TopLearn.Web.Controllers
 {
@@ -58,7 +59,36 @@ namespace TopLearn.Web.Controllers
                     }
                 }
 
-                ViewBag.Episode = course.CourseEpisodes.SingleOrDefault(e => e.Id == episodeId);
+                CourseEpisode episode = course.CourseEpisodes.SingleOrDefault(e => e.Id == episodeId);
+
+                string filePathForOnlineShow = "/CourseFilesForOnlineShow/" + 
+                    episode.FileName.Replace(".rar", ".mp4");
+
+
+                if (!System.IO.File.Exists(Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot/CourseFilesForOnlineShow", episode.FileName.Replace(".rar", ".mp4"))))
+                {
+                    string targetPath = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot/CourseFilesForOnlineShow");
+
+                    string rarPath = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot/courses/episodes",
+                        episode.FileName);
+
+                    var archive = ArchiveFactory.Open(rarPath);
+
+                    var Entries = archive.Entries.OrderBy(x => x.Key.Length);
+                    foreach (var entry in Entries)
+                    {
+                        if (Path.GetExtension(entry.Key) == ".mp4")
+                        {
+                            entry.WriteTo(System.IO.File.Create(Path.Combine(targetPath, episode.FileName.Replace(".rar", ".mp4"))));
+                        }
+                    }
+                }
+
+                ViewBag.filePath = filePathForOnlineShow;
+                ViewBag.Episode = episode;
             }
 
             return View(course);

@@ -54,6 +54,24 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.Value.ToString().ToLower().StartsWith("/coursefilesforonlineshow"))
+    {
+        var callingUrl = context.Request.Headers["Referer"].ToString();
+        if (callingUrl != "" && (callingUrl.StartsWith("https://localhost:7168/") || callingUrl.StartsWith("https://localhost:7168/")))
+        {
+            await next.Invoke();
+        }
+        else
+            context.Response.Redirect("/login");
+    }
+    else
+        await next.Invoke();
+
+
+});
+
 app.UseStaticFiles();
 app.UseRouting();
 

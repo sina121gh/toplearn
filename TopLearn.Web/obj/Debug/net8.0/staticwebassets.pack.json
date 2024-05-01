@@ -1013,12 +1013,20 @@
       "PackagePath": "staticwebassets\\Admin\\plugins\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\CourseFilesForOnlineShow\\01_Asp.NetCore2Advance_Intro.mp4",
+      "PackagePath": "staticwebassets\\CourseFilesForOnlineShow\\01_Asp.NetCore2Advance_Intro.mp4"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg",
       "PackagePath": "staticwebassets\\UsersAvatars\\28c511bc1f4a41e786da591f12a6329f.jpg"
     },
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\UsersAvatars\\DefaultAvatar.png",
       "PackagePath": "staticwebassets\\UsersAvatars\\DefaultAvatar.png"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\01_Asp.NetCore2Advance_Intro.rar",
+      "PackagePath": "staticwebassets\\courses\\episodes\\01_Asp.NetCore2Advance_Intro.rar"
     },
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\courses\\episodes\\1.rar",

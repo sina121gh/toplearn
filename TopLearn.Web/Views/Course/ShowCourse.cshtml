@@ -77,9 +77,10 @@
                     @if (ViewBag.Episode != null)
                     {
                         CourseEpisode courseEpisode = ViewBag.Episode as CourseEpisode;
+                        string filePath = ViewBag.FilePath;
 
                         <video controls style="width:100%;">
-                            <source src="/courses/episodes/@courseEpisode.Id" />
+                            <source src="@filePath" />
                         </video>
                     }
 
