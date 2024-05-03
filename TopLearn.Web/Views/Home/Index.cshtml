@@ -13,7 +13,7 @@
     </header>
     <div class="search-form">
         <form action="/courses" method="get">
-            <input type="text" name="filter" placeholder="چی دوست داری یاد بگیری ؟">
+            <input type="text" id="filter" name="filter" placeholder="چی دوست داری یاد بگیری ؟">
             <button><i class="zmdi zmdi-search"></i></button>
         </form>
     </div>
@@ -55,3 +55,12 @@
     </div>
 </main>
 
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#filter").autocomplete({
+                source: 'api/course/search'
+            })
+        });
+    </script>
+}
