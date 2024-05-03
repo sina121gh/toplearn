@@ -4,12 +4,16 @@ namespace TopLearn.Web.ViewComponents
 {
     public class CourseGroupComponent : ViewComponent
     {
+        #region DI
+
         private readonly ICourseService _courseService;
 
         public CourseGroupComponent(ICourseService courseService)
         {
             _courseService = courseService;
         }
+
+        #endregion
 
         public async Task<IViewComponentResult> InvokeAsync()
         {

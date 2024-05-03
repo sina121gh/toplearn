@@ -26,10 +26,9 @@
                 <a href="/courses"> مشاهده همه دوره ها </a>
             </header>
             <div class="row">
-                @foreach (var course in Model.Item1.Courses)
-                {
-                    <partial name="_CourseBox" model="course"></partial>
-                }
+                <cache expires-after="@TimeSpan.FromMinutes(5)">
+                    @await Component.InvokeAsync("LatestCoursesComponent");
+                </cache>
             </div>
         </section>
 
