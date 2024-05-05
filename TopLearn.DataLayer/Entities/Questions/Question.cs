@@ -23,12 +23,12 @@ namespace TopLearn.DataLayer.Entities.Questions
         public int UserId { get; set; }
 
         [Required(ErrorMessage = "فیلد {0} الزامی است")]
-        [DisplayName("عنوان سوال")]
+        [Display(Name = "عنوان سوال")]
         [MaxLength(200)]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "فیلد {0} الزامی است")]
-        [DisplayName("متن سوال")]
+        [Display(Name = "متن سوال")]
         public string Body { get; set; }
 
         [Required]
@@ -45,7 +45,7 @@ namespace TopLearn.DataLayer.Entities.Questions
         [ForeignKey("UserId")]
         public User.User? User { get; set; }
 
-        public IEnumerable<Answer> Answers { get; set; }
+        public IEnumerable<Answer>? Answers { get; set; }
 
         #endregion
     }

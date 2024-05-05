@@ -28,6 +28,7 @@ builder.Services.AddTransient<IPermisionService, PermisionService>();
 builder.Services.AddTransient<IFileService, FileService>();
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.AddTransient<IForumService, ForumService>();
 
 #endregion
 

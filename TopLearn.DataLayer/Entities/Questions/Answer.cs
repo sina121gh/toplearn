@@ -28,7 +28,7 @@ namespace TopLearn.DataLayer.Entities.Questions
         #region Relations
 
         [ForeignKey("QuestionId")]
-        public Question Question { get; set; }
+        public Question? Question { get; set; }
 
         [ForeignKey("UserId")]
         public User.User? User { get; set; }
