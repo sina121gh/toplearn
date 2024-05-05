@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TopLearn.DataLayer.Entities.Order;
+using TopLearn.DataLayer.Entities.Questions;
 using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.DataLayer.Entities.Course
@@ -103,6 +104,8 @@ namespace TopLearn.DataLayer.Entities.Course
         public List<CourseComment>? CourseComments { get; set; }
 
         public List<CourseVote>? CourseVotes { get; set; }
+
+        public List<Question>? Questions { get; set; }
 
         #endregion
     }

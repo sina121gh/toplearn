@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TopLearn.DataLayer.Entities.Course;
 using TopLearn.DataLayer.Entities.Order;
 using TopLearn.DataLayer.Entities.Permissions;
+using TopLearn.DataLayer.Entities.Questions;
 using TopLearn.DataLayer.Entities.User;
 using TopLearn.DataLayer.Entities.Wallet;
 
@@ -64,18 +65,34 @@ namespace TopLearn.DataLayer.Context
 
         #endregion
 
+        #region Questions
+
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+
+        #endregion
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region Query Filter
-
             var cascadeFKs = modelBuilder.Model.GetEntityTypes()
-            .SelectMany(t => t.GetForeignKeys())
-            .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+                            .SelectMany(t => t.GetForeignKeys())
+                            .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
 
             foreach (var fk in cascadeFKs)
                 fk.DeleteBehavior = DeleteBehavior.Restrict;
+
+            //modelBuilder.Entity<Course>()
+            //    .HasOne<CourseGroup>(c => c.Group)
+            //    .WithMany(g => g.Courses)
+            //    .HasForeignKey(c => c.Group);
+
+            //modelBuilder.Entity<Course>()
+            //    .HasOne<CourseGroup>(c => c.SubGroup)
+            //    .WithMany(g => g.CoursesList)
+            //    .HasForeignKey(c => c.SubGroup);
+
+            #region Query Filter
 
             modelBuilder.Entity<User>()
                 .HasQueryFilter(u => !u.IsDeleted);

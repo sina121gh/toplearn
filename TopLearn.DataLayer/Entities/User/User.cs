@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopLearn.DataLayer.Entities.Course;
 using TopLearn.DataLayer.Entities.Order;
+using TopLearn.DataLayer.Entities.Questions;
 using TopLearn.DataLayer.Entities.Wallet;
 
 namespace TopLearn.DataLayer.Entities.User
@@ -75,6 +76,10 @@ namespace TopLearn.DataLayer.Entities.User
         public IEnumerable<CourseComment>? CourseComments { get; set; }
 
         public IEnumerable<CourseVote>? CourseVotes { get; set; }
+
+        public IEnumerable<Question>? Questions { get; set; }
+
+        public IEnumerable<Answer>? Answers { get; set; }
 
 
         #endregion
