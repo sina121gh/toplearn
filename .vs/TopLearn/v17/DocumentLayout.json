@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.web\\views\\forum\\showquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|solutionrelative:toplearn.web\\views\\forum\\showquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD5D1C-2DCB-4224-9F47-304E882F06CF}|TopLearn.Core\\TopLearn.Core.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.core\\services\\forumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD5D1C-2DCB-4224-9F47-304E882F06CF}|TopLearn.Core\\TopLearn.Core.csproj|solutionrelative:toplearn.core\\services\\forumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD5D1C-2DCB-4224-9F47-304E882F06CF}|TopLearn.Core\\TopLearn.Core.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.core\\services\\interfaces\\iforumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD5D1C-2DCB-4224-9F47-304E882F06CF}|TopLearn.Core\\TopLearn.Core.csproj|solutionrelative:toplearn.core\\services\\interfaces\\iforumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|e:\\documents\\vs\\toplean\\asp.net core\\advance\\toplearn\\toplearn.web\\controllers\\forumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF105FF-E473-4BCA-AA5F-5432BADD0F90}|TopLearn.Web\\TopLearn.Web.csproj|solutionrelative:toplearn.web\\controllers\\forumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ForumService.cs",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\Services\\ForumService.cs",
+              "RelativeDocumentMoniker": "TopLearn.Core\\Services\\ForumService.cs",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\Services\\ForumService.cs",
+              "RelativeToolTip": "TopLearn.Core\\Services\\ForumService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwC0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T15:44:08.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShowQuestion.cshtml",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Forum\\ShowQuestion.cshtml",
+              "RelativeDocumentMoniker": "TopLearn.Web\\Views\\Forum\\ShowQuestion.cshtml",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Forum\\ShowQuestion.cshtml",
+              "RelativeToolTip": "TopLearn.Web\\Views\\Forum\\ShowQuestion.cshtml",
+              "ViewState": "AQIAAAcAAAAAAAAAAIAwwB0AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-05T15:23:51.472Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1337924956:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
@@ -42,28 +80,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShowCourse.cshtml",
-              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
-              "RelativeDocumentMoniker": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
-              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
-              "RelativeToolTip": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
-              "ViewState": "AQIAAM0AAAAAAAAAAAAAAN8AAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-05T15:07:06.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ForumController.cs",
               "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Controllers\\ForumController.cs",
               "RelativeDocumentMoniker": "TopLearn.Web\\Controllers\\ForumController.cs",
               "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Controllers\\ForumController.cs",
               "RelativeToolTip": "TopLearn.Web\\Controllers\\ForumController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAWwC8AAAAJAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwEcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-05T14:51:37.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IForumService.cs",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\Services\\Interfaces\\IForumService.cs",
+              "RelativeDocumentMoniker": "TopLearn.Core\\Services\\Interfaces\\IForumService.cs",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Core\\Services\\Interfaces\\IForumService.cs",
+              "RelativeToolTip": "TopLearn.Core\\Services\\Interfaces\\IForumService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAqwBEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T15:15:43.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShowCourse.cshtml",
+              "DocumentMoniker": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "RelativeDocumentMoniker": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "ToolTip": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "RelativeToolTip": "TopLearn.Web\\Views\\Course\\ShowCourse.cshtml",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-05T15:07:06.091Z",
               "EditorCaption": ""
             }
           ]

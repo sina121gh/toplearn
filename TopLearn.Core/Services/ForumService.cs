@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopLearn.Core.DTOs.Question;
 using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 using TopLearn.DataLayer.Entities.Questions;
@@ -34,6 +36,21 @@ namespace TopLearn.Core.Services
             {
                 return -1;
             }
+        }
+
+        public ShowSingleQuestionViewModel ShowQuestion(int questionId)
+        {
+            Question? question = _context.Questions
+                .Include(q => q.User)
+                .Include(q => q.Answers)
+                .ThenInclude(a => a.User)
+                .SingleOrDefault(q => q.Id == questionId);
+
+            return new ShowSingleQuestionViewModel()
+            {
+                Question = question,
+                Answers = question.Answers
+            };
         }
     }
 }

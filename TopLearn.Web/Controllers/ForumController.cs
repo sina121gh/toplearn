@@ -30,6 +30,8 @@ namespace TopLearn.Web.Controllers
             return View();
         }
 
+        #region Create Question
+
         [Authorize]
         [Route("courses/{courseId}/questions/create")]
         public IActionResult CreateQuestion(int courseId)
@@ -62,7 +64,19 @@ namespace TopLearn.Web.Controllers
             question.UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             int questionId = _forumService.AddQuestion(question);
 
-            return Redirect($"/courses/{question.CourseId}/questions");
+            return Redirect($"/courses/{question.CourseId}/questions/{questionId}");
         }
+
+        #endregion
+
+        #region Show Question
+
+        [Route("courses/{courseId}/questions/{questionId}")]
+        public IActionResult ShowQuestion(int questionId)
+        {
+            return View(_forumService.ShowQuestion(questionId));
+        }
+
+        #endregion
     }
 }
