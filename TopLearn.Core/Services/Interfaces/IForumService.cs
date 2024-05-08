@@ -14,6 +14,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Question
 
+        ShowCourseQuestionsViewModel GetQuestionsByCourseIdWithIncludes(
+            int courseId, string filter = "", int pageId = 1, int take = 5);
         Question? GetQuestionById(int questionId);
         int AddQuestion(Question question);
         ShowSingleQuestionViewModel ShowQuestion(int questionId);

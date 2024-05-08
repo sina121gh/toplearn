@@ -1,0 +1,104 @@
+﻿@using TopLearn.Core.DTOs.Question
+@model ShowCourseQuestionsViewModel
+@inject ICourseService _courseService;
+@inject IOrderService _orderService;
+@{
+    bool isCourceFree = _courseService.IsCourseFree(Model.CourseId);
+    ViewData["Title"] = "پرسش";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/"> تاپ لرن </a></li>
+            <li class="breadcrumb-item"><a href=""> پرسش و پاسخ </a></li>
+            <li class="breadcrumb-item active" aria-current="page">  </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="inner">
+                @if (Model.Qeustions.Count() > 0)
+                {
+                    @foreach (var question in Model.Qeustions)
+                    {
+                        <div class="panel p-5">
+                            <div class="panel-heading">
+                                <h1>
+                                    <a href="@question.Id">
+                                        @question.Title
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="panel-footer">
+                                <img src="/UsersAvatars/@question.User.Avatar" style="max-width: 50px; border-radius: 20px;" />
+                                @question.User.UserName | @question.CreateDate.ToShamsi()
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        پرسشی یافت نشد
+                    </div>
+                }
+            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (isCourceFree
+               || (!isCourceFree && _orderService.IsUserInCourse(User.Identity.Name, Model.CourseId)))
+                {
+                    <div class="inner" style="margin-top: 25px;">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h1 style="font-size: 18px;" class="text-success text-muted">افزودن پاسخ جدید</h1>
+                            </div>
+                            <div class="panel-body">
+                                <form action="/courses/@Model.CourseId/questions/create" method="post">
+
+                                    <input type="hidden" name="Model.CourseId" value="@Model.CourseId" />
+                                    <input type="hidden" name="Title" value="@Model.CourseId" />
+                                    <div class="form-group">
+                                        <textarea id='body' name="Body" required></textarea>
+                                        <button class="btn btn-block btn-success" style="margin-top: 20px; height: 50px; font-size:15px;" type="submit">ثبت پرسش</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger">
+                        برای پرسش سوال باید دوره را خریداری کنید.
+                        <a href="/courses/@Model.CourseId">خرید دوره</a>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    برای پرسش سوال باید وارد سایت شوید.
+                    <a href="/login">ورود به سایت</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace('body', {
+            customConfig: '/js/ckeditorConfig.js'
+        });
+
+    </script>
+}

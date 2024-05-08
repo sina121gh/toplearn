@@ -232,6 +232,10 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "HtmlSanitizer": {
+              "target": "Package",
+              "version": "[8.0.865, )"
+            },
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.2, )"

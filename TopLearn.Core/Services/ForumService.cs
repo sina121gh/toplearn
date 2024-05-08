@@ -96,5 +96,28 @@ namespace TopLearn.Core.Services
                 .SingleOrDefault(a => a.QuestionId == questionId && 
                 a.Id == answerId);
         }
+
+        public ShowCourseQuestionsViewModel GetQuestionsByCourseIdWithIncludes(
+            int courseId, string filter = "", int pageId = 1,
+            int take = 5)
+        {
+            IQueryable<Question> result = _context.Questions
+                .Where(q => q.CourseId == courseId &&
+                EF.Functions.Like(q.Title, $"%{filter}%"))
+                .Include(q => q.User);
+
+            int skip = (pageId  - 1) * take;
+            int pageCount = (int)Math.Ceiling((double)result.Count() / take);
+
+            return new ShowCourseQuestionsViewModel()
+            {
+                Qeustions = result.OrderByDescending(q => q.ModifyDate)
+                .Skip(skip).Take(take).ToList(),
+                CourseId = courseId,
+                PageCount = pageCount,
+                HasNextPage = pageId < pageCount,
+                HasPreviousPage = pageId > 1,
+            };
+        }
     }
 }

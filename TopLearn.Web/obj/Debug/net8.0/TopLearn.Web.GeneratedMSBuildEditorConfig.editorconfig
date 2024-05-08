@@ -234,6 +234,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ydW1cQ3JlYXRlUXVlc3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Documents/VS/Toplean/Asp.Net Core/Advance/TopLearn/TopLearn.Web/Views/Forum/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ydW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/VS/Toplean/Asp.Net Core/Advance/TopLearn/TopLearn.Web/Views/Forum/ShowQuestion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ydW1cU2hvd1F1ZXN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

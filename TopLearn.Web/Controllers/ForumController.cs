@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Ganss.Xss;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TopLearn.DataLayer.Entities.Course;
@@ -26,9 +27,10 @@ namespace TopLearn.Web.Controllers
 
         #endregion
 
-        public IActionResult Index()
+        [Route("courses/{courseId}/questions")]
+        public IActionResult Index(int courseId, int pageId = 1, int take = 5, string filter = "")
         {
-            return View();
+            return View(_forumService.GetQuestionsByCourseIdWithIncludes(courseId, filter, pageId, take));
         }
 
         #region Create Question
@@ -93,6 +95,9 @@ namespace TopLearn.Web.Controllers
 
                 if (question == null)
                     return NotFound();
+
+                var sanitizer = new HtmlSanitizer();
+                body = sanitizer.Sanitize(body);
 
                 if (question.CourseId != courseId)
                     return BadRequest();
