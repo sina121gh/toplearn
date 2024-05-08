@@ -10,16 +10,21 @@ using TopLearn.DataLayer.Entities.Questions;
 namespace TopLearn.Core.Services.Interfaces
 {
     public interface IForumService
-    {      
+    {
 
         #region Question
 
+        Question? GetQuestionById(int questionId);
         int AddQuestion(Question question);
         ShowSingleQuestionViewModel ShowQuestion(int questionId);
 
         #endregion
 
         #region Answer
+
+        bool AddAnswer(Answer answer);
+        bool ChangeTrueAnswer(int questionId, int answerId);
+        Answer? GetAnswerById(int questionId, int answerId);
 
         #endregion
     }

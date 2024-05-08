@@ -34,6 +34,9 @@ a,i,input[type="submit"], form button{ -webkit-transition : all 0.2s linear 0s; 
 .comment-list .comment-row:after,
 .term-categories .switch-field:after{ display: block; clear: both; content: ''; visibility: hidden; height: 0; line-height: 0}
 
+
+
+
 .landing-layer{
   width: 100%;
   background: url('../images/slide.jpg') no-repeat center center / cover;
@@ -1005,7 +1008,7 @@ main#home-page{
     margin-left: 3px
 }
 
-@media screen and (max-width : 991px){
+@media screen and (max-width : 991px) {
     .main-menu nav > span{
         display: block;
     }

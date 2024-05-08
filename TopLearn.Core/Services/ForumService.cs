@@ -21,6 +21,7 @@ namespace TopLearn.Core.Services
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
+
         public int AddQuestion(Question question)
         {
             question.CreateDate = DateTime.Now;
@@ -49,8 +50,51 @@ namespace TopLearn.Core.Services
             return new ShowSingleQuestionViewModel()
             {
                 Question = question,
-                Answers = question.Answers
+                Answers = question.Answers.OrderByDescending(a => a.IsTrue).ThenByDescending(a => a.CreateDate),
             };
+        }
+
+        public bool AddAnswer(Answer answer)
+        {
+            try
+            {
+                _context.Answers.Add(answer);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public Question? GetQuestionById(int questionId) => _context.Questions.Find(questionId);
+
+        public bool ChangeTrueAnswer(int questionId, int answerId)
+        {
+            var answers = _context.Answers.Where(a => a.QuestionId == questionId);
+            foreach (var answer in answers)
+            {
+                answer.IsTrue = false;
+            }
+            
+            answers.SingleOrDefault(a => a.Id == answerId).IsTrue = true;
+
+            try
+            {
+                _context.UpdateRange(answers);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public Answer? GetAnswerById(int questionId, int answerId)
+        {
+            return _context.Answers
+                .SingleOrDefault(a => a.QuestionId == questionId && 
+                a.Id == answerId);
         }
     }
 }

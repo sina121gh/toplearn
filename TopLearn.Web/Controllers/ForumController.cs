@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using TopLearn.DataLayer.Entities.Course;
 using TopLearn.DataLayer.Entities.Questions;
 
 namespace TopLearn.Web.Controllers
@@ -75,6 +76,63 @@ namespace TopLearn.Web.Controllers
         public IActionResult ShowQuestion(int questionId)
         {
             return View(_forumService.ShowQuestion(questionId));
+        }
+
+        #endregion
+
+        #region Answer
+
+        [Route("courses/{courseId}/questions/{questionId}/answers-create")]
+        [Authorize]
+        [HttpPost]
+        public IActionResult Answer(int courseId, int questionId, string body)
+        {
+            if (!string.IsNullOrEmpty(body))
+            {
+                Question? question = _forumService.GetQuestionById(questionId);
+
+                if (question == null)
+                    return NotFound();
+
+                if (question.CourseId != courseId)
+                    return BadRequest();
+                _forumService.AddAnswer(new Answer()
+                {
+                    Body = body,
+                    CreateDate = DateTime.Now,
+                    QuestionId = questionId,
+                    UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)),
+                });
+            }
+            return Redirect($"/courses/{courseId}/questions/{questionId}");
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("/questions/{questionId}/answers/{answerId}")]
+        public IActionResult GetAnswerBodyForEdit(int questionId, int answerId)
+        {
+            Answer? answer = _forumService.GetAnswerById(questionId, answerId);
+            if (answer == null)
+                return NotFound();
+
+            if (answer.UserId != int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)))
+                return Forbid();
+
+            return Ok(answer);
+        }
+
+        [Authorize]
+        public IActionResult SelectTrueAnswer(int questionId, int answerId)
+        {
+            int currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            Question question = _forumService.GetQuestionById(questionId);
+
+            if (question.UserId != currentUserId)
+                return BadRequest();
+
+            _forumService.ChangeTrueAnswer(questionId, answerId);
+            return Redirect($"/courses/{question.CourseId}/questions/{questionId}");
         }
 
         #endregion

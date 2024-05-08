@@ -25,6 +25,8 @@ namespace TopLearn.DataLayer.Entities.Questions
         [Required]
         public DateTime CreateDate { get; set; }
 
+        public bool IsTrue { get; set; } = false;
+
         #region Relations
 
         [ForeignKey("QuestionId")]
