@@ -21,6 +21,13 @@
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="inner">
+                <div class="panel">
+                    <form id="filterForm" method="get" class="form-inline">
+                        <input type="hidden" name="pageId" id="pageId" value="@ViewBag.PageId" />
+                        <input type="text" name="filter" class="form-control" placeholder="عبارت را وارد کنید" value="@ViewBag.Filter"/>
+                        <button class="btn-sm btn-success" onclick="filter()">جستجو</button>
+                    </form>
+                </div>
                 @if (Model.Qeustions.Count() > 0)
                 {
                     @foreach (var question in Model.Qeustions)
@@ -89,7 +96,34 @@
 
         </div>
     </div>
+
+    <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+        <section class="terms-items">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
+                        <a class="page-link" onclick="changePage(@ViewData["PageId"] - 1)" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><i class="zmdi zmdi-chevron-right"></i></span>
+                        </a>
+                    </li>
+                    @for (int i = 1; i <= Model.PageCount; i++)
+                    {
+                        <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
+                    }
+                    <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
+                        <a class="page-link" onclick="changePage(@ViewData["PageId"] + 1)" href="#" aria-label="Next">
+                            <span aria-hidden="true"><i class="zmdi zmdi-chevron-left"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </div>
 </div>
+
+
+
 
 @section Scripts
 {
@@ -99,6 +133,15 @@
         CKEDITOR.replace('body', {
             customConfig: '/js/ckeditorConfig.js'
         });
+
+        function changePage(pageId) {
+            $('#pageId').val(pageId);
+            filter();
+        }
+
+        function filter() {
+            $("#filterForm").submit();
+        }
 
     </script>
 }

@@ -34,6 +34,9 @@ namespace TopLearn.Web.Controllers
         [Authorize]
         public IActionResult Test() => View();
 
+        [Route("error404")]
+        public IActionResult Error404() => View();
+
 
         [Route("/get-roles")]
         public JsonResult GetRoles()

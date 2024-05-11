@@ -1097,8 +1097,28 @@
       "PackagePath": "staticwebassets\\css\\fonts\\Material-Design-Iconic-Font.woff2"
     },
     {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Vazir.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\Vazir.eot"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Vazir.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\Vazir.ttf"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Vazir.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\Vazir.woff"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\fonts\\Vazir.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\Vazir.woff2"
+    },
+    {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
       "PackagePath": "staticwebassets\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\not-found-page.css",
+      "PackagePath": "staticwebassets\\css\\not-found-page.css"
     },
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\css\\style.css",
@@ -1231,6 +1251,38 @@
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
       "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.js"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\404.png",
+      "PackagePath": "staticwebassets\\pics\\404.png"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\astronaut.svg",
+      "PackagePath": "staticwebassets\\pics\\astronaut.svg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\bg_purple.png",
+      "PackagePath": "staticwebassets\\pics\\bg_purple.png"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\earth.svg",
+      "PackagePath": "staticwebassets\\pics\\earth.svg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\logo.svg",
+      "PackagePath": "staticwebassets\\pics\\logo.svg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\moon.svg",
+      "PackagePath": "staticwebassets\\pics\\moon.svg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\overlay_stars.svg",
+      "PackagePath": "staticwebassets\\pics\\overlay_stars.svg"
+    },
+    {
+      "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\pics\\rocket.svg",
+      "PackagePath": "staticwebassets\\pics\\rocket.svg"
     },
     {
       "Id": "E:\\Documents\\VS\\Toplean\\Asp.Net Core\\Advance\\TopLearn\\TopLearn.Web\\wwwroot\\uploadedImages\\f0ee192fb3bb43478d251ccd8427c299.jpg",

@@ -57,6 +57,15 @@ var app = builder.Build();
 
 app.Use(async (context, next) =>
 {
+    await next();
+    if (context.Response.StatusCode == 404)
+    {
+        context.Response.Redirect("/error404");
+    }
+});
+
+app.Use(async (context, next) =>
+{
     if (context.Request.Path.Value.ToString().ToLower().StartsWith("/coursefilesforonlineshow"))
     {
         var callingUrl = context.Request.Headers["Referer"].ToString();

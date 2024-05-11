@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
 using System.Security.Claims;
 using TopLearn.Convertors;
 using TopLearn.Core.Convertors;
@@ -77,7 +78,7 @@ namespace TopLearn.Web.Controllers
         #endregion
 
         #region Login
-        [Route("Login")]
+        [Route("login")]
         public IActionResult Login(bool editProfile = false)
         {
             ViewBag.EditProfile = editProfile;
@@ -85,8 +86,8 @@ namespace TopLearn.Web.Controllers
         }
 
         [HttpPost]
-        [Route("Login")]
-        public IActionResult Login(LoginViewModel login, string returnUrl = "/user-panel")
+        [Route("login")]
+        public IActionResult Login(LoginViewModel login, string ReturnUrl = "/user-panel")
         {
             if (!ModelState.IsValid)
                 return View(login);
@@ -114,10 +115,10 @@ namespace TopLearn.Web.Controllers
                     };
 
                     HttpContext.SignInAsync(principal, properties);
-
-                    ViewBag.IsSuccess = true;
-                    ViewBag.ReturnUrl = returnUrl;
-                    return View();
+                    if (Url.IsLocalUrl(ReturnUrl))
+                        return LocalRedirect(ReturnUrl);
+                    else 
+                        return LocalRedirect("/user-panel");
                 }
                     
                 else
