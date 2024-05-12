@@ -30,14 +30,19 @@ namespace TopLearn.Web.Controllers
         [Route("courses/{courseId}/questions")]
         public IActionResult Index(int courseId, int pageId = 1, int take = 5, string filter = "")
         {
-            if (!_courseService.IsCourseFree(courseId))
-            {
-                if (User.Identity.IsAuthenticated && 
-                    (!_orderService.IsUserInCourse(User.Identity.Name, courseId)))
-                {
-                        return Forbid();
-                }
-            }
+            //if (!_courseService.IsCourseFree(courseId))
+            //{
+            //    if (User.Identity.IsAuthenticated && 
+            //        (!_orderService.IsUserInCourse(User.Identity.Name, courseId)))
+            //    {
+            //            return Forbid();
+            //    }
+            //    else
+            //    {
+
+            //            return Forbid();
+            //    }
+            //}
 
             ViewBag.PageId = pageId;
             ViewBag.Filter = filter;

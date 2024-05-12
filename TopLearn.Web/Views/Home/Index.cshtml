@@ -26,7 +26,7 @@
                 <a href="/courses"> مشاهده همه دوره ها </a>
             </header>
             <div class="row">
-                <cache expires-after="@TimeSpan.FromMinutes(5)">
+                <cache expires-after="@TimeSpan.FromMinutes(3)">
                     @await Component.InvokeAsync("LatestCoursesComponent");
                 </cache>
             </div>

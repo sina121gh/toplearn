@@ -3,6 +3,7 @@
 @inject ICourseService _courseService;
 @inject IOrderService _orderService;
 @{
+    bool showQuestions = true;
     bool isCourceFree = _courseService.IsCourseFree(Model.CourseId);
     ViewData["Title"] = "پرسش";
 }
@@ -17,109 +18,98 @@
     </nav>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="inner">
-                <div class="panel">
-                    <form id="filterForm" method="get" class="form-inline">
-                        <input type="hidden" name="pageId" id="pageId" value="@ViewBag.PageId" />
-                        <input type="text" name="filter" class="form-control" placeholder="عبارت را وارد کنید" value="@ViewBag.Filter"/>
-                        <button class="btn-sm btn-success" onclick="filter()">جستجو</button>
-                    </form>
-                </div>
-                @if (Model.Qeustions.Count() > 0)
-                {
-                    @foreach (var question in Model.Qeustions)
-                    {
-                        <div class="panel p-5">
-                            <div class="panel-heading">
-                                <h1>
-                                    <a href="@question.Id">
-                                        @question.Title
-                                    </a>
-                                </h1>
-                            </div>
-                            <div class="panel-footer">
-                                <img src="/UsersAvatars/@question.User.Avatar" style="max-width: 50px; border-radius: 20px;" />
-                                @question.User.UserName | @question.CreateDate.ToShamsi()
-                            </div>
-                        </div>
-                    }
-                }
-                else
-                {
-                    <div class="alert alert-info">
-                        پرسشی یافت نشد
-                    </div>
-                }
-            </div>
-            @if (User.Identity.IsAuthenticated)
-            {
-                @if (isCourceFree
-               || (!isCourceFree && _orderService.IsUserInCourse(User.Identity.Name, Model.CourseId)))
-                {
-                    <div class="inner" style="margin-top: 25px;">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h1 style="font-size: 18px;" class="text-success text-muted">افزودن پاسخ جدید</h1>
-                            </div>
-                            <div class="panel-body">
-                                <form action="/courses/@Model.CourseId/questions/create" method="post">
 
-                                    <input type="hidden" name="Model.CourseId" value="@Model.CourseId" />
-                                    <input type="hidden" name="Title" value="@Model.CourseId" />
-                                    <div class="form-group">
-                                        <textarea id='body' name="Body" required></textarea>
-                                        <button class="btn btn-block btn-success" style="margin-top: 20px; height: 50px; font-size:15px;" type="submit">ثبت پرسش</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    <div class="alert alert-danger">
-                        برای پرسش سوال باید دوره را خریداری کنید.
-                        <a href="/courses/@Model.CourseId">خرید دوره</a>
-                    </div>
-                }
-            }
-            else
+<div class="container">
+    @if (!isCourceFree)
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+            if (!_orderService.IsUserInCourse(User.Identity.Name, Model.CourseId))
             {
                 <div class="alert alert-danger">
-                    برای پرسش سوال باید وارد سایت شوید.
-                    <a href="/login">ورود به سایت</a>
+                    برای دیدن سوالات باید دوره را خریداری کنید.
+                    <a href="/courses/@Model.CourseId">خرید دوره</a>
                 </div>
+                showQuestions = false;
             }
+        }
+        else
+        {
+            <div class="alert alert-danger">
+                برای دیدن سوالات باید وارد سایت شوید.
+                <a href="/login?returnUrl=/courses/@Model.CourseId/questions">ورود به سایت</a>
+            </div>
+            showQuestions = false;
+        }
+        
+    }
 
-        </div>
-    </div>
-
-    <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-
-        <section class="terms-items">
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
-                        <a class="page-link" onclick="changePage(@ViewData["PageId"] - 1)" href="#" aria-label="Previous">
-                            <span aria-hidden="true"><i class="zmdi zmdi-chevron-right"></i></span>
-                        </a>
-                    </li>
-                    @for (int i = 1; i <= Model.PageCount; i++)
+    @if (showQuestions)
+    {
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="inner">
+                    <div class="panel">
+                        <form id="filterForm" method="get" class="form-inline">
+                            <input type="hidden" name="pageId" id="pageId" value="@ViewBag.PageId" />
+                            <input type="text" name="filter" class="form-control" placeholder="عبارت را وارد کنید" value="@ViewBag.Filter" />
+                            <button class="btn-sm btn-success" onclick="filter()">جستجو</button>
+                        </form>
+                    </div>
+                    @if (Model.Qeustions.Count() > 0)
                     {
-                        <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
+                        @foreach (var question in Model.Qeustions)
+                        {
+                            <div class="panel p-5">
+                                <div class="panel-heading">
+                                    <h1>
+                                        <a href="@question.Id">
+                                            @question.Title
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="panel-footer">
+                                    <img src="/UsersAvatars/@question.User.Avatar" style="max-width: 50px; border-radius: 20px;" />
+                                    @question.User.UserName | @question.CreateDate.ToShamsi()
+                                </div>
+                            </div>
+                        }
                     }
-                    <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
-                        <a class="page-link" onclick="changePage(@ViewData["PageId"] + 1)" href="#" aria-label="Next">
-                            <span aria-hidden="true"><i class="zmdi zmdi-chevron-left"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-    </div>
+                    else
+                    {
+                        <div class="alert alert-info">
+                            پرسشی یافت نشد
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+            <section class="terms-items">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
+                            <a class="page-link" onclick="changePage(@ViewData["PageId"] - 1)" href="#" aria-label="Previous">
+                                <span aria-hidden="true"><i class="zmdi zmdi-chevron-right"></i></span>
+                            </a>
+                        </li>
+                        @for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
+                        }
+                        <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
+                            <a class="page-link" onclick="changePage(@ViewData["PageId"] + 1)" href="#" aria-label="Next">
+                                <span aria-hidden="true"><i class="zmdi zmdi-chevron-left"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    }
 </div>
 
 
@@ -127,12 +117,7 @@
 
 @section Scripts
 {
-    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
     <script>
-
-        CKEDITOR.replace('body', {
-            customConfig: '/js/ckeditorConfig.js'
-        });
 
         function changePage(pageId) {
             $('#pageId').val(pageId);
