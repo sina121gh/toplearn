@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Course>
+@{
+    ViewData["Title"] = "لیست دوره ها";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> @ViewData["Title"] </li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+
+                <partial name="_SideBar"></partial>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <section class="user-account-content">
+                        <header><h1> @ViewData["Title"] </h1></header>
+                        @if (ViewBag.IsFinally == true)
+                        {
+
+                        }
+                        <div class="inner">
+                            <div class="account-information">
+                                <h3> @ViewData["Title"] </h3>
+                                <table class="table table-bordered table-hover table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>عنوان</th>
+                                            <th>وضعیت</th>
+                                            <th>تعداد قسمت ها</th>
+                                            <th>دستورات</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (Course course in Model)
+                                        {
+                                            <tr>
+                                                <td>@course.Title</td>
+                                                <td>@course.CourseStatus.Title</td>
+                                                <td>@course.CourseEpisodes.Count()</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="/master-courses/@course.Id/episodes">
+                                                        مدیریت قسمت ها
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

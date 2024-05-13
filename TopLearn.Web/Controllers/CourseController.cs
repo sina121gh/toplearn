@@ -7,7 +7,7 @@ namespace TopLearn.Web.Controllers
     public class CourseController : Controller
     {
 
-        #region DI
+        #region Ctor
 
         private readonly ICourseService _courseService;
         private readonly IOrderService _orderService;
@@ -124,7 +124,11 @@ namespace TopLearn.Web.Controllers
 
             if (User.Identity.IsAuthenticated)
             {
-                if (_orderService.IsUserInCourse(User.Identity.Name, episode.CourseId))
+                string userName = User.Identity.Name;
+                int userId = _userService.GetUserIdByUserName(userName);
+
+                if (_orderService.IsUserInCourse(userName, episode.CourseId) || 
+                    _courseService.GetCourseTeacherId(episode.Course.Id) == userId)
                 {
                     byte[] file = System.IO.File.ReadAllBytes(filePath);
                     return File(file, "application/force-download", fileName);

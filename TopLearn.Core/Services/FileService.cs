@@ -109,20 +109,27 @@ namespace TopLearn.Core.Services
             return demoName;
         }
 
-        public string SaveEpisodeFile(IFormFile episodeFile)
+        public string SaveEpisodeFile(IFormFile episodeFile, string fileName = "")
         {
             //string episodeName = MyGenerator.GenerateCode() + Path.GetExtension(episodeFile.FileName);
+            
             string episodePath = Path.Combine(Directory.GetCurrentDirectory(),
-                    "wwwroot",
-                    "courses",
-                    "episodes",
-                    episodeFile.FileName);
+                    "wwwroot/courses/episodes/");
+
+            if (fileName != "")
+                episodePath += fileName;
+            else 
+                episodePath += episodeFile.FileName;
+
             using (FileStream stream = new FileStream(episodePath, FileMode.Create))
             {
                 episodeFile.CopyTo(stream);
             }
 
-            return episodeFile.FileName;
+            if (fileName != "")
+                return fileName;
+            else
+                return episodeFile.FileName;
         }
 
         public string SaveImage(IFormFile image)

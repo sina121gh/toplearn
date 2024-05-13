@@ -35,7 +35,7 @@ namespace TopLearn.Core.Services.Interfaces
 
         #region Episode
 
-        string SaveEpisodeFile(IFormFile episodeFile);
+        string SaveEpisodeFile(IFormFile episodeFile, string fileName = "");
         void DeleteEpisode(string episodeName);
 
         #endregion

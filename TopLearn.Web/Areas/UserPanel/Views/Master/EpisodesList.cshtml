@@ -1,0 +1,72 @@
+﻿@model IEnumerable<CourseEpisode>
+@{
+    ViewData["Title"] = "مدیریت قسمت ها";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> @ViewData["Title"] </li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+
+                <partial name="_SideBar"></partial>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <section class="user-account-content">
+                        <header class="">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <h1> @ViewData["Title"] </h1>
+                                <a href="/master-courses/@ViewBag.CourseId/episodes/add" class="btn btn-success">
+                                    افزودن قسمت جدید
+                                </a>
+                            </div>
+                        </header>
+
+                        <div class="inner">
+                            <div class="account-information">
+                                <h3> @ViewData["Title"] </h3>
+                                <table class="table table-bordered table-hover table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>عنوان</th>
+                                            <th>زمان</th>
+                                            <th>وضعیت</th>
+                                            <th>دستورات</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (CourseEpisode episode in Model)
+                                        {
+                                            bool isFree = episode.IsFree;
+                                            <tr>
+                                                <td>@episode.Title</td>
+                                                <td>@episode.Time</td>
+                                                <td>
+                                                    <span class="btn-sm @(isFree ? "btn-success" : "btn-warning")">
+                                                        @(isFree ? "رایگان" : "پولی")
+                                                    </span>
+                                                </td>
+                                                <td><a class="btn-sm btn-primary" href="/download/@episode.Id">دانلود</a></td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

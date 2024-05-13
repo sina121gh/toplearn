@@ -601,5 +601,56 @@ namespace TopLearn.Core.Services
                 return false;
             }
         }
+
+        public IEnumerable<Course> GetAllMasterCourses(string userName)
+        {
+            int userId = _userService.GetUserIdByUserName(userName);
+            return _context.Courses
+                .Include(c => c.CourseStatus)
+                .Include(c => c.CourseEpisodes)
+                .Where(c => c.TeacherId == userId)
+                .ToList();
+        }
+
+        public bool DoesCourseExist(int courseId)
+        {
+            return _context.Courses
+                .Any(c => c.Id == courseId);
+        }
+
+        public int GetCourseTeacherId(int courseId)
+        {
+            return _context.Courses
+                .SingleOrDefault(c => c.Id == courseId)
+                .TeacherId;
+        }
+
+        public bool AddEpisode(AddEpisodeViewModel episodeViewModel, string userName)
+        {
+            int courseId = episodeViewModel.CourseId;
+            int userId = _userService.GetUserIdByUserName(userName);
+
+            if (!DoesCourseExist(courseId) || GetCourseTeacherId(courseId) != userId)
+                return false;
+
+            CourseEpisode episode = new CourseEpisode()
+            {
+                CourseId = courseId,
+                Title = episodeViewModel.Title,
+                Time = episodeViewModel.Time,
+                FileName = episodeViewModel.FileName,
+                IsFree = episodeViewModel.IsFree,
+            };
+
+            try
+            {
+                _context.CourseEpisodes.Add(episode);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
