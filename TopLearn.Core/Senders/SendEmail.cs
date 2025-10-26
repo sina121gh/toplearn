@@ -33,7 +33,8 @@ namespace TopLearn.Senders
 
             SmtpServer.Port = 587;
             SmtpServer.UseDefaultCredentials = false;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("sina121gh@gmail.com", "qojo yxrd zmwy yzzq");
+            SmtpServer.Credentials = new System.Net.NetworkCredential(Environment.GetEnvironmentVariable("SMTP_USERNAME"),
+                Environment.GetEnvironmentVariable("SMTP_PASSWORD"));
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
