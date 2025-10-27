@@ -23,7 +23,7 @@ builder.Services.AddDbContext<TopLearnContext>(options =>
 
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
-builder.Services.AddTransient<IPaymentService, PaymentService>();
+builder.Services.AddTransient<IPaymentService, ZarinpalService>();
 builder.Services.AddTransient<IPermisionService, PermisionService>();
 builder.Services.AddTransient<IFileService, FileService>();
 builder.Services.AddTransient<ICourseService, CourseService>();

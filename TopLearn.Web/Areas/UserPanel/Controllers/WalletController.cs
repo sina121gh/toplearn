@@ -18,6 +18,8 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
         private readonly IUserService _userService;
         private readonly IPaymentService _paymentService;
 
+        private readonly string GatewayUrl = Environment.GetEnvironmentVariable("GATEWAY_URL_TO_PAY");
+
         public WalletController(TopLearnContext context, IUserService userService, IPaymentService paymentService)
         {
             _context = context;
@@ -46,12 +48,12 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
 
             #region Online Payment
 
-            string authority = await _paymentService.PaymentRequest(charge.Amount, walletId, "شارژ حساب");
+            string authority = await _paymentService.PaymentRequestAsync(charge.Amount, walletId, "شارژ حساب");
 
             if (authority == "")
-                return NotFound();
+                return BadRequest();
 
-            return Redirect($"https://sandbox.zarinpal.com/pg/StartPay/{authority}");
+            return Redirect($"{GatewayUrl}/{authority}");
             #endregion
         }
 
@@ -68,16 +70,16 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             {
                 string authority = HttpContext.Request.Query["Authority"].ToString();
                 Transaction? transaction = _userService.GetTransactionById(transactionId);
-                var verification = await _paymentService.ValidatePayment(transaction.Amount, authority);
+                var verification = await _paymentService.ValidatePaymentAsync(transaction.Amount, authority);
 
                 // 100 = Ok Payment
-                if (verification.Status == 100)
+                if (verification.Data.Code == 100)
                 {
                     transaction.IsSuccess = true;
                     _userService.UpdateTransaction(transaction);
                     _userService.UpdateWalletBalance(transaction);
                     ViewBag.IsSuccess = true;
-                    ViewBag.Code = verification.RefId;
+                    ViewBag.Code = verification.Data.RefId;
                 }
             }
 
