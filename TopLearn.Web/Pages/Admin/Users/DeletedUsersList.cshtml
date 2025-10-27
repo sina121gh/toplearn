@@ -66,7 +66,7 @@
                                     <th>ایمیل</th>
                                     <th>وضعیت</th>
                                     <th>تاریخ ثبت نام</th>
-                                    <th>دستورات</th>
+                                    @* <th>دستورات</th> *@
                                 </tr>
                             <tbody>
                                     @foreach (User user in Model.UsersViewModel.Users)
@@ -76,14 +76,14 @@
                                         <td>@user.Email</td>
                                         <td>@(user.IsActive ? "فعال" : "غیر فعال")</td>
                                         <td>@user.RegisterDate.ToShamsi()</td>
-                                        <td>
+                                        @* <td>
                                             <a href="/admin/edit-user/@user.Id/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
                                             <a href="/admin/delete-user/@user.Id/" class="btn btn-danger btn-sm">
                                                 حذف
                                             </a>
-                                        </td>
+                                        </td> *@
                                     </tr>
                                     }
                             </tbody>

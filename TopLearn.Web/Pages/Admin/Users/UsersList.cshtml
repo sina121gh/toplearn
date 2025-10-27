@@ -148,13 +148,15 @@
                     $.ajax({
                         type: 'get',
                         url: `/admin/users/${id}/delete/`,
-                        // success: function (response) {
-                        //     Swal.fire({
-                        //         title: 'نقش با موفقیت حذف شد',
-                        //         icon: 'success'
-                        //     })
-                        // }
-                        success: location.reload(),
+                        success: function (response) {
+                            Swal.fire({
+                                title: 'کاربر با موفقیت حذف شد',
+                                icon: 'success'
+                            })
+                            setTimeout(() => {
+                                location.reload();
+                            }, 800);
+                        }
                     })
                 }
             });
