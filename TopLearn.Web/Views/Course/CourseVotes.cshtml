@@ -17,8 +17,8 @@ else if (!User.Identity.IsAuthenticated)
             <a href="/login">ورود به سایت</a>
         </div>
         <p>
-            <a class="btn btn-success disabled">میپسندم (12)</a>
-            <a class="btn btn-danger disabled">نمی پسندم (5)</a>
+            <a class="btn btn-success disabled">میپسندم (@Model.LikeCount)</a>
+            <a class="btn btn-danger disabled">نمی پسندم (@Model.DislikeCount)</a>
         </p>
     </div>
 }
@@ -29,8 +29,8 @@ else
             برای ثبت نظر باید دوره را تهیه کنید
         </div>
         <p>
-            <a class="btn btn-success disabled">میپسندم (12)</a>
-            <a class="btn btn-danger disabled">نمی پسندم (5)</a>
+            <a class="btn btn-success disabled">میپسندم (@Model.LikeCount)</a>
+            <a class="btn btn-danger disabled">نمی پسندم (@Model.DislikeCount)</a>
         </p>
     </div>
 }
