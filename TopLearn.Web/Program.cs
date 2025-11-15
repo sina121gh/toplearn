@@ -7,6 +7,17 @@ using TopLearn.Core.Services.Interfaces;
 using TopLearn.DataLayer.Context;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 1073741824; // 1GB
+});
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 1073741824; // 1GB
+});
+
 builder.Services.AddMvc();
 DotNetEnv.Env.Load();
 
@@ -48,10 +59,7 @@ builder.Services.AddAuthentication(options =>
 
 #endregion
 
-//builder.Services.Configure<FormOptions>(options =>
-//{
-//    options.MultipartBodyLengthLimit = 52428800;
-//});
+
 
 var app = builder.Build();
 
