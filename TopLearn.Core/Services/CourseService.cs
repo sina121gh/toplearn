@@ -652,5 +652,68 @@ namespace TopLearn.Core.Services
                 return false;
             }
         }
+
+        public bool DeleteCourse(int courseId)
+        {
+            Course course = GetCourseById(courseId);
+
+            if (course != null)
+            {
+                try
+                {
+                    if (!DeleteCourseEpisodes(courseId))
+                        return false;
+                    _context.Courses.Remove(course);
+                    _fileService.DeleteDemo(course.DemoFileName);
+                    _fileService.DeleteImage(course.ImageName);
+                    return _context.SaveChanges() > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+
+            }
+
+            return false;
+        }
+
+        public IEnumerable<string> GetCourseEpisodesFileNames(int courseId)
+        {
+            return _context.CourseEpisodes
+                .Where(e => e.CourseId == courseId)
+                .Select(e => e.FileName)
+                .ToList();
+        }
+
+        public Course GetCourseByIdIncludingEpisodes(int courseId)
+        {
+            return _context.Courses
+                .Include(c => c.CourseEpisodes)
+                .SingleOrDefault(c => c.Id == courseId);
+        }
+
+        public bool DeleteCourseEpisodes(int courseId)
+        {
+            var episodes = GetCourseEpisodes(courseId);
+            if (episodes.Any())
+                try
+                {
+                    foreach (var episode in episodes)
+                    {
+                        _context.CourseEpisodes.Remove(episode);
+                        _fileService.DeleteEpisode(episode.FileName);
+                    }
+
+                    _context.SaveChanges();
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+
+            return true;
+        }
     }
 }

@@ -68,12 +68,17 @@
                                         <td>@course.Title</td>
                                         <td>@course.EpisodeCount</td>
                                         <td>
+                                            
+                                            <a href="/admin/courses/@course.Id/episodes" class="btn btn-primary btn-sm">
+                                                بخش ها
+                                            </a>
+
                                             <a href="/admin/courses/@course.Id/edit/" class="btn btn-primary btn-sm">
                                                 ویرایش
                                             </a>
 
-                                            <a href="/admin/courses/@course.Id/episodes" class="btn btn-primary btn-sm">
-                                                بخش ها
+                                            <a onclick="deleteCourse(@course.Id, '@course.Title')" class="btn btn-danger btn-sm text-white">
+                                                حذف
                                             </a>
                                         </td>
                                     </tr>
@@ -115,3 +120,43 @@
         <!-- /.card-body -->
     </div>
 </section>
+
+
+@section Scripts{
+        <script>
+        function deleteCourse(id, title) {
+            console.log("delete")
+            Swal.fire({
+                title: `آیا از حذف دوره <u>${title}</u> مطمئن هستید؟`,
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'لغو',
+                //confirmButtonColor: '#dc3545',
+                //cancelButtonColor: '#e0a800',
+                focusConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-outline-danger',
+                    cancelButton: 'btn btn-outline-info mx-2',
+                },
+                buttonsStyling: false,
+            }).then(result => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'get',
+                        url: `/admin/courses/${id}/delete/`,
+                        success: function (response) {
+                            Swal.fire({
+                                title: 'دوره با موفقیت حذف شد',
+                                icon: 'success'
+                            })
+                            setTimeout(() => {
+                                location.reload();
+                            }, 800)
+                        }
+                    })
+                }
+            })
+        }
+        </script>
+}

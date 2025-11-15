@@ -50,11 +50,15 @@ namespace TopLearn.Core.Services.Interfaces
 
         int AddCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
 
+        bool DeleteCourse(int courseId);
+
         int GetCourseTeacherId(int courseId);
 
         string GetCourseTitleById(int courseId);
 
         Course GetCourseById(int courseId);
+
+        Course GetCourseByIdIncludingEpisodes(int courseId);
 
         bool UpdateCourse(Course course, IFormFile courseImg, IFormFile courseDemo);
 
@@ -69,6 +73,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         IEnumerable<CourseEpisode> GetCourseEpisodes(int courseId);
 
+        IEnumerable<string> GetCourseEpisodesFileNames(int courseId);
+
         int AddEpisode(CourseEpisode episode, IFormFile episodeFile);
 
         bool AddEpisode(AddEpisodeViewModel episodeViewModel, string userName);
@@ -78,6 +84,8 @@ namespace TopLearn.Core.Services.Interfaces
         bool UpdateEpisode(CourseEpisode episode, IFormFile episodeFile);
 
         bool DeleteEpisode(int episodeId);
+
+        bool DeleteCourseEpisodes(int courseId);
 
         CourseEpisode GetEpisodeById(int episodeId);
 
