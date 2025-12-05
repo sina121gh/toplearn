@@ -69,7 +69,7 @@
                                                 ویرایش
                                             </a>
 
-                                            <a onclick="remove(@group.Id, '@group.Title')"  class="btn btn-danger btn-sm">
+                                            <a onclick="remove(@group.Id, '@group.Title')"  class="btn btn-danger btn-sm text-white">
                                                 حذف
                                             </a>
                                         </td>
@@ -152,7 +152,7 @@
         const remove = (id, title) => {
 
             Swal.fire({
-                title: `آیا از حذف کد <u>${title}</u> مطمئن هستید؟`,
+                title: `آیا از حذف گروه <u>${title}</u> مطمئن هستید؟`,
                 icon: 'question',
                 showCancelButton: true,
                 confirmButtonText: 'حذف',
@@ -166,15 +166,17 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'get',
-                        url: `/admin/course-groups/${id}/delete/`,
+                        type: 'DELETE',
+                        url: `/admin/course-groups/${id}`,
                     }).done(function (res) {
                         if (res === 'True') {
                             Swal.fire({
                                 title: 'گروه با موفقیت حذف شد',
                                 icon: 'success'
                             });
-                            location.reload();
+                            setTimeout(() => {
+                                location.reload();
+                            }, 800)
                         } else {
                             Swal.fire({
                                 title: 'عملیات با شکست مواجه شد',

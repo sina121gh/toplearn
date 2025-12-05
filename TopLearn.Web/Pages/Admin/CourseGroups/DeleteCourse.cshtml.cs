@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TopLearn.Web.Pages.Admin.CourseGroups
 {
+    [IgnoreAntiforgeryToken]
     public class DeleteCourseModel : PageModel
     {
 
@@ -17,7 +18,7 @@ namespace TopLearn.Web.Pages.Admin.CourseGroups
 
         #endregion
 
-        public IActionResult OnGet(int groupId)
+        public IActionResult OnDelete(int groupId)
         {
             return Content(_courseService.DeleteGroup(groupId).ToString());
         }

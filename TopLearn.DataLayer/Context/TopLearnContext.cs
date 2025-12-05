@@ -82,6 +82,12 @@ namespace TopLearn.DataLayer.Context
             foreach (var fk in cascadeFKs)
                 fk.DeleteBehavior = DeleteBehavior.Restrict;
 
+            modelBuilder.Entity<UserCourse>()
+                .HasOne(uc => uc.Course)
+                .WithMany(c => c.UserCourses)
+                .HasForeignKey(uc => uc.CourseId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             //modelBuilder.Entity<Course>()
             //    .HasOne<CourseGroup>(c => c.Group)
             //    .WithMany(g => g.Courses)

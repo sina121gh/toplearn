@@ -62,13 +62,13 @@
                                 </tr>
                             <tbody>
                                 @foreach (CourseForAdminViewModel course in Model.CoursesViewModel.Courses)
-                                    {
+                                {
                                     <tr>
                                         <td><img src="/courses/thumbnails/@course.ImageName" /></td>
                                         <td>@course.Title</td>
                                         <td>@course.EpisodeCount</td>
                                         <td>
-                                            
+
                                             <a href="/admin/courses/@course.Id/episodes" class="btn btn-primary btn-sm">
                                                 بخش ها
                                             </a>
@@ -122,10 +122,9 @@
 </section>
 
 
-@section Scripts{
-        <script>
+@section Scripts {
+    <script>
         function deleteCourse(id, title) {
-            console.log("delete")
             Swal.fire({
                 title: `آیا از حذف دوره <u>${title}</u> مطمئن هستید؟`,
                 icon: 'question',
@@ -143,20 +142,28 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'get',
-                        url: `/admin/courses/${id}/delete/`,
+                        type: 'DELETE',
+                        url: `/admin/courses/${id}`,
                         success: function (response) {
-                            Swal.fire({
+                            if (response.success)
+                            {
+                                Swal.fire({
                                 title: 'دوره با موفقیت حذف شد',
                                 icon: 'success'
-                            })
-                            setTimeout(() => {
+                                })
+                                setTimeout(() => {
                                 location.reload();
-                            }, 800)
+                                }, 800)
+                            }
+                            else
+                                Swal.fire({
+                                title: 'حذف با شکست مواجه شد',
+                                icon: 'error'
+                                })
                         }
                     })
                 }
             })
         }
-        </script>
+    </script>
 }

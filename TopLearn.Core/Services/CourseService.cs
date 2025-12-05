@@ -653,7 +653,7 @@ namespace TopLearn.Core.Services
             }
         }
 
-        public bool DeleteCourse(int courseId)
+        public async Task<bool> DeleteCourseAsync(int courseId)
         {
             Course course = GetCourseById(courseId);
 
@@ -663,8 +663,10 @@ namespace TopLearn.Core.Services
                 {
                     if (!DeleteCourseEpisodes(courseId))
                         return false;
+                    await DeleteUserCoursesAsync(courseId);
                     _context.Courses.Remove(course);
-                    _fileService.DeleteDemo(course.DemoFileName);
+                    if (!string.IsNullOrEmpty(course.DemoFileName))
+                        _fileService.DeleteDemo(course.DemoFileName);
                     _fileService.DeleteImage(course.ImageName);
                     return _context.SaveChanges() > 0;
                 }
@@ -714,6 +716,13 @@ namespace TopLearn.Core.Services
                 }
 
             return true;
+        }
+
+        public async Task DeleteUserCoursesAsync(int courseId)
+        {
+            await _context.UserCourses
+                .Where(uc => uc.CourseId == courseId)
+                .ExecuteDeleteAsync();
         }
     }
 }
