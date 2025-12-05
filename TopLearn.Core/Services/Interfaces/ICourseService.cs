@@ -54,6 +54,8 @@ namespace TopLearn.Core.Services.Interfaces
 
         Task DeleteUserCoursesAsync(int courseId);
 
+        Task<bool> DoesAnyoneHaveThisCourseAsync(int courseId);
+
         int GetCourseTeacherId(int courseId);
 
         string GetCourseTitleById(int courseId);

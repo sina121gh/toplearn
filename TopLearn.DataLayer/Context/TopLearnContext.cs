@@ -75,28 +75,36 @@ namespace TopLearn.DataLayer.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var cascadeFKs = modelBuilder.Model.GetEntityTypes()
-                            .SelectMany(t => t.GetForeignKeys())
-                            .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+            modelBuilder.Entity<Course>()
+            .HasOne(c => c.Teacher)
+            .WithMany(u => u.Courses)
+            .HasForeignKey(c => c.TeacherId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-            foreach (var fk in cascadeFKs)
-                fk.DeleteBehavior = DeleteBehavior.Restrict;
+            modelBuilder.Entity<Question>()
+            .HasOne(q => q.User)
+            .WithMany(u => u.Questions)
+            .HasForeignKey(q => q.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<UserCourse>()
-                .HasOne(uc => uc.Course)
-                .WithMany(c => c.UserCourses)
-                .HasForeignKey(uc => uc.CourseId)
-                .OnDelete(DeleteBehavior.Cascade);
+            .HasOne(uc => uc.User)
+            .WithMany(u => u.UserCourses)
+            .HasForeignKey(uc => uc.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-            //modelBuilder.Entity<Course>()
-            //    .HasOne<CourseGroup>(c => c.Group)
-            //    .WithMany(g => g.Courses)
-            //    .HasForeignKey(c => c.Group);
+            modelBuilder.Entity<UserCourse>()
+            .HasOne(uc => uc.Course)
+            .WithMany(c => c.UserCourses)
+            .HasForeignKey(uc => uc.CourseId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-            //modelBuilder.Entity<Course>()
-            //    .HasOne<CourseGroup>(c => c.SubGroup)
-            //    .WithMany(g => g.CoursesList)
-            //    .HasForeignKey(c => c.SubGroup);
+            //var cascadeFKs = modelBuilder.Model.GetEntityTypes()
+            //                .SelectMany(t => t.GetForeignKeys())
+            //                .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            //foreach (var fk in cascadeFKs)
+            //    fk.DeleteBehavior = DeleteBehavior.Restrict;
 
             #region Query Filter
 

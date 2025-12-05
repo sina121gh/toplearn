@@ -261,7 +261,7 @@ namespace TopLearn.Core.Services
                 .Include(c => c.CourseEpisodes)
                 .Include(c => c.CourseStatus)
                 .Include(c => c.CourseLevel)
-                .Include(c => c.User)
+                .Include(c => c.Teacher)
                 .Include(c => c.UserCourses)
                 .Include(c => c.CourseComments)
                 .Include(c => c.Group)
@@ -723,6 +723,12 @@ namespace TopLearn.Core.Services
             await _context.UserCourses
                 .Where(uc => uc.CourseId == courseId)
                 .ExecuteDeleteAsync();
+        }
+
+        public async Task<bool> DoesAnyoneHaveThisCourseAsync(int courseId)
+        {
+            return await _context.UserCourses
+                .AnyAsync(uc => uc.CourseId == courseId);
         }
     }
 }

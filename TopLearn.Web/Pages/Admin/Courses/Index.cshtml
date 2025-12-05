@@ -77,7 +77,7 @@
                                                 ویرایش
                                             </a>
 
-                                            <a onclick="deleteCourse(@course.Id, '@course.Title')" class="btn btn-danger btn-sm text-white">
+                                            <a onclick="showDeleteSwal(@course.Id, '@course.Title', false)" class="btn btn-danger btn-sm text-white">
                                                 حذف
                                             </a>
                                         </td>
@@ -124,15 +124,14 @@
 
 @section Scripts {
     <script>
-        function deleteCourse(id, title) {
+
+        function showDeleteSwal(id, title, forceDelete) {
             Swal.fire({
                 title: `آیا از حذف دوره <u>${title}</u> مطمئن هستید؟`,
                 icon: 'question',
                 showCancelButton: true,
                 confirmButtonText: 'حذف',
                 cancelButtonText: 'لغو',
-                //confirmButtonColor: '#dc3545',
-                //cancelButtonColor: '#e0a800',
                 focusConfirm: false,
                 customClass: {
                     confirmButton: 'btn btn-outline-danger',
@@ -156,14 +155,72 @@
                                 }, 800)
                             }
                             else
-                                Swal.fire({
-                                title: 'حذف با شکست مواجه شد',
-                                icon: 'error'
-                                })
+                            {
+                                if (response.message == 'users')
+                                {
+                                    Swal.fire({
+                                        title: `دوره را کاربران تهیه کرده اند، ایا میخواهید دوره را حذف کنید؟`,
+                                        icon: 'question',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'حذف',
+                                        cancelButtonText: 'لغو',
+                                        //confirmButtonColor: '#dc3545',
+                                        //cancelButtonColor: '#e0a800',
+                                        focusConfirm: false,
+                                        customClass: {
+                                            confirmButton: 'btn btn-outline-danger',
+                                            cancelButton: 'btn btn-outline-info mx-2',
+                                        },
+                                        buttonsStyling: false,
+                                    }).then(result => {
+                                        if (result.isConfirmed)
+                                        {
+                                            deleteCourse(id, true);
+                                        }
+                                    })
+                                }
+                                else
+                                {
+                                    Swal.fire({
+                                    title: 'حذف با خطا مواجه شد',
+                                    icon: 'error'
+                                    })
+                                }
+
+                            }
+
                         }
                     })
                 }
             })
+        }
+
+        function deleteCourse(id, forceDelete)
+        {
+            $.ajax({
+                type: 'DELETE',
+                url: `/admin/courses/${id}?forceDelete=${forceDelete}`,
+                success: function (response) {
+                    if (response.success)
+                    {
+                        Swal.fire({
+                        title: 'دوره با موفقیت حذف شد',
+                        icon: 'success'
+                        })
+                        setTimeout(() => {
+                        location.reload();
+                        }, 800)
+                    }
+                    else
+                    {
+                        Swal.fire({
+                        title: 'حذف با خطا مواجه شد',
+                        icon: 'error'
+                        })
+                    }
+                }
+
+             })
         }
     </script>
 }

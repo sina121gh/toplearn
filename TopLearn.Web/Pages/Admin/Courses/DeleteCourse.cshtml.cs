@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 
@@ -14,8 +14,14 @@ namespace TopLearn.Web.Pages.Admin.Courses
             _courseService = courseService;
         }
 
-        public async Task<IActionResult> OnDelete(int courseId)
+        public async Task<IActionResult> OnDelete(int courseId, bool forceDelete = false)
         {
+            if (!forceDelete)
+                if (await _courseService.DoesAnyoneHaveThisCourseAsync(courseId))
+                {
+                    return new JsonResult(new { success = false, message = "users" });
+                }
+
             bool success = await _courseService.DeleteCourseAsync(courseId);
             return new JsonResult(new { success = success });
         }

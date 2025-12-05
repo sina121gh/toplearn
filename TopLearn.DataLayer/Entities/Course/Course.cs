@@ -76,7 +76,7 @@ namespace TopLearn.DataLayer.Entities.Course
         #region Relations
 
         [ForeignKey("TeacherId")]
-        public User.User? User { get; set; }
+        public User.User? Teacher { get; set; }
 
 
         [ForeignKey("GroupId")]
