@@ -4,6 +4,7 @@ using TopLearn.Core.Security;
 
 namespace TopLearn.Web.Pages.Admin.Roles
 {
+    [IgnoreAntiforgeryToken]
     [PermissionChecker("حذف نقش")]
     public class DeleteRoleModel : PageModel
     {
@@ -14,9 +15,10 @@ namespace TopLearn.Web.Pages.Admin.Roles
             _permisionService = permisionService;
         }
 
-        public void OnGet(int roleId)
+        public IActionResult OnDelete(int roleId)
         {
             _permisionService.DeleteRole(roleId);
+            return new JsonResult(new { success = true });
         }
     }
 }

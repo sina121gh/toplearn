@@ -122,8 +122,8 @@ const showSwal = (id, title) => {
     }).then(result => {
         if (result.isConfirmed) {
             $.ajax({
-                type: 'get',
-                url: `/admin/roles/${id}/delete/`,
+                type: 'DELETE',
+                url: `/admin/roles/${id}`,
                 success: function (response) {
                     Swal.fire({
                         title: 'نقش با موفقیت حذف شد',
