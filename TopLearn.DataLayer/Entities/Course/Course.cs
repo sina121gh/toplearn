@@ -17,14 +17,16 @@ namespace TopLearn.DataLayer.Entities.Course
         public int Id { get; set; }
 
 
-        [Required(ErrorMessage = "لطفا {0}‌ را وارد کنید")]
+        [Required(ErrorMessage = "لطفا گروه‌ را انتخاب کنید")]
+        [DeniedValues(0, ErrorMessage = "لطفا گروه‌ را انتخاب کنید")]
         public int GroupId { get; set; }
 
 
         public int? SubGroupId { get; set; }
 
 
-        [Required(ErrorMessage = "لطفا {0}‌ را وارد کنید")]
+        [Required(ErrorMessage = "لطفا مدرس‌ را انتخاب کنید")]
+        [DeniedValues(0, ErrorMessage = "لطفا مدرس را انتخاب کنید")]
         public int TeacherId { get; set; }
 
 
