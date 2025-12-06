@@ -4,7 +4,7 @@
     IEnumerable<int> selectedGroups = ViewData["SelectedGroups"] as IEnumerable<int>;
 }
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "دوره ها";
 }
 
 <div class="container">
@@ -71,8 +71,12 @@
                             <input type="hidden" value="" id="min-value" name="minPrice">
                             <input type="hidden" value="" id="max-value" name="maxPrice">
                             <div class="price-bar"><div id="priceFilter"></div></div>
-                            <div class="max-price">تا <span id="max-text">@Model.Courses.OrderByDescending(c => c.Price).First().Price</span> تومان</div>
-                            <div class="min-price">از <span id="min-text">@Model.Courses.OrderBy(c => c.Price).First().Price</span> تومان</div>
+                            @if (Model.Courses.Any())
+                            {
+                                <div class="max-price">تا <span id="max-text">@Model.Courses?.OrderByDescending(c => c.Price).First().Price</span> تومان</div>
+                                <div class="min-price">از <span id="min-text">@Model.Courses?.OrderBy(c => c.Price).First().Price</span> تومان</div>
+                            }
+                                
                             <div class="clearfix"></div>
                         </div>
                     </section>
@@ -118,10 +122,11 @@
 
                     <section class="terms-items">
                         <div class="row">
-                            @foreach (var course in Model.Courses)
-                            {
-                                <partial name="_CourseBox" model="course"></partial>
-                            }
+                            @if (Model.Courses.Any())
+                                @foreach (var course in Model.Courses)
+                                {
+                                    <partial name="_CourseBox" model="@(course)"></partial>
+                                }
                         </div>
 
 
