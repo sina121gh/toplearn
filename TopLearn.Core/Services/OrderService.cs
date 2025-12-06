@@ -168,6 +168,7 @@ namespace TopLearn.Core.Services
         {
             return _context
                 .Discounts
+                .AsNoTracking()
                 .Any(d => d.Code == code);
         }
 
@@ -185,12 +186,16 @@ namespace TopLearn.Core.Services
 
         public Discount GetDiscountById(int discountId)
         {
-            return _context.Discounts.Find(discountId);
+            return _context.Discounts
+                .AsNoTracking()
+                .First(d => d.Id == discountId);
         }
 
         public string GetDiscountCodeById(int discountId)
         {
-            return _context.Discounts.Find(discountId).Code;
+            return _context.Discounts
+                .AsNoTracking()
+                .First(d => d.Id == discountId).Code;
         }
 
         public List<Discount> GetDiscounts()

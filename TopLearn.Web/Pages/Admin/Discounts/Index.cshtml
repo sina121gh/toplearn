@@ -59,7 +59,7 @@
 
         function getDiscounts() {
             $.ajax({
-                url: "/get-discounts",
+                url: "/discounts",
                 method: 'get',
                 success: function (response) {
                     if (response == null || response == undefined || response.length == 0) {

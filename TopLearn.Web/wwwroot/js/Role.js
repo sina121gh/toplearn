@@ -4,7 +4,7 @@
 
 function getRoles() {
     $.ajax({
-        url: '/get-roles/',
+        url: '/roles',
         type: 'get',
         dataType: 'json',
         contentType: 'application/json;charset=utf8',

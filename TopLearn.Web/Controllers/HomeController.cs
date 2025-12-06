@@ -38,7 +38,7 @@ namespace TopLearn.Web.Controllers
         public IActionResult Error404() => View();
 
 
-        [Route("/get-roles")]
+        [Route("/roles")]
         public JsonResult GetRoles()
         {
             var roles = _permisionService.GetRoles();
@@ -120,7 +120,7 @@ namespace TopLearn.Web.Controllers
         }
 
         [HttpGet]
-        [Route("/get-discounts")]
+        [Route("/discounts")]
         public JsonResult GetDiscounts()
         {
             return Json(_orderService.GetDiscounts()
