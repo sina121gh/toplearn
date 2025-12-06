@@ -4,6 +4,7 @@ using System.Text.Json;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
+    [IgnoreAntiforgeryToken]
     [PermissionChecker("حذف کاربر")]
     public class DeleteUserModel : PageModel
     {
@@ -15,11 +16,11 @@ namespace TopLearn.Web.Pages.Admin.Users
             _userService = userService;
         }
 
-        public IActionResult OnGet(int userId)
+        public IActionResult OnDelete(int userId)
         {
-            _userService.DeleteUser(userId);
+            var success = _userService.DeleteUser(userId);
             //return Content(JsonSerializer.Serialize(_userService.GetUsers()));
-            return Redirect("/admin/users/");
+            return new JsonResult(new { success = success });
         }
     }
 }

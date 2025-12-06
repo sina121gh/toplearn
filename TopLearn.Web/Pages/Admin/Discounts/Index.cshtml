@@ -114,8 +114,8 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'get',
-                        url: `/admin/discounts/${id}/delete/`,
+                        type: 'DELETE',
+                        url: `/admin/discounts/${id}`,
                     }).done(function (res) {
                         if (res === 'True') {
                             Swal.fire({

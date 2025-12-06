@@ -69,8 +69,8 @@
                                     <th>دستورات</th>
                                 </tr>
                             <tbody>
-                                    @foreach (User user in Model.UsersViewModel.Users)
-                                    {
+                                @foreach (User user in Model.UsersViewModel.Users)
+                                {
                                     <tr>
                                         <td>@user.UserName</td>
                                         <td>@user.Email</td>
@@ -85,7 +85,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    }
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -146,16 +146,26 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'get',
-                        url: `/admin/users/${id}/delete/`,
+                        type: 'DELETE',
+                        url: `/admin/users/${id}`,
                         success: function (response) {
-                            Swal.fire({
+                            if (response.success)
+                            {
+                                Swal.fire({
                                 title: 'کاربر با موفقیت حذف شد',
                                 icon: 'success'
-                            })
-                            setTimeout(() => {
-                                location.reload();
-                            }, 800);
+                                })
+                                setTimeout(() => {
+                                    location.reload();
+                                }, 800);
+                            }
+                            else{
+                                Swal.fire({
+                                    title: 'حذف با خطا مواجه شد',
+                                    icon: 'error'
+                                    })
+                            }
+
                         }
                     })
                 }

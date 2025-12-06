@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TopLearn.Web.Pages.Admin.Courses.Episodes
 {
+    [IgnoreAntiforgeryToken]
     public class DeleteEpisodeModel : PageModel
     {
         private readonly ICourseService _courseService;
@@ -13,9 +14,10 @@ namespace TopLearn.Web.Pages.Admin.Courses.Episodes
             _courseService = courseService;
         }
 
-        public void OnGet(int episodeId)
+        public IActionResult OnDelete(int episodeId)
         {
-            _courseService.DeleteEpisode(episodeId);
+            var success = _courseService.DeleteEpisode(episodeId);
+            return new JsonResult(new { success = success });
         }
     }
 }

@@ -132,14 +132,24 @@
             }).then(result => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        type: 'get',
-                        url: `/admin/course-episodes/${id}/delete/`,
+                        type: 'DELETE',
+                        url: `/admin/course-episodes/${id}`,
                         success: function (response) {
-                            Swal.fire({
+                            if (response.success)
+                            {
+                                Swal.fire({
                                 title: 'بخش با موفقیت حذف شد',
                                 icon: 'success'
-                            })
-                            getEpisodes(@Model.CourseId);
+                                })
+                                getEpisodes(@Model.CourseId);
+                            }
+                            else{
+                                Swal.fire({
+                                    title: 'حذف با خطا مواجه شد',
+                                    icon: 'error'
+                                    })
+                            }
+                            
                         }
                     })
                 }

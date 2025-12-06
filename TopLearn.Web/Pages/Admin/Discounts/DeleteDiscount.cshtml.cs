@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TopLearn.Web.Pages.Admin.Discounts
 {
+    [IgnoreAntiforgeryToken]
     public class DeleteDiscountModel : PageModel
     {
 
@@ -17,7 +18,7 @@ namespace TopLearn.Web.Pages.Admin.Discounts
 
         #endregion
 
-        public IActionResult OnGet(int discountId)
+        public IActionResult OnDelete(int discountId)
         {
             Discount discount = _orderService.GetDiscountById(discountId);
 
